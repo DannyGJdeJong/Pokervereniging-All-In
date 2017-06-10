@@ -17,6 +17,7 @@ namespace Pokervereniging_All_In.Database
                 conn.Open();
                 string insertString = @"INSERT INTO masterclass (e_code, minimale_rating, bekende_speler) VALUES (@e_code, @minimale_rating, @bekende_speler)";
 
+
                 MySqlCommand cmd = new MySqlCommand(insertString, conn);
                 MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
                 MySqlParameter MinRatingParam = new MySqlParameter("@minimale_rating", MySqlDbType.Int32);
