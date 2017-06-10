@@ -57,6 +57,8 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bekende_speler.cs" />
+    <Compile Include="Models\Masterclass.cs" />
     <Compile Include="Models\Persoon.cs" />
     <Compile Include="Models\Speler.cs" />
     <Compile Include="Program.cs" />
