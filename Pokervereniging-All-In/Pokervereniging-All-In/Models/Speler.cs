@@ -17,5 +17,17 @@ namespace Pokervereniging_All_In.Models
         {
 
         }
+
+        public override string ToString()
+        {
+            if (String.IsNullOrEmpty(Tussenvoegsels))
+            {
+                return Roepnaam + " " + Achternaam;
+            }
+            else
+            {
+                return Roepnaam + " " + Tussenvoegsels + " " + Achternaam;
+            }
+        }
     }
 }

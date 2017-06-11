@@ -18,5 +18,6 @@ namespace Pokervereniging_All_In.Models
         public int Huisnummer { get; set; }
         public char Geslacht { get; set; }
         public string Emailadres { get; set; }
+        public int P_Code { get; set; }
     }
 }
