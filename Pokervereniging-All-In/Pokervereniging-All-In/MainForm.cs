@@ -26,6 +26,8 @@ namespace Pokervereniging_All_In
             {
                 lstSpelers.Items.Add(speler);
             }
+
+            dataGridView1.DataSource = spelerCont.GetSpelers();
         }
     }
 }
