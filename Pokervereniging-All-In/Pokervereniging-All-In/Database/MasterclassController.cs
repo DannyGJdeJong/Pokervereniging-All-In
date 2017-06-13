@@ -17,7 +17,6 @@ namespace Pokervereniging_All_In.Database
                 conn.Open();
                 string insertString = @"INSERT INTO masterclass (e_code, minimale_rating, bekende_speler) VALUES (@e_code, @minimale_rating, @bekende_speler)";
 
-
                 MySqlCommand cmd = new MySqlCommand(insertString, conn);
                 MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
                 MySqlParameter MinRatingParam = new MySqlParameter("@minimale_rating", MySqlDbType.Int32);
@@ -63,7 +62,6 @@ namespace Pokervereniging_All_In.Database
                     int MinRating = dataReader.GetInt32("minimale_rating");
                     int BekendeSpeler = dataReader.GetInt32("bekende_speler");
                     Masterclass masterclass = new Masterclass { E_code = EventCode, Bekende_speler = BekendeSpeler, Minimale_rating = MinRating };
-
                     masterclasses.Add(masterclass);
                 }
             }
@@ -78,6 +76,71 @@ namespace Pokervereniging_All_In.Database
 
             return masterclasses;
         }
+
+        public List<Bekende_speler> GetBekendeSpeler()
+        {
+            List<Bekende_speler> bekendespelers = new List<Bekende_speler>();
+
+            try
+            {
+                conn.Open();
+
+                string selectQuery = @"SELECT * FROM bekende_speler";
+                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int BekendeSpeler = dataReader.GetInt32("p_code");
+                    string naam = dataReader.GetString("roepnaam");
+                    Bekende_speler bekendespeler = new Bekende_speler { P_Code = BekendeSpeler, Roepnaam = naam };
+                    bekendespelers.Add(bekendespeler);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ophalen van bekende speler mislukt" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return bekendespelers;
+        }
+
+        public List<Locatie> GetLocatie()
+        {
+            List<Locatie> locaties = new List<Locatie>();
+
+            try
+            {
+                conn.Open();
+
+                string selectQuery = @"SELECT * FROM Locatie";
+                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int lcode = dataReader.GetInt32("l_code");
+                    Locatie locatie = new Locatie { L_code = lcode};
+                    locaties.Add(locatie);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ophalen van bekende locaties mislukt" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return locaties;
+        }
+
+
     }
 }
 
