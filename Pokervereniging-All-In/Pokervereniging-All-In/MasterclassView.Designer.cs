@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.MasterView = new System.Windows.Forms.ListView();
-            this.E_Code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Locatie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Min_rating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BekendeSpeler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
@@ -39,23 +40,29 @@
             // MasterView
             // 
             this.MasterView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.E_Code,
+            this.Datum,
             this.Min_rating,
-            this.BekendeSpeler});
+            this.BekendeSpeler,
+            this.Locatie});
             this.MasterView.FullRowSelect = true;
             this.MasterView.GridLines = true;
             this.MasterView.Location = new System.Drawing.Point(24, 12);
             this.MasterView.MultiSelect = false;
             this.MasterView.Name = "MasterView";
-            this.MasterView.Size = new System.Drawing.Size(907, 470);
+            this.MasterView.Size = new System.Drawing.Size(1179, 470);
             this.MasterView.TabIndex = 0;
             this.MasterView.UseCompatibleStateImageBehavior = false;
             this.MasterView.View = System.Windows.Forms.View.Details;
             // 
-            // E_Code
+            // Datum
             // 
-            this.E_Code.Text = "E_Code";
-            this.E_Code.Width = 100;
+            this.Datum.Text = "Datum";
+            this.Datum.Width = 100;
+            // 
+            // Locatie
+            // 
+            this.Locatie.Text = "Locatie";
+            this.Locatie.Width = 120;
             // 
             // Min_rating
             // 
@@ -90,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 565);
+            this.ClientSize = new System.Drawing.Size(1224, 565);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.MasterView);
@@ -105,10 +112,11 @@
         #endregion
 
         private System.Windows.Forms.ListView MasterView;
-        private System.Windows.Forms.ColumnHeader E_Code;
+        private System.Windows.Forms.ColumnHeader Datum;
         private System.Windows.Forms.ColumnHeader Min_rating;
         private System.Windows.Forms.ColumnHeader BekendeSpeler;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ColumnHeader Locatie;
     }
 }

@@ -34,9 +34,9 @@
             this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lstSpelers = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lstSpelers = new System.Windows.Forms.ListBox();
             this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voorlettersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roepnaamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,9 +60,10 @@
             // 
             // btnGetSpelers
             // 
-            this.btnGetSpelers.Location = new System.Drawing.Point(6, 6);
+            this.btnGetSpelers.Location = new System.Drawing.Point(12, 12);
+            this.btnGetSpelers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnGetSpelers.Name = "btnGetSpelers";
-            this.btnGetSpelers.Size = new System.Drawing.Size(75, 23);
+            this.btnGetSpelers.Size = new System.Drawing.Size(150, 44);
             this.btnGetSpelers.TabIndex = 0;
             this.btnGetSpelers.Text = "Verversen";
             this.btnGetSpelers.UseVisualStyleBackColor = true;
@@ -73,10 +74,11 @@
             this.tbcMain.Controls.Add(this.tabPage1);
             this.tbcMain.Controls.Add(this.tabPage2);
             this.tbcMain.Controls.Add(this.tabPage3);
-            this.tbcMain.Location = new System.Drawing.Point(12, 12);
+            this.tbcMain.Location = new System.Drawing.Point(24, 23);
+            this.tbcMain.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbcMain.Name = "tbcMain";
             this.tbcMain.SelectedIndex = 0;
-            this.tbcMain.Size = new System.Drawing.Size(864, 503);
+            this.tbcMain.Size = new System.Drawing.Size(1728, 967);
             this.tbcMain.TabIndex = 2;
             // 
             // tabPage1
@@ -85,10 +87,11 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.btnGetSpelers);
             this.tabPage1.Controls.Add(this.lstSpelers);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(856, 477);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Size = new System.Drawing.Size(1712, 920);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Speler";
             // 
@@ -116,39 +119,44 @@
             this.staatOpBlacklistDataGridViewCheckBoxColumn,
             this.iBANnummerDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.spelerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 218);
+            this.dataGridView1.Size = new System.Drawing.Size(1688, 419);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // lstSpelers
+            // 
+            this.lstSpelers.FormattingEnabled = true;
+            this.lstSpelers.ItemHeight = 25;
+            this.lstSpelers.Location = new System.Drawing.Point(12, 498);
+            this.lstSpelers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstSpelers.Name = "lstSpelers";
+            this.lstSpelers.Size = new System.Drawing.Size(514, 404);
+            this.lstSpelers.TabIndex = 1;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(856, 477);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Size = new System.Drawing.Size(1712, 920);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(856, 477);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage3.Size = new System.Drawing.Size(1712, 920);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lstSpelers
-            // 
-            this.lstSpelers.FormattingEnabled = true;
-            this.lstSpelers.Location = new System.Drawing.Point(6, 259);
-            this.lstSpelers.Name = "lstSpelers";
-            this.lstSpelers.Size = new System.Drawing.Size(259, 212);
-            this.lstSpelers.TabIndex = 1;
             // 
             // pCodeDataGridViewTextBoxColumn
             // 
@@ -156,7 +164,7 @@
             this.pCodeDataGridViewTextBoxColumn.HeaderText = "P_Code";
             this.pCodeDataGridViewTextBoxColumn.Name = "pCodeDataGridViewTextBoxColumn";
             this.pCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pCodeDataGridViewTextBoxColumn.Width = 70;
+            this.pCodeDataGridViewTextBoxColumn.Width = 134;
             // 
             // voorlettersDataGridViewTextBoxColumn
             // 
@@ -164,7 +172,7 @@
             this.voorlettersDataGridViewTextBoxColumn.HeaderText = "Voorletters";
             this.voorlettersDataGridViewTextBoxColumn.Name = "voorlettersDataGridViewTextBoxColumn";
             this.voorlettersDataGridViewTextBoxColumn.ReadOnly = true;
-            this.voorlettersDataGridViewTextBoxColumn.Width = 82;
+            this.voorlettersDataGridViewTextBoxColumn.Width = 161;
             // 
             // roepnaamDataGridViewTextBoxColumn
             // 
@@ -172,7 +180,7 @@
             this.roepnaamDataGridViewTextBoxColumn.HeaderText = "Roepnaam";
             this.roepnaamDataGridViewTextBoxColumn.Name = "roepnaamDataGridViewTextBoxColumn";
             this.roepnaamDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roepnaamDataGridViewTextBoxColumn.Width = 84;
+            this.roepnaamDataGridViewTextBoxColumn.Width = 161;
             // 
             // tussenvoegselsDataGridViewTextBoxColumn
             // 
@@ -180,7 +188,7 @@
             this.tussenvoegselsDataGridViewTextBoxColumn.HeaderText = "Tussenvoegsels";
             this.tussenvoegselsDataGridViewTextBoxColumn.Name = "tussenvoegselsDataGridViewTextBoxColumn";
             this.tussenvoegselsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tussenvoegselsDataGridViewTextBoxColumn.Width = 109;
+            this.tussenvoegselsDataGridViewTextBoxColumn.Width = 214;
             // 
             // achternaamDataGridViewTextBoxColumn
             // 
@@ -188,7 +196,7 @@
             this.achternaamDataGridViewTextBoxColumn.HeaderText = "Achternaam";
             this.achternaamDataGridViewTextBoxColumn.Name = "achternaamDataGridViewTextBoxColumn";
             this.achternaamDataGridViewTextBoxColumn.ReadOnly = true;
-            this.achternaamDataGridViewTextBoxColumn.Width = 89;
+            this.achternaamDataGridViewTextBoxColumn.Width = 172;
             // 
             // postcodeDataGridViewTextBoxColumn
             // 
@@ -196,7 +204,7 @@
             this.postcodeDataGridViewTextBoxColumn.HeaderText = "Postcode";
             this.postcodeDataGridViewTextBoxColumn.Name = "postcodeDataGridViewTextBoxColumn";
             this.postcodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.postcodeDataGridViewTextBoxColumn.Width = 77;
+            this.postcodeDataGridViewTextBoxColumn.Width = 147;
             // 
             // straatDataGridViewTextBoxColumn
             // 
@@ -204,7 +212,7 @@
             this.straatDataGridViewTextBoxColumn.HeaderText = "Straat";
             this.straatDataGridViewTextBoxColumn.Name = "straatDataGridViewTextBoxColumn";
             this.straatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.straatDataGridViewTextBoxColumn.Width = 60;
+            this.straatDataGridViewTextBoxColumn.Width = 114;
             // 
             // huisnummerDataGridViewTextBoxColumn
             // 
@@ -212,7 +220,7 @@
             this.huisnummerDataGridViewTextBoxColumn.HeaderText = "Huisnummer";
             this.huisnummerDataGridViewTextBoxColumn.Name = "huisnummerDataGridViewTextBoxColumn";
             this.huisnummerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.huisnummerDataGridViewTextBoxColumn.Width = 90;
+            this.huisnummerDataGridViewTextBoxColumn.Width = 177;
             // 
             // woonplaatsDataGridViewTextBoxColumn
             // 
@@ -220,7 +228,7 @@
             this.woonplaatsDataGridViewTextBoxColumn.HeaderText = "Woonplaats";
             this.woonplaatsDataGridViewTextBoxColumn.Name = "woonplaatsDataGridViewTextBoxColumn";
             this.woonplaatsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woonplaatsDataGridViewTextBoxColumn.Width = 89;
+            this.woonplaatsDataGridViewTextBoxColumn.Width = 171;
             // 
             // geslachtDataGridViewTextBoxColumn
             // 
@@ -228,7 +236,7 @@
             this.geslachtDataGridViewTextBoxColumn.HeaderText = "Geslacht";
             this.geslachtDataGridViewTextBoxColumn.Name = "geslachtDataGridViewTextBoxColumn";
             this.geslachtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.geslachtDataGridViewTextBoxColumn.Width = 74;
+            this.geslachtDataGridViewTextBoxColumn.Width = 142;
             // 
             // emailadresDataGridViewTextBoxColumn
             // 
@@ -236,7 +244,7 @@
             this.emailadresDataGridViewTextBoxColumn.HeaderText = "Emailadres";
             this.emailadresDataGridViewTextBoxColumn.Name = "emailadresDataGridViewTextBoxColumn";
             this.emailadresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailadresDataGridViewTextBoxColumn.Width = 83;
+            this.emailadresDataGridViewTextBoxColumn.Width = 164;
             // 
             // ratingDataGridViewTextBoxColumn
             // 
@@ -244,7 +252,7 @@
             this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
             this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
             this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ratingDataGridViewTextBoxColumn.Width = 63;
+            this.ratingDataGridViewTextBoxColumn.Width = 119;
             // 
             // staatOpBlacklistDataGridViewCheckBoxColumn
             // 
@@ -252,7 +260,7 @@
             this.staatOpBlacklistDataGridViewCheckBoxColumn.HeaderText = "StaatOpBlacklist";
             this.staatOpBlacklistDataGridViewCheckBoxColumn.Name = "staatOpBlacklistDataGridViewCheckBoxColumn";
             this.staatOpBlacklistDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.staatOpBlacklistDataGridViewCheckBoxColumn.Width = 91;
+            this.staatOpBlacklistDataGridViewCheckBoxColumn.Width = 176;
             // 
             // iBANnummerDataGridViewTextBoxColumn
             // 
@@ -260,7 +268,7 @@
             this.iBANnummerDataGridViewTextBoxColumn.HeaderText = "IBANnummer";
             this.iBANnummerDataGridViewTextBoxColumn.Name = "iBANnummerDataGridViewTextBoxColumn";
             this.iBANnummerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iBANnummerDataGridViewTextBoxColumn.Width = 94;
+            this.iBANnummerDataGridViewTextBoxColumn.Width = 182;
             // 
             // spelerBindingSource
             // 
@@ -268,11 +276,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 527);
+            this.ClientSize = new System.Drawing.Size(1776, 1013);
             this.Controls.Add(this.tbcMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainForm";
             this.Text = "Pokervereniging All-In";
             this.tbcMain.ResumeLayout(false);

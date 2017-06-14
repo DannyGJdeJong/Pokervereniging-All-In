@@ -61,7 +61,7 @@
             // 
             this.TxtRating.Location = new System.Drawing.Point(207, 32);
             this.TxtRating.Name = "TxtRating";
-            this.TxtRating.Size = new System.Drawing.Size(268, 31);
+            this.TxtRating.Size = new System.Drawing.Size(333, 31);
             this.TxtRating.TabIndex = 2;
             // 
             // BSubmit
@@ -80,7 +80,7 @@
             this.CBLocatie.FormattingEnabled = true;
             this.CBLocatie.Location = new System.Drawing.Point(207, 185);
             this.CBLocatie.Name = "CBLocatie";
-            this.CBLocatie.Size = new System.Drawing.Size(268, 33);
+            this.CBLocatie.Size = new System.Drawing.Size(333, 33);
             this.CBLocatie.TabIndex = 5;
             // 
             // label3
@@ -97,7 +97,7 @@
             this.CBAdd.FormattingEnabled = true;
             this.CBAdd.Location = new System.Drawing.Point(207, 132);
             this.CBAdd.Name = "CBAdd";
-            this.CBAdd.Size = new System.Drawing.Size(268, 33);
+            this.CBAdd.Size = new System.Drawing.Size(333, 33);
             this.CBAdd.TabIndex = 9;
             // 
             // label4
@@ -113,14 +113,14 @@
             // 
             this.DtPicker.Location = new System.Drawing.Point(207, 80);
             this.DtPicker.Name = "DtPicker";
-            this.DtPicker.Size = new System.Drawing.Size(268, 31);
+            this.DtPicker.Size = new System.Drawing.Size(333, 31);
             this.DtPicker.TabIndex = 10;
             // 
             // MasterclassAddView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 335);
+            this.ClientSize = new System.Drawing.Size(568, 335);
             this.Controls.Add(this.DtPicker);
             this.Controls.Add(this.CBAdd);
             this.Controls.Add(this.label4);

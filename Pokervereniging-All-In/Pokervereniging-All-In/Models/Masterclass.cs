@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Masterclass
+    class Masterclass : Event
     {
-
-        public int E_code { get; set; }
         public int Minimale_rating { get; set; }
         public BekendeSpeler Bekende_Speler = new BekendeSpeler();
+        public Locatie locatie = new Locatie();
 
     }
 }

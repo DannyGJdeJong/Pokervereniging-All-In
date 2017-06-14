@@ -15,7 +15,8 @@ namespace Pokervereniging_All_In.Database
             try
             {
                 conn.Open();
-                string insertString = @"INSERT INTO masterclass (e_code, minimale_rating, bekende_speler) VALUES (@e_code, @minimale_rating, @bekende_speler)";
+                string insertString = @"INSERT INTO masterclass (e_code, minimale_rating, bekende_speler) 
+                                        VALUES (@e_code, @minimale_rating, @bekende_speler)";
 
                 MySqlCommand cmd = new MySqlCommand(insertString, conn);
                 MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
@@ -70,6 +71,24 @@ namespace Pokervereniging_All_In.Database
                     masterclass.E_code = EventCode;
                     masterclass.Bekende_Speler.Roepnaam = BekendeSpeler;
                     masterclass.Minimale_rating = MinRating;
+                    EventController events = new EventController();
+                    LocatieController locaties = new LocatieController();
+                    foreach (Event val in events.GetEvents())
+                    {
+                        if(EventCode == val.E_code)
+                        {
+                            masterclass.Datum = val.Datum;
+                            masterclass.L_code = val.L_code;
+                            break;
+                        }
+                    }
+                    foreach (Locatie val in locaties.GetLocaties())
+                    {
+                        if (masterclass.L_code == val.L_code)
+                        {
+                            masterclass.locatie.Adres = val.Adres;
+                        }
+                    }
                     masterclasses.Add(masterclass);
                 }
             }

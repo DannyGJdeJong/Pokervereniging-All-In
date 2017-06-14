@@ -32,7 +32,7 @@ namespace Pokervereniging_All_In
             }
             foreach (Locatie locatie in LocatieDB.GetLocaties())
             {
-                CBLocatie.Items.Add(locatie.L_code);
+                CBLocatie.Items.Add(locatie.Adres);
             }
         }
 
@@ -49,7 +49,7 @@ namespace Pokervereniging_All_In
         {
             Event EventValues = new Event();
             EventValues.Datum = DtPicker.Value;
-            EventValues.L_code = int.Parse(CBLocatie.Text);
+            EventValues.L_code = LocatieDB.GetLCode(CBLocatie.Text); ;
             MasterclassEvent.InsertEvent(EventValues);
             int Temp_Ecode = MasterclassEvent.GetEventID(MasterclassEvent);
             MakeMasterclass(Temp_Ecode);
@@ -59,7 +59,14 @@ namespace Pokervereniging_All_In
             Masterclass temp_masterclass = new Masterclass();
             temp_masterclass.Bekende_Speler.P_Code = BekendeSpelerDB.GetPCode(CBAdd.Text);
             temp_masterclass.E_code = Temp_Ecode;
-            temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
+            if(string.IsNullOrEmpty(TxtRating.Text))
+            {
+                throw new ArgumentException("Het rating veld moet ingevuld worden");
+            }
+            else
+            {
+                temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
+            }
             MasterDB.Insertmasterclass(temp_masterclass);
         }
     }

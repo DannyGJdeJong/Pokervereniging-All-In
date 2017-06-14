@@ -53,6 +53,19 @@ namespace Pokervereniging_All_In.Database
             return locaties;
         
     }
+        public int GetLCode(string adres)
+        {
+            int Temp_LCode = 0;
+            foreach (Locatie value in GetLocaties())
+            {
+                if (adres == value.Adres)
+                {
+                    Temp_LCode = value.L_code;
+                }
+            }
+
+                return Temp_LCode;
+        }
         public void InsertLocatie()
         {
 
