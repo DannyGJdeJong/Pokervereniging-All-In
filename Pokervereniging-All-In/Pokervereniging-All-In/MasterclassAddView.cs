@@ -14,7 +14,9 @@ namespace Pokervereniging_All_In
 {
     public partial class MasterclassAddView : Form
     {
-        MasterclassController masterDB = new MasterclassController();
+        BekendeSpelerController BekendeSpelerDB = new BekendeSpelerController();
+        LocatieController LocatieDB = new LocatieController();
+        MasterclassController MasterDB = new MasterclassController();
         int Temp_Ecode = 0;
         int Temp_Pcode = 0;
         public MasterclassAddView()
@@ -24,11 +26,11 @@ namespace Pokervereniging_All_In
 
         private void AddView_Load(object sender, EventArgs e)
         {
-            foreach (BekendeSpeler speler in masterDB.GetBekendeSpeler())
+            foreach (BekendeSpeler speler in BekendeSpelerDB.GetBekendeSpeler())
             {
                 CBAdd.Items.Add(speler.Roepnaam);
             }
-            foreach (Locatie locatie in masterDB.GetLocatie())
+            foreach (Locatie locatie in LocatieDB.GetLocaties())
             {
                 CBLocatie.Items.Add(locatie.L_code);
             }
@@ -38,7 +40,7 @@ namespace Pokervereniging_All_In
         {
             MakeEvent();
             Masterclass temp_masterclass = new Masterclass();
-            foreach(BekendeSpeler speler in masterDB.GetBekendeSpeler())
+            foreach(BekendeSpeler speler in BekendeSpelerDB.GetBekendeSpeler())
             {
                 if(speler.Roepnaam == CBAdd.Text)
                 {
@@ -49,7 +51,7 @@ namespace Pokervereniging_All_In
             temp_masterclass.Bekende_speler = Temp_Pcode;
             temp_masterclass.E_code = Temp_Ecode;
             temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
-            masterDB.Insertmasterclass(temp_masterclass);
+            MasterDB.Insertmasterclass(temp_masterclass);
         }
 
         private void MakeEvent()

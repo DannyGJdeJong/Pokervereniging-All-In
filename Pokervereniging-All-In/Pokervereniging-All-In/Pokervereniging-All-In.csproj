@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\BekendeSpelerController.cs" />
+    <Compile Include="Database\LocatieController.cs" />
     <Compile Include="MasterclassAddView.cs">
       <SubType>Form</SubType>
     </Compile>
