@@ -74,5 +74,14 @@ namespace Pokervereniging_All_In.Models
                 conn.Close();
             }
         }
+        public int GetEventID(EventController e)
+        {
+           int  Temp_Ecode = 0;
+            foreach (Event value in e.GetEvents())
+            {
+                Temp_Ecode = Math.Max(value.E_code, Temp_Ecode);
+            }
+            return Temp_Ecode;
+        }
     }
 }

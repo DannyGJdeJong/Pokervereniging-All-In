@@ -18,7 +18,7 @@ namespace Pokervereniging_All_In
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MasterclassView());
 
            
 

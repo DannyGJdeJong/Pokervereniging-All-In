@@ -76,8 +76,6 @@ namespace Pokervereniging_All_In.Database
 
             return masterclasses;
         }
-
-
     }
 }
 

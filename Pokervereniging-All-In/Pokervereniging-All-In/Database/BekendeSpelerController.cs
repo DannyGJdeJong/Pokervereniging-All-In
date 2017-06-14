@@ -34,7 +34,6 @@ namespace Pokervereniging_All_In.Database
                     string straat = dataReader.GetString("straat");
                     int huisnummer = dataReader.GetInt32("huisnummer");
                     string woonplaats = dataReader.GetString("woonplaats");
-                    string emailadres = dataReader.GetString("emailadres");
                     DateTime geb_datum = dataReader.GetDateTime("geb_datum");
                     string nationaliteit = dataReader.GetString("nationaliteit");
                     
@@ -50,7 +49,6 @@ namespace Pokervereniging_All_In.Database
                     speler.Straat = straat;
                     speler.Huisnummer = huisnummer;
                     speler.Woonplaats = woonplaats;
-                    speler.Emailadres = emailadres;
                     speler.Geb_datum = geb_datum;
                     speler.nationaliteit = nationaliteit;
                     bekendespelers.Add(speler);

@@ -39,10 +39,24 @@ namespace Pokervereniging_All_In
         private void button1_Click(object sender, EventArgs e)
         {
             MakeEvent();
+            MakeMasterclass();
+        }
+
+        private void MakeEvent()
+        {
+            Event EventValues = new Event();
+            EventValues.Datum = DtPicker.Value;
+            EventValues.L_code = CBLocatie.SelectedIndex;
+            EventController MasterclassEvent = new EventController();
+            MasterclassEvent.InsertEvent(EventValues);
+            int Temp_Ecode = MasterclassEvent.GetEventID(MasterclassEvent);
+        }
+        private void MakeMasterclass()
+        {
             Masterclass temp_masterclass = new Masterclass();
-            foreach(BekendeSpeler speler in BekendeSpelerDB.GetBekendeSpeler())
+            foreach (BekendeSpeler speler in BekendeSpelerDB.GetBekendeSpeler())
             {
-                if(speler.Roepnaam == CBAdd.Text)
+                if (speler.Roepnaam == CBAdd.Text)
                 {
                     Temp_Pcode = speler.P_Code;
                     break;
@@ -53,22 +67,5 @@ namespace Pokervereniging_All_In
             temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
             MasterDB.Insertmasterclass(temp_masterclass);
         }
-
-        private void MakeEvent()
-        {
-            Event EventValues = new Event();
-            EventValues.Datum = DtPicker.Value;
-            EventValues.L_code = CBLocatie.SelectedIndex;
-            EventController MasterclassEvent = new EventController();
-            MasterclassEvent.InsertEvent(EventValues);
-            foreach (Event e in MasterclassEvent.GetEvents())
-            {
-               Temp_Ecode = Math.Max(e.E_code, Temp_Ecode);
-            }
-
-
-        }
     }
-
-
-    }
+}
