@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokervereniging_All_In.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,24 @@ namespace Pokervereniging_All_In.Models
         public bool StaatOpBlacklist { get; set; }
         public List<string> Telefoonnummers { get; set; }
 
-        public Speler()
+        public Speler(int p_code, string roepnaam, string voorletters, string tussenvoegsels, string achternaam, char geslacht, string postcode, string straat, int huisnummer, string woonplaats, string emailadres, string IBAN_nummer, int rating, bool staat_op_blacklist)
         {
-
+            P_Code = p_code;
+            Roepnaam = roepnaam;
+            Voorletters = voorletters;
+            Tussenvoegsels = tussenvoegsels;
+            Achternaam = achternaam;
+            Geslacht = geslacht;
+            Postcode = postcode;
+            Straat = straat;
+            Huisnummer = huisnummer;
+            Woonplaats = woonplaats;
+            Emailadres = emailadres;
+            IBANnummer = IBAN_nummer;
+            Rating = rating;
+            StaatOpBlacklist = staat_op_blacklist;
+            TelefoonnummerController telnumCont = new TelefoonnummerController();
+            Telefoonnummers = telnumCont.GetTelefoonnummers(P_Code);
         }
 
         public override string ToString()

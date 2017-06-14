@@ -29,5 +29,16 @@ namespace Pokervereniging_All_In
 
             dataGridView1.DataSource = spelerCont.GetSpelers();
         }
+
+        private void btnToernooi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnMasterclass_Click(object sender, EventArgs e)
+        {
+            MasterclassView masterClassView = new MasterclassView();
+            masterClassView.Show();
+        }
     }
 }

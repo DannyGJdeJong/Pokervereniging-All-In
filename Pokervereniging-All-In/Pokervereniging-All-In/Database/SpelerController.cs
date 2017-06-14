@@ -39,23 +39,7 @@ namespace Pokervereniging_All_In.Database
                     int rating = dataReader.GetInt32("rating");
                     bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';
 
-                    Speler speler = new Speler();
-                    speler.P_Code = p_code;
-                    speler.Roepnaam = roepnaam;
-                    speler.Voorletters = voorletters;
-                    speler.Tussenvoegsels = tussenvoegsels;
-                    speler.Achternaam = achternaam;
-                    speler.Geslacht = geslacht;
-                    speler.Postcode = postcode;
-                    speler.Straat = straat;
-                    speler.Huisnummer = huisnummer;
-                    speler.Woonplaats = woonplaats;
-                    speler.Emailadres = emailadres;
-                    speler.IBANnummer = IBAN_nummer;
-                    speler.Rating = rating;
-                    speler.StaatOpBlacklist = staat_op_blacklist;
-                    TelefoonnummerController telnumCont = new TelefoonnummerController();
-                    speler.Telefoonnummers = telnumCont.GetTelefoonnummers(p_code);
+                    Speler speler = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
                     spelers.Add(speler);
                 }
             }
