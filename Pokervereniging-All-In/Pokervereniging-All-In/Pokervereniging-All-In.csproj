@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\BekendeSpelerController.cs" />
     <Compile Include="MasterclassAddView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +87,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Bekende_speler.cs" />
+    <Compile Include="Models\BekendeSpeler.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Database\EventController.cs" />
     <Compile Include="Models\Locatie.cs" />

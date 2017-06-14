@@ -77,9 +77,9 @@ namespace Pokervereniging_All_In.Database
             return masterclasses;
         }
 
-        public List<Bekende_speler> GetBekendeSpeler()
+        public List<BekendeSpeler> GetBekendeSpeler()
         {
-            List<Bekende_speler> bekendespelers = new List<Bekende_speler>();
+            List<BekendeSpeler> bekendespelers = new List<BekendeSpeler>();
 
             try
             {
@@ -93,7 +93,7 @@ namespace Pokervereniging_All_In.Database
                 {
                     int BekendeSpeler = dataReader.GetInt32("p_code");
                     string naam = dataReader.GetString("roepnaam");
-                    Bekende_speler bekendespeler = new Bekende_speler { P_Code = BekendeSpeler, Roepnaam = naam };
+                    BekendeSpeler bekendespeler = new BekendeSpeler { P_Code = BekendeSpeler, Roepnaam = naam };
                     bekendespelers.Add(bekendespeler);
                 }
             }

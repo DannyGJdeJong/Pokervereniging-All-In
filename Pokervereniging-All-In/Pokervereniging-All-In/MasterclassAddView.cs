@@ -24,7 +24,7 @@ namespace Pokervereniging_All_In
 
         private void AddView_Load(object sender, EventArgs e)
         {
-            foreach (Bekende_speler speler in masterDB.GetBekendeSpeler())
+            foreach (BekendeSpeler speler in masterDB.GetBekendeSpeler())
             {
                 CBAdd.Items.Add(speler.Roepnaam);
             }
@@ -38,7 +38,7 @@ namespace Pokervereniging_All_In
         {
             MakeEvent();
             Masterclass temp_masterclass = new Masterclass();
-            foreach(Bekende_speler speler in masterDB.GetBekendeSpeler())
+            foreach(BekendeSpeler speler in masterDB.GetBekendeSpeler())
             {
                 if(speler.Roepnaam == CBAdd.Text)
                 {
