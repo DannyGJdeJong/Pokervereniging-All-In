@@ -65,6 +65,19 @@ namespace Pokervereniging_All_In.Database
 
             return bekendespelers;
         }
+        public int GetPCode(string BSpeler)
+        {
+            int Temp_Pcode = 0;
+            foreach (BekendeSpeler speler in GetBekendeSpeler())
+            {
+                if (speler.Roepnaam == BSpeler)
+                {
+                    Temp_Pcode = speler.P_Code;
+                    break;
+                }
+            }
+            return Temp_Pcode;
+        }
 
     }
 }

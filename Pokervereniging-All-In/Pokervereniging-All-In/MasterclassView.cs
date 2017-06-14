@@ -33,11 +33,12 @@ namespace Pokervereniging_All_In.Database
         private void MasterclassView_Activated(object sender, EventArgs e)
         {
             MasterView.Items.Clear();
-            foreach (Masterclass test in masterDB.GetMasterclasses())
+            foreach (Masterclass value in masterDB.GetMasterclasses())
             {
-                ListViewItem item = new ListViewItem(test.E_code.ToString());
-                item.SubItems.Add(test.Minimale_rating.ToString());
-                item.SubItems.Add(test.Bekende_speler.ToString());
+                ListViewItem item = new ListViewItem(value.E_code.ToString());
+                item.SubItems.Add(value.Minimale_rating.ToString());
+
+                item.SubItems.Add(value.Bekende_Speler.Roepnaam);
                 MasterView.Items.Add(item);
             }
         }

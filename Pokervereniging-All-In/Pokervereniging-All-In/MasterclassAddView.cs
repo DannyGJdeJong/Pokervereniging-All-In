@@ -17,8 +17,8 @@ namespace Pokervereniging_All_In
         BekendeSpelerController BekendeSpelerDB = new BekendeSpelerController();
         LocatieController LocatieDB = new LocatieController();
         MasterclassController MasterDB = new MasterclassController();
-        int Temp_Ecode = 0;
-        int Temp_Pcode = 0;
+        EventController MasterclassEvent = new EventController();
+        
         public MasterclassAddView()
         {
             InitializeComponent();
@@ -39,30 +39,25 @@ namespace Pokervereniging_All_In
         private void button1_Click(object sender, EventArgs e)
         {
             MakeEvent();
-            MakeMasterclass();
+            if(BSubmit.DialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void MakeEvent()
         {
             Event EventValues = new Event();
             EventValues.Datum = DtPicker.Value;
-            EventValues.L_code = CBLocatie.SelectedIndex;
-            EventController MasterclassEvent = new EventController();
+            EventValues.L_code = int.Parse(CBLocatie.Text);
             MasterclassEvent.InsertEvent(EventValues);
             int Temp_Ecode = MasterclassEvent.GetEventID(MasterclassEvent);
+            MakeMasterclass(Temp_Ecode);
         }
-        private void MakeMasterclass()
+        private void MakeMasterclass(int Temp_Ecode)
         {
             Masterclass temp_masterclass = new Masterclass();
-            foreach (BekendeSpeler speler in BekendeSpelerDB.GetBekendeSpeler())
-            {
-                if (speler.Roepnaam == CBAdd.Text)
-                {
-                    Temp_Pcode = speler.P_Code;
-                    break;
-                }
-            }
-            temp_masterclass.Bekende_speler = Temp_Pcode;
+            temp_masterclass.Bekende_Speler.P_Code = BekendeSpelerDB.GetPCode(CBAdd.Text);
             temp_masterclass.E_code = Temp_Ecode;
             temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
             MasterDB.Insertmasterclass(temp_masterclass);

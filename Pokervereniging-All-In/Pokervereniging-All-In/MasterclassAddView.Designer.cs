@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtRating = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BSubmit = new System.Windows.Forms.Button();
             this.CBLocatie = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CBAdd = new System.Windows.Forms.ComboBox();
@@ -64,15 +64,16 @@
             this.TxtRating.Size = new System.Drawing.Size(268, 31);
             this.TxtRating.TabIndex = 2;
             // 
-            // button1
+            // BSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(207, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BSubmit.Location = new System.Drawing.Point(207, 238);
+            this.BSubmit.Name = "BSubmit";
+            this.BSubmit.Size = new System.Drawing.Size(163, 44);
+            this.BSubmit.TabIndex = 4;
+            this.BSubmit.Text = "Submit";
+            this.BSubmit.UseVisualStyleBackColor = true;
+            this.BSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // CBLocatie
             // 
@@ -115,7 +116,7 @@
             this.DtPicker.Size = new System.Drawing.Size(268, 31);
             this.DtPicker.TabIndex = 10;
             // 
-            // AddView
+            // MasterclassAddView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,11 +126,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CBLocatie);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BSubmit);
             this.Controls.Add(this.TxtRating);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddView";
+            this.Name = "MasterclassAddView";
             this.Text = "AddView";
             this.Load += new System.EventHandler(this.AddView_Load);
             this.ResumeLayout(false);
@@ -142,7 +143,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtRating;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BSubmit;
         private System.Windows.Forms.ComboBox CBLocatie;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CBAdd;

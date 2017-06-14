@@ -24,7 +24,7 @@ namespace Pokervereniging_All_In.Database
 
                 ECodeParam.Value = masterclass.E_code;
                 MinRatingParam.Value = masterclass.Minimale_rating;
-                BekendeSpelerParam.Value = masterclass.Bekende_speler;
+                BekendeSpelerParam.Value = masterclass.Bekende_Speler.P_Code;
 
                 cmd.Parameters.Add(ECodeParam);
                 cmd.Parameters.Add(MinRatingParam);
@@ -52,7 +52,11 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM masterclass";
+                string selectQuery = @"SELECT e_code, minimale_rating, roepnaam
+                                        FROM masterclass
+                                        left join bekende_speler  on
+                                        bekende_speler = p_code
+                                        order by e_code";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
@@ -60,8 +64,12 @@ namespace Pokervereniging_All_In.Database
                 {
                     int EventCode = dataReader.GetInt32("e_code");
                     int MinRating = dataReader.GetInt32("minimale_rating");
-                    int BekendeSpeler = dataReader.GetInt32("bekende_speler");
-                    Masterclass masterclass = new Masterclass { E_code = EventCode, Bekende_speler = BekendeSpeler, Minimale_rating = MinRating };
+                    string BekendeSpeler = dataReader.GetString("roepnaam");
+                    Masterclass masterclass = new Masterclass();
+
+                    masterclass.E_code = EventCode;
+                    masterclass.Bekende_Speler.Roepnaam = BekendeSpeler;
+                    masterclass.Minimale_rating = MinRating;
                     masterclasses.Add(masterclass);
                 }
             }
