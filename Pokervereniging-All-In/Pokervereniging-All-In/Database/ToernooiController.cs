@@ -90,5 +90,81 @@ namespace Pokervereniging_All_In.Database
 
             return toernooi;
         }
+
+        public void InsertToernooi(Toernooi toernooi)
+        {
+            try
+            {
+                conn.Open();
+                string insertString = @"INSERT INTO toernooi (e_code, minimum_deelnemers, inleggeld) 
+                                        VALUES (@e_code, @minimum_deelnemers, @inleggeld)";
+
+                MySqlCommand cmd = new MySqlCommand(insertString, conn);
+                MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
+                MySqlParameter MinimumDeelnemersParam = new MySqlParameter("@minimum_deelnemers", MySqlDbType.Int32);
+                MySqlParameter InleggeldParam = new MySqlParameter("@inleggeld", MySqlDbType.Int32);
+
+                ECodeParam.Value = toernooi.E_code;
+                MinimumDeelnemersParam.Value = toernooi.Mindeelnemers;
+                InleggeldParam.Value = toernooi.Inleggeld;
+
+                cmd.Parameters.Add(ECodeParam);
+                cmd.Parameters.Add(MinimumDeelnemersParam);
+                cmd.Parameters.Add(InleggeldParam);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Toernooi niet toegeveogd: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void SetWinners(int ecode, Speler eerste, Speler tweede, Speler derde)
+        {
+            try
+            {
+                conn.Open();
+                string insertString = @"INSERT INTO toernooi (eerste_plaats, tweede_plaats, derde_plaats) 
+                                        VALUES (@eerste, @tweede, @derde)
+                                        WHERE e_code = @ecode";
+
+                MySqlCommand cmd = new MySqlCommand(insertString, conn);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
+                MySqlParameter EersteParam = new MySqlParameter("@eerste", MySqlDbType.Int32);
+                MySqlParameter TweedeParam = new MySqlParameter("@tweede", MySqlDbType.Int32);
+                MySqlParameter DerdeParam = new MySqlParameter("@derde", MySqlDbType.Int32);
+
+                EcodeParam.Value = ecode;
+                EersteParam.Value = eerste.P_Code;
+                TweedeParam.Value = tweede.P_Code;
+                DerdeParam.Value = derde.P_Code;
+
+                cmd.Parameters.Add(EcodeParam);
+                cmd.Parameters.Add(EersteParam);
+                cmd.Parameters.Add(TweedeParam);
+                cmd.Parameters.Add(DerdeParam);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Toernooi niet toegeveogd: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }    
     }
 }

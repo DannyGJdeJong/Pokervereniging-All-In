@@ -10,16 +10,24 @@ namespace Pokervereniging_All_In.Database
 {
     class SortedPlayerController : DatabaseController
     {
-        public Dictionary<Speler, Deelname> GetSpelersAndDeelnames(int ecode, int volgnr)
+        public Dictionary<Speler, Deelname> GetSpelersAndDeelnames(int ecode)
         {
-            Dictionary<Speler, Deelname> Deelnames = new Dictionary<Speler, Deelname>();
+            Dictionary<Speler, Deelname> Deelnames = new Dictionary<Speler,Deelname>();
 
             try
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code JOIN inschrijving n on d.e_code = i.e_code WHERE e_code = @ecode AND volgnummer = @volgnr";
+                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code JOIN inschrijving n on d.e_code = i.e_code WHERE e_code = @ecode";
+
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
+
+                EcodeParam.Value = ecode;
+
+                cmd.Parameters.Add(EcodeParam);
+
+
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 ToernooiController TC = new ToernooiController();
 
@@ -47,7 +55,6 @@ namespace Pokervereniging_All_In.Database
 
                     Speler s = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
                     Deelname d = new Deelname(e_code, volgnummer, rondenr, doetnogmee, tafelnummer);
-
                     Deelnames.Add(s, d);
                 }
             }
@@ -62,6 +69,6 @@ namespace Pokervereniging_All_In.Database
 
             return Deelnames;
 
-        }
+        }        
     }
 }

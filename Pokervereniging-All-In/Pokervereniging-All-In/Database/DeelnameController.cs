@@ -46,5 +46,11 @@ namespace Pokervereniging_All_In.Database
 
             return Deelnames;
         }
+
+        public void InsertDeelnames(int ecode)
+        {
+            SortedPlayerController SC = new SortedPlayerController();
+            SC.GetSpelersAndDeelnames(ecode);
+        }
     }
 }
