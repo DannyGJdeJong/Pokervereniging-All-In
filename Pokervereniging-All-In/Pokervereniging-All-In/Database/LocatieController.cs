@@ -73,38 +73,36 @@ namespace Pokervereniging_All_In.Database
 
         public Locatie GetLocatie(int lcode)
         {
-            Locatie locatie = null;
+            Locatie locatie = null; 
 
             try
             {
                 conn.Open();
 
                 string selectQuery = @"SELECT * FROM locatie WHERE l_code = @lcode";
-                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);                
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                SpelerController SC = new SpelerController();
 
-                MySqlParameter ecodeParam = new MySqlParameter("@lcode", MySqlDbType.Int32);
-                ecodeParam.Value = lcode;
+                MySqlParameter lcodeParam = new MySqlParameter("@lcode", MySqlDbType.Int32);
+                lcodeParam.Value = lcode;
 
-                cmd.Parameters.Add(ecodeParam);
+                cmd.Parameters.Add(lcodeParam);
                 cmd.Prepare();
 
                 while (dataReader.Read())
                 {
-                    int l_code = dataReader.GetInt32("l_code");
                     int aantaltafels = dataReader.GetInt32("aantal_tafels");
                     string adres = dataReader.GetString("adres");
                     int huisnummer = dataReader.GetInt32("huisnummer");
                     string plaats = dataReader.GetString("plaats");
                     string postcode = dataReader.GetString("postcode");
 
-                    locatie = new Locatie(aantaltafels, adres, huisnummer, l_code, plaats, postcode);
+                    locatie = new Locatie(aantaltafels, adres, huisnummer, lcode, plaats, postcode);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Something went wrong when trying to " + ex);
+                throw ex;
             }
             finally
             {
