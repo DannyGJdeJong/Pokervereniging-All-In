@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Database\BekendeSpelerController.cs" />
     <Compile Include="Database\LocatieController.cs" />
+    <Compile Include="Database\ToernooiController.cs" />
     <Compile Include="MasterclassAddView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="Models\Locatie.cs" />
     <Compile Include="Models\Masterclass.cs" />
     <Compile Include="Models\Persoon.cs" />
+    <Compile Include="Models\Toernooi.cs" />
     <Compile Include="Models\Speler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
