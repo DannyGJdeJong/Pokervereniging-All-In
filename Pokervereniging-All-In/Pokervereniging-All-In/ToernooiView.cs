@@ -25,8 +25,7 @@ namespace Pokervereniging_All_In
             lstToernooi.Items.Clear();
             foreach (Toernooi toernooi in toernooiController.GetToernooien())
             {
-                ListViewItem item = new ListViewItem();
-                item.SubItems.Add(toernooi.Datum.ToShortDateString());
+                ListViewItem item = new ListViewItem(toernooi.Datum.ToShortDateString());
                 item.SubItems.Add(toernooi.Inleggeld.ToString());
                 item.SubItems.Add(toernooi.Mindeelnemers.ToString());
                 item.SubItems.Add(toernooi.ToString());
