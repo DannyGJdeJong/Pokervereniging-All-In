@@ -14,7 +14,7 @@ namespace Pokervereniging_All_In.Models
         public Speler Eersteplaats { get; set; }
         public Speler Tweedeplaats { get; set; }
         public Speler Derdeplaats { get; set; }
-        public Dictionary<Speler, Deelname> Inschrijvingen { get; set; }
+        public Dictionary<Speler, int> Inschrijvingen { get; set; }
 
         public Toernooi(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
         {
