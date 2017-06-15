@@ -27,7 +27,7 @@ namespace Pokervereniging_All_In.Models
                     int eventCode = dataReader.GetInt32("e_code");
                     DateTime datum  = dataReader.GetDateTime("datum");
                     int Locatie = dataReader.GetInt32("l_code");
-                    Event Temp_Event = new Event { E_code = eventCode, Datum = datum, L_code = Locatie };
+                    Event Temp_Event = new Event(eventCode, datum, Locatie);
                     events.Add(Temp_Event);
                 }
             }
@@ -74,43 +74,6 @@ namespace Pokervereniging_All_In.Models
                 conn.Close();
             }
         }
-        public void UpdateEvent(Event e)
-        {
-            try
-            {
-                conn.Open();
-                string insertString = @"UPDATE event SET datum = @datum,
-                                        l_code = @l_code where e_code = @e_code";
-
-                MySqlCommand cmd = new MySqlCommand(insertString, conn);
-                MySqlParameter datumParam = new MySqlParameter("@datum", MySqlDbType.Date);
-                MySqlParameter l_codeParam = new MySqlParameter("@l_code", MySqlDbType.Int32);
-                MySqlParameter e_codeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
-
-                datumParam.Value = e.Datum;
-                l_codeParam.Value = e.L_code;
-                e_codeParam.Value = e.E_code;
-
-
-                cmd.Parameters.Add(datumParam);
-                cmd.Parameters.Add(l_codeParam);
-                cmd.Parameters.Add(e_codeParam);
-
-                cmd.Prepare();
-
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Event niet geupdate: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
         public int GetEventID(EventController e)
         {
            int  Temp_Ecode = 0;
@@ -121,5 +84,45 @@ namespace Pokervereniging_All_In.Models
             return Temp_Ecode;
         }
 
+        public Event GetEvent(int ecode)
+        {
+            Event Temp_Event = null;
+
+            try
+            {
+                conn.Open();
+
+                string selectQuery = @"SELECT * FROM event WHERE e_code = @ecode";
+                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
+
+                EcodeParam.Value = ecode;
+
+                cmd.Parameters.Add(EcodeParam);
+
+                cmd.Prepare();
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int e_code = dataReader.GetInt32("e_code");
+                    DateTime datum = dataReader.GetDateTime("datum");
+                    int lcode = dataReader.GetInt32("l_code");
+
+                    Temp_Event = new Event(ecode, datum, lcode);                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong when trying to " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return Temp_Event;
+        }
     }
 }

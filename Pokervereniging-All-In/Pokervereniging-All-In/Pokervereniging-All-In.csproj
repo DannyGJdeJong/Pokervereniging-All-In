@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\BekendeSpelerController.cs" />
+    <Compile Include="Database\SortedPlayerController.cs" />
     <Compile Include="Database\LocatieController.cs" />
     <Compile Include="Database\DeelnameController.cs" />
     <Compile Include="Database\ToernooiController.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Models\Masterclass.cs" />
     <Compile Include="Models\Persoon.cs" />
     <Compile Include="Models\Deelname.cs" />
+    <Compile Include="Models\Inschrijving.cs" />
     <Compile Include="Models\Toernooi.cs" />
     <Compile Include="Models\Speler.cs" />
     <Compile Include="Program.cs" />
@@ -112,6 +114,12 @@
     </Compile>
     <Compile Include="SpelerView.Designer.cs">
       <DependentUpon>SpelerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToernooiView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToernooiView.Designer.cs">
+      <DependentUpon>ToernooiView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MasterclassAddView.resx">
       <DependentUpon>MasterclassAddView.cs</DependentUpon>
@@ -136,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="SpelerView.resx">
       <DependentUpon>SpelerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToernooiView.resx">
+      <DependentUpon>ToernooiView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Pokervereniging_All_In.Models.Speler.datasource" />
     <None Include="Properties\Settings.settings">
