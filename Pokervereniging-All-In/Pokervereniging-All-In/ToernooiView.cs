@@ -28,7 +28,7 @@ namespace Pokervereniging_All_In
                 ListViewItem item = new ListViewItem(toernooi.Datum.ToShortDateString());
                 item.SubItems.Add(toernooi.Inleggeld.ToString());
                 item.SubItems.Add(toernooi.Mindeelnemers.ToString());
-                item.SubItems.Add(toernooi.ToString());
+                item.SubItems.Add(toernooi.Locatie == null ? "" : toernooi.Locatie.Plaats);
                 lstToernooi.Items.Add(item);
             }
         }
