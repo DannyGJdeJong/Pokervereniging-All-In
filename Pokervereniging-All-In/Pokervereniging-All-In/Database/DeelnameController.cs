@@ -57,7 +57,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'v')
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % 8 + 1));
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels + 1));
                 }
             }
             foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
@@ -66,7 +66,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'm')
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer & 8 + 1));
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer & toernooi.Locatie.Aantal_tafels + 1));
                 }
             }
         }
