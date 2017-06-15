@@ -12,11 +12,11 @@ namespace Pokervereniging_All_In.Models
         public int Ecode { get; set; }
         public int Mindeelnemers { get; set; }
         public int Inleggeld { get; set; }
-        public int Eersteplaats { get; set; }
-        public int Tweedeplaats { get; set; }
-        public int Derdeplaats { get; set; }
+        public Speler Eersteplaats { get; set; }
+        public Speler Tweedeplaats { get; set; }
+        public Speler Derdeplaats { get; set; }
 
-        public Toernooi(int e_code, int mindeelnemers, int inleggeld, int eersteplaats = null, int tweedeplaats = null, int derdeplaats = null )
+        public Toernooi(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
         {
             Ecode = e_code;
             Mindeelnemers = mindeelnemers;
@@ -28,7 +28,7 @@ namespace Pokervereniging_All_In.Models
 
         public override string ToString()
         {
-            return E_code.ToString();
+            return Ecode.ToString();
         }
     }
 }
