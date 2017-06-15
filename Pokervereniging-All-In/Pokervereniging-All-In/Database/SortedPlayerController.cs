@@ -10,7 +10,7 @@ namespace Pokervereniging_All_In.Database
 {
     class SortedPlayerController : DatabaseController
     {
-        public Dictionary<Speler, Deelname> GetSpelersAndDeelnames()
+        public Dictionary<Speler, Deelname> GetSpelersAndDeelnames(int ecode, int volgnr)
         {
             Dictionary<Speler, Deelname> Deelnames = new Dictionary<Speler, Deelname>();
 
@@ -18,7 +18,7 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code";
+                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code JOIN inschrijving n on d.e_code = i.e_code WHERE e_code = @ecode AND volgnummer = @volgnr";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 ToernooiController TC = new ToernooiController();

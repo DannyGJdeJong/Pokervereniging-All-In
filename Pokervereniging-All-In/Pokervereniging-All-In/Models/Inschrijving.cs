@@ -7,23 +7,19 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Toernooi : Event        
+    class Inschrijving        
     {
-        public int Ecode { get; set; }
-        public int Mindeelnemers { get; set; }
-        public int Inleggeld { get; set; }
-        public Speler Eersteplaats { get; set; }
-        public Speler Tweedeplaats { get; set; }
-        public Speler Derdeplaats { get; set; }
+        public Toernooi Ecode { get; set; }
+        public int Volgnummer { get; set; }
+        public Speler Pcode { get; set; }
+        public bool Heeftbetaald { get; set; }
 
-        public Toernooi(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
+        public Inschrijving(Toernooi ecode, int volgnummer, Speler pcode, bool heeftbetaald)
         {
-            Ecode = e_code;
-            Mindeelnemers = mindeelnemers;
-            Inleggeld = inleggeld;
-            Eersteplaats = eersteplaats;
-            Tweedeplaats = tweedeplaats;
-            Derdeplaats = derdeplaats;
+            Ecode = ecode;
+            Volgnummer = volgnummer;
+            Pcode = pcode;
+            Heeftbetaald = heeftbetaald;
         }
 
         public override string ToString()
