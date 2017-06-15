@@ -8,37 +8,47 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class LocatieController :DatabaseController
+    class SortedPlayerController : DatabaseController
     {
-        public List<Locatie> GetLocaties()
+        public Dictionary<Speler, Deelname> GetSpelersAndDeelnames()
         {
-            List<Locatie> locaties = new List<Locatie>();
+            Dictionary<Speler, Deelname> Deelnames = new Dictionary<Speler, Deelname>();
 
             try
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM Locatie";
+                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
+                ToernooiController TC = new ToernooiController();
 
                 while (dataReader.Read())
                 {
-                    int aantal_tafels = dataReader.GetInt32("aantal_tafels");
-                    string adres = dataReader.GetString("straat");
-                    int huisnummer = dataReader.GetInt32("huisnummer");
-                    int lcode = dataReader.GetInt32("l_code");
-                    string plaats = dataReader.GetString("plaats");
+                    int p_code = dataReader.GetInt32("p_code");
+                    string roepnaam = dataReader.GetString("roepnaam");
+                    string voorletters = dataReader.GetString("voorletters");
+                    string tussenvoegsels = dataReader[3] as string;
+                    string achternaam = dataReader.GetString("achternaam");
+                    char geslacht = dataReader.GetChar("geslacht");
                     string postcode = dataReader.GetString("postcode");
+                    string straat = dataReader.GetString("straat");
+                    int huisnummer = dataReader.GetInt32("huisnummer");
+                    string woonplaats = dataReader.GetString("woonplaats");
+                    string emailadres = dataReader.GetString("emailadres");
+                    string IBAN_nummer = dataReader.GetString("IBAN_nummer");
+                    int rating = dataReader.GetInt32("rating");
+                    bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';
+                    Toernooi e_code = TC.GetToernooi(dataReader.GetInt32("e_code"));
+                    int volgnummer = dataReader.GetInt32("volgnummer");
+                    int rondenr = dataReader.GetInt32("ronde_nr");
+                    bool doetnogmee = dataReader.GetString("doet_nog_mee") == "J";
+                    int tafelnummer = dataReader.GetInt32("tafelnummer");
 
-                    Locatie locatie = new Locatie();
-                    locatie.Aantal_tafels = aantal_tafels;
-                    locatie.Adres = adres;
-                    locatie.Huisnummer = huisnummer;
-                    locatie.L_code = lcode;
-                    locatie.Plaats = plaats;
-                    locatie.Postcode = postcode;
-                    locaties.Add(locatie);
+                    Speler s = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
+                    Deelname d = new Deelname(e_code, volgnummer, rondenr, doetnogmee, tafelnummer);
+
+                    Deelnames.Add(s, d);
                 }
             }
             catch (Exception ex)
@@ -50,24 +60,7 @@ namespace Pokervereniging_All_In.Database
                 conn.Close();
             }
 
-            return locaties;
-        
-    }
-        public int GetLCode(string adres)
-        {
-            int Temp_LCode = 0;
-            foreach (Locatie value in GetLocaties())
-            {
-                if (adres == value.Adres)
-                {
-                    Temp_LCode = value.L_code;
-                }
-            }
-
-                return Temp_LCode;
-        }
-        public void InsertLocatie()
-        {
+            return Deelnames;
 
         }
     }
