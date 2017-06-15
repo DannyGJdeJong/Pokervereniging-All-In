@@ -11,6 +11,7 @@ namespace Pokervereniging_All_In.Models
         public int E_code { get; set; }
         public DateTime Datum { get; set; }
         public int L_code { get; set; }
+        public Locatie Locatie { get; set;}
 
     }
 }

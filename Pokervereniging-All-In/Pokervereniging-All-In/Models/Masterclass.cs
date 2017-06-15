@@ -10,7 +10,10 @@ namespace Pokervereniging_All_In.Models
     {
         public int Minimale_rating { get; set; }
         public BekendeSpeler Bekende_Speler = new BekendeSpeler();
-        public Locatie locatie = new Locatie();
 
+        public Masterclass()
+        {
+            Locatie = new Locatie();
+        }
     }
 }
