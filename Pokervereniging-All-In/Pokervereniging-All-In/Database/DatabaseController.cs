@@ -16,7 +16,7 @@ namespace Pokervereniging_All_In.Database
             try
             {
                 #region
-                conn = new MySqlConnection("Server=localhost;Database=poker;Uid=root;Pwd=ruky125f");
+                conn = new MySqlConnection("Server=localhost;Database=poker;Uid=root;Pwd=root");
                 #endregion
             }
             catch (Exception e)
