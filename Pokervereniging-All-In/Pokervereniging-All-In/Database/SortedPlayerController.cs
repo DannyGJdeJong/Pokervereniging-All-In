@@ -46,8 +46,7 @@ namespace Pokervereniging_All_In.Database
                     string emailadres = dataReader.GetString("emailadres");
                     string IBAN_nummer = dataReader.GetString("IBAN_nummer");
                     int rating = dataReader.GetInt32("rating");
-                    bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';
-                    Toernooi e_code = TC.GetToernooi(dataReader.GetInt32("e_code"));
+                    bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';                  
                     int volgnummer = dataReader.GetInt32("volgnummer");
 
                     Speler s = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
