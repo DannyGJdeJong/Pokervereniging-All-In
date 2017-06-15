@@ -124,5 +124,41 @@ namespace Pokervereniging_All_In.Models
 
             return Temp_Event;
         }
+        public void UpdateEvent(Event e)
+        {
+            try
+            {
+                conn.Open();
+                string insertString = @"UPDATE event SET datum = @datum,
+                                        l_code = @l_code where e_code = @e_code";
+
+                MySqlCommand cmd = new MySqlCommand(insertString, conn);
+                MySqlParameter datumParam = new MySqlParameter("@datum", MySqlDbType.Date);
+                MySqlParameter l_codeParam = new MySqlParameter("@l_code", MySqlDbType.Int32);
+                MySqlParameter e_codeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
+
+                datumParam.Value = e.Datum;
+                l_codeParam.Value = e.L_code;
+                e_codeParam.Value = e.E_code;
+
+
+                cmd.Parameters.Add(datumParam);
+                cmd.Parameters.Add(l_codeParam);
+                cmd.Parameters.Add(e_codeParam);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Event niet geupdate: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
