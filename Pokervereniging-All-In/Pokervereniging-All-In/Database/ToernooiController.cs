@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class ToernooiController : DatabaseController
+    public class ToernooiController : DatabaseController
     {
         public List<Toernooi> GetToernooien()
         {

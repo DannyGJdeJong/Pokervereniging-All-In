@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class EventController : DatabaseController
+    public class EventController : DatabaseController
     {
         public List<Event> GetEvents()
         {

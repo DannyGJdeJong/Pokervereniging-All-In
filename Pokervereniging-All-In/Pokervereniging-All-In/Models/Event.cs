@@ -7,7 +7,7 @@ using Pokervereniging_All_In.Database;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Event
+    public class Event
     {
         public int E_code { get; set; }
         public DateTime Datum { get; set; }

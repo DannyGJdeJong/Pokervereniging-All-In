@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Locatie
+    public class Locatie
     {
         public int Aantal_tafels { get; set; }
         public string Adres { get; set; }

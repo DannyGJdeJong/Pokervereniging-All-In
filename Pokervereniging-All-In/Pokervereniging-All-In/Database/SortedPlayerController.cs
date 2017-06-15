@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class SortedPlayerController : DatabaseController
+    public class SortedPlayerController : DatabaseController
     {
         public Dictionary<Speler, int> GetSpelersAndVolgnummers(int ecode)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Inschrijving : Event        
+    public class Inschrijving : Event        
     {
         public int Ecode { get; set; }
         public int Mindeelnemers { get; set; }

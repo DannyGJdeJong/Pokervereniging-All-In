@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class MasterclassController : DatabaseController
+    public class MasterclassController : DatabaseController
     {
         public void Insertmasterclass(Masterclass masterclass)
         {

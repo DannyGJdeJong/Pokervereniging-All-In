@@ -32,8 +32,8 @@ namespace Pokervereniging_All_In
 
         private void btnToernooi_Click(object sender, EventArgs e)
         {
-            ToernooiView toernooiView = new ToernooiView();
-            toernooiView.Show();
+            ToernooiOverview toernooiOverview = new ToernooiOverview();
+            toernooiOverview.Show();
         }
 
         private void btnMasterclass_Click(object sender, EventArgs e)

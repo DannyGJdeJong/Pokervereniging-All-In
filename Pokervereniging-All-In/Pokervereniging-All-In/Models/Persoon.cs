@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    abstract class Persoon
+    public abstract class Persoon
     {
         public string Roepnaam { get; set; }
         public string Voorletters { get; set; }

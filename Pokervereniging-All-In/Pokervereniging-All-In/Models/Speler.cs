@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Models
 {
-    class Speler : Persoon
+    public class Speler : Persoon
     {
         public string IBANnummer { get; set; }
         public int Rating { get; set; }

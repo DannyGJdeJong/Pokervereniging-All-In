@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class BekendeSpelerController : DatabaseController
+    public class BekendeSpelerController : DatabaseController
     {
         public List<BekendeSpeler> GetBekendeSpeler()
         {

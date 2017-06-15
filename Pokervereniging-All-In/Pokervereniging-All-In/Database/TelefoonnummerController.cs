@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class TelefoonnummerController : DatabaseController
+    public class TelefoonnummerController : DatabaseController
     {
         public List<string> GetTelefoonnummers(int p_code)
         {

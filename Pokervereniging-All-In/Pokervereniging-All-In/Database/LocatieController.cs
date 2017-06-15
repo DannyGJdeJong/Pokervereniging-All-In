@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pokervereniging_All_In.Database
 {
-    class LocatieController :DatabaseController
+    public class LocatieController :DatabaseController
     {
         public List<Locatie> GetLocaties()
         {
