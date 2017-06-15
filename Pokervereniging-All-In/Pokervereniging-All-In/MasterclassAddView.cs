@@ -32,7 +32,7 @@ namespace Pokervereniging_All_In
             }
             foreach (Locatie locatie in LocatieDB.GetLocaties())
             {
-                CBLocatie.Items.Add(locatie.Adres);
+                CBLocatie.Items.Add(locatie.Straat);
             }
         }
 

@@ -86,7 +86,7 @@ namespace Pokervereniging_All_In.Database
                     {
                         if (masterclass.L_code == val.L_code)
                         {
-                            masterclass.Locatie.Adres = val.Adres;
+                            masterclass.Locatie.Straat = val.Straat;
                         }
                     }
                     masterclasses.Add(masterclass);

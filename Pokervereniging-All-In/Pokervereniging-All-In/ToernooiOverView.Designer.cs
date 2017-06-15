@@ -82,7 +82,7 @@
             this.Controls.Add(this.lstToernooi);
             this.Name = "ToernooiOverview";
             this.Text = "ToernooiView";
-            this.Activated += new System.EventHandler(this.ToernooiView_Activated);
+            this.Activated += new System.EventHandler(this.ToernooiOverview_Activated);
             this.ResumeLayout(false);
 
         }

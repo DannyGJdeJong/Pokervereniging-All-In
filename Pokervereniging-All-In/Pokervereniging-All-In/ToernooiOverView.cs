@@ -22,7 +22,7 @@ namespace Pokervereniging_All_In
             InitializeComponent();
         }
 
-        private void ToernooiView_Activated(object sender, EventArgs e)
+        private void ToernooiOverview_Activated(object sender, EventArgs e)
         {
             toernooiController = new ToernooiController();
             toernooiList = new List<Toernooi>();
@@ -46,7 +46,7 @@ namespace Pokervereniging_All_In
 
         private void lstToernooi_DoubleClick(object sender, EventArgs e)
         {
-            ToernooiOverview toernooiView = new ToernooiOverview(toernooiList[lstToernooi.SelectedIndices[0]]);
+            ToernooiView toernooiView = new ToernooiView(toernooiList[lstToernooi.SelectedIndices[0]]);
             toernooiView.Show();
         }
     }

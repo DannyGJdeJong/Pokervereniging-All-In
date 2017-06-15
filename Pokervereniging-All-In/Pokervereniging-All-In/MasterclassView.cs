@@ -48,7 +48,7 @@ namespace Pokervereniging_All_In.Database
                 ListViewItem item = new ListViewItem(value.Datum.ToShortDateString());
                 item.SubItems.Add(value.Minimale_rating.ToString());
                 item.SubItems.Add(value.Bekende_Speler.Roepnaam);
-                item.SubItems.Add(value.Locatie.Adres);
+                item.SubItems.Add(value.Locatie.Straat);
                 item.SubItems.Add(value.E_code.ToString());
                 MasterView.Items.Add(item);
                 

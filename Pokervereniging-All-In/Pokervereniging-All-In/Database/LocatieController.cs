@@ -25,7 +25,7 @@ namespace Pokervereniging_All_In.Database
                 while (dataReader.Read())
                 {
                     int aantal_tafels = dataReader.GetInt32("aantal_tafels");
-                    string adres = dataReader.GetString("straat");
+                    string straat = dataReader.GetString("straat");
                     int huisnummer = dataReader.GetInt32("huisnummer");
                     int lcode = dataReader.GetInt32("l_code");
                     string plaats = dataReader.GetString("plaats");
@@ -33,7 +33,7 @@ namespace Pokervereniging_All_In.Database
 
                     Locatie locatie = new Locatie();
                     locatie.Aantal_tafels = aantal_tafels;
-                    locatie.Adres = adres;
+                    locatie.Straat = straat;
                     locatie.Huisnummer = huisnummer;
                     locatie.L_code = lcode;
                     locatie.Plaats = plaats;
@@ -58,7 +58,7 @@ namespace Pokervereniging_All_In.Database
             int Temp_LCode = 0;
             foreach (Locatie value in GetLocaties())
             {
-                if (adres == value.Adres)
+                if (adres == value.Straat)
                 {
                     Temp_LCode = value.L_code;
                 }
@@ -93,11 +93,12 @@ namespace Pokervereniging_All_In.Database
                 while (dataReader.Read())
                 {
                     int aantaltafels = dataReader.GetInt32("aantal_tafels");
+                    string straat = dataReader.GetString("straat");
                     int huisnummer = dataReader.GetInt32("huisnummer");
                     string plaats = dataReader.GetString("plaats");
                     string postcode = dataReader.GetString("postcode");
 
-                    locatie = new Locatie(aantaltafels, huisnummer, lcode, plaats, postcode);
+                    locatie = new Locatie(aantaltafels, straat, huisnummer, lcode, plaats, postcode);
                 }
             }
             catch (Exception ex)
