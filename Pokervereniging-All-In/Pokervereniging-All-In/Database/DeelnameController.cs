@@ -49,8 +49,68 @@ namespace Pokervereniging_All_In.Database
 
         public void InsertDeelnames(int ecode)
         {
-            SortedPlayerController SC = new SortedPlayerController();
-            SC.GetSpelersAndDeelnames(ecode);
+            ToernooiController TC = new ToernooiController();
+            Toernooi toernooi = TC.GetToernooi(ecode);
+            foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
+            {
+                int nummer = 0;
+                if (kv.Key.Geslacht == 'v')
+                {
+                    nummer++;
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % 8 + 1));
+                }
+            }
+            foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
+            {
+                int nummer = 0;
+                if (kv.Key.Geslacht == 'm')
+                {
+                    nummer++;
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer & 8 + 1));
+                }
+            }
+        }
+
+        public void InsertDeelname(Deelname deelname)
+        {
+            try
+            {
+                conn.Open();
+                string insertString = @"INSERT INTO deelname (e_code, volgnummer, ronde_nr, doet_nog_mee, tafelnummer) 
+                                        VALUES (@e_code, @volgnummer, @rondenr, @doetnogmee, @tafelnummer)";
+
+                MySqlCommand cmd = new MySqlCommand(insertString, conn);
+                MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
+                MySqlParameter VolgnummerParam = new MySqlParameter("@volgnummer", MySqlDbType.Int32);
+                MySqlParameter RondenrParam = new MySqlParameter("@rondenr", MySqlDbType.Int32);
+                MySqlParameter DoetnogmeeParam = new MySqlParameter("@doetnogmee", MySqlDbType.VarChar);
+                MySqlParameter TafelnummerParam = new MySqlParameter("@tafelnummer", MySqlDbType.Int32);
+
+                ECodeParam.Value = deelname.Ecode.E_code;
+                VolgnummerParam.Value = deelname.Volgnummer;
+                RondenrParam.Value = deelname.Rondenr;
+                DoetnogmeeParam.Value = deelname.Doetnogmee == true ? "J" : "N";
+                TafelnummerParam.Value = deelname.Tafelnummer;
+
+                cmd.Parameters.Add(ECodeParam);
+                cmd.Parameters.Add(VolgnummerParam);
+                cmd.Parameters.Add(RondenrParam);
+                cmd.Parameters.Add(DoetnogmeeParam);
+                cmd.Parameters.Add(TafelnummerParam);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Toernooi niet toegeveogd: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

@@ -64,7 +64,6 @@ namespace Pokervereniging_All_In.Database
 
                 string selectQuery = @"SELECT * FROM toernooi WHERE e_code = @ecode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
                 SpelerController SC = new SpelerController();
 
                 MySqlParameter ecodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
@@ -73,14 +72,23 @@ namespace Pokervereniging_All_In.Database
                 cmd.Parameters.Add(ecodeParam);
                 cmd.Prepare();
 
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
                 while (dataReader.Read())
                 {
                     int e_code = dataReader.GetInt32("e_code");
                     int mindeelnemers = dataReader.GetInt32("minimum_deelnemers");
                     int inleggeld = dataReader.GetInt32("inleggeld");
-                    Speler eersteplaats = SC.GetSpeler(dataReader.GetInt32("eerste_plaats"));
-                    Speler tweedeplaats = SC.GetSpeler(dataReader.GetInt32("tweede_plaats"));
-                    Speler derdeplaats = SC.GetSpeler(dataReader.GetInt32("derde_plaats"));
+                    Speler eersteplaats = null;
+                    Speler tweedeplaats = null;
+                    Speler derdeplaats = null;
+                    if (dataReader["eerste_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("eerste_plaats"));
+                    if (dataReader["tweede_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("tweede_plaats"));
+                    if (dataReader["derde_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("derde_plaats"));
+
 
                     toernooi = new Toernooi(e_code, mindeelnemers, inleggeld, eersteplaats, tweedeplaats, derdeplaats);
                 }
