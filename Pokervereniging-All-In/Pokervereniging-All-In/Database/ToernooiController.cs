@@ -28,9 +28,15 @@ namespace Pokervereniging_All_In.Database
                     int e_code = dataReader.GetInt32("e_code");
                     int mindeelnemers = dataReader.GetInt32("minimum_deelnemers");
                     int inleggeld = dataReader.GetInt32("inleggeld");
-                    Speler eersteplaats = SC.GetSpeler(dataReader.GetInt32("eerste_plaats"));
-                    Speler tweedeplaats = SC.GetSpeler(dataReader.GetInt32("tweede_plaats"));
-                    Speler derdeplaats = SC.GetSpeler(dataReader.GetInt32("derde_plaats"));
+                    Speler eersteplaats = null;
+                    Speler tweedeplaats = null;
+                    Speler derdeplaats = null;
+                    if (dataReader["eerste_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("eerste_plaats"));
+                    if (dataReader["tweede_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("tweede_plaats"));
+                    if (dataReader["derde_plaats"] != DBNull.Value)
+                        eersteplaats = SC.GetSpeler(dataReader.GetInt32("derde_plaats"));
 
                     Toernooi toernooi = new Toernooi(e_code, mindeelnemers, inleggeld, eersteplaats, tweedeplaats, derdeplaats);
                     Toernooien.Add(toernooi);
