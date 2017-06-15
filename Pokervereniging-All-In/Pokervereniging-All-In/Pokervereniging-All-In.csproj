@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Database\DatabaseController.cs" />
     <Compile Include="Database\MasterclassController.cs" />
+    <Compile Include="MasterclassUpdateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterclassUpdateView.Designer.cs">
+      <DependentUpon>MasterclassUpdateView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterclassView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="MasterclassAddView.resx">
       <DependentUpon>MasterclassAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterclassUpdateView.resx">
+      <DependentUpon>MasterclassUpdateView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterclassView.resx">
       <DependentUpon>MasterclassView.cs</DependentUpon>

@@ -17,7 +17,7 @@ namespace Pokervereniging_All_In
         BekendeSpelerController BekendeSpelerDB = new BekendeSpelerController();
         LocatieController LocatieDB = new LocatieController();
         MasterclassController MasterDB = new MasterclassController();
-        EventController MasterclassEvent = new EventController();
+        EventController EventDB = new EventController();
         
         public MasterclassAddView()
         {
@@ -50,8 +50,8 @@ namespace Pokervereniging_All_In
             Event EventValues = new Event();
             EventValues.Datum = DtPicker.Value;
             EventValues.L_code = LocatieDB.GetLCode(CBLocatie.Text); ;
-            MasterclassEvent.InsertEvent(EventValues);
-            int Temp_Ecode = MasterclassEvent.GetEventID(MasterclassEvent);
+            EventDB.InsertEvent(EventValues);
+            int Temp_Ecode = EventDB.GetEventID(EventDB);
             MakeMasterclass(Temp_Ecode);
         }
         private void MakeMasterclass(int Temp_Ecode)
@@ -61,6 +61,7 @@ namespace Pokervereniging_All_In
             temp_masterclass.E_code = Temp_Ecode;
             if(string.IsNullOrEmpty(TxtRating.Text))
             {
+                MessageBox.Show("Het rating veld moet ingevuld worden");
                 throw new ArgumentException("Het rating veld moet ingevuld worden");
             }
             else

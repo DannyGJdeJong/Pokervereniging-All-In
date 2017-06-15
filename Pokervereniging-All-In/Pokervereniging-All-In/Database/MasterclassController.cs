@@ -103,6 +103,42 @@ namespace Pokervereniging_All_In.Database
 
             return masterclasses;
         }
+
+        public void Updatemasterclass(Masterclass masterclass)
+        {
+            try
+            {
+                conn.Open();
+                string insertString = @"UPDATE masterclass SET minimale_rating =  @minimale_rating,
+                                        bekende_speler = @bekende_speler where e_code = @e_code"; 
+
+                MySqlCommand cmd = new MySqlCommand(insertString, conn);
+                MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
+                MySqlParameter MinRatingParam = new MySqlParameter("@minimale_rating", MySqlDbType.Int32);
+                MySqlParameter BekendeSpelerParam = new MySqlParameter("@bekende_speler", MySqlDbType.Int32);
+
+                ECodeParam.Value = masterclass.E_code;
+                MinRatingParam.Value = masterclass.Minimale_rating;
+                BekendeSpelerParam.Value = masterclass.Bekende_Speler.P_Code;
+
+                cmd.Parameters.Add(ECodeParam);
+                cmd.Parameters.Add(MinRatingParam);
+                cmd.Parameters.Add(BekendeSpelerParam);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Masterclass niet geupdate: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
 

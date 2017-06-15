@@ -30,11 +30,12 @@
         {
             this.MasterView = new System.Windows.Forms.ListView();
             this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Locatie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Min_rating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BekendeSpeler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Locatie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtUpdate = new System.Windows.Forms.Button();
+            this.E_code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // MasterView
@@ -43,7 +44,8 @@
             this.Datum,
             this.Min_rating,
             this.BekendeSpeler,
-            this.Locatie});
+            this.Locatie,
+            this.E_code});
             this.MasterView.FullRowSelect = true;
             this.MasterView.GridLines = true;
             this.MasterView.Location = new System.Drawing.Point(24, 12);
@@ -59,11 +61,6 @@
             this.Datum.Text = "Datum";
             this.Datum.Width = 100;
             // 
-            // Locatie
-            // 
-            this.Locatie.Text = "Locatie";
-            this.Locatie.Width = 120;
-            // 
             // Min_rating
             // 
             this.Min_rating.Text = "Minimale_rating";
@@ -73,6 +70,11 @@
             // 
             this.BekendeSpeler.Text = "Bekende_speler";
             this.BekendeSpeler.Width = 175;
+            // 
+            // Locatie
+            // 
+            this.Locatie.Text = "Locatie";
+            this.Locatie.Width = 120;
             // 
             // button1
             // 
@@ -84,21 +86,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // BtUpdate
             // 
-            this.button3.Location = new System.Drawing.Point(153, 503);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtUpdate.Location = new System.Drawing.Point(153, 503);
+            this.BtUpdate.Name = "BtUpdate";
+            this.BtUpdate.Size = new System.Drawing.Size(135, 37);
+            this.BtUpdate.TabIndex = 3;
+            this.BtUpdate.Text = "Update";
+            this.BtUpdate.UseVisualStyleBackColor = true;
+            this.BtUpdate.Click += new System.EventHandler(this.BtUpdate_Click);
+            // 
+            // E_code
+            // 
+            this.E_code.Text = "E_code";
+            this.E_code.Width = 100;
             // 
             // MasterclassView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 565);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtUpdate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.MasterView);
             this.Name = "MasterclassView";
@@ -116,7 +124,8 @@
         private System.Windows.Forms.ColumnHeader Min_rating;
         private System.Windows.Forms.ColumnHeader BekendeSpeler;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtUpdate;
         private System.Windows.Forms.ColumnHeader Locatie;
+        private System.Windows.Forms.ColumnHeader E_code;
     }
 }

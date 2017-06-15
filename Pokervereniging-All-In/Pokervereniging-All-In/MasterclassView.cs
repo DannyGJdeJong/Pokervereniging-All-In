@@ -33,6 +33,15 @@ namespace Pokervereniging_All_In.Database
 
         private void MasterclassView_Activated(object sender, EventArgs e)
         {
+            ShowMasterclass();
+        }
+
+        private void BtUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateMasterclass();
+        }
+        public void ShowMasterclass()
+        {
             MasterView.Items.Clear();
             foreach (Masterclass value in masterDB.GetMasterclasses())
             {
@@ -40,7 +49,33 @@ namespace Pokervereniging_All_In.Database
                 item.SubItems.Add(value.Minimale_rating.ToString());
                 item.SubItems.Add(value.Bekende_Speler.Roepnaam);
                 item.SubItems.Add(value.locatie.Adres);
+                item.SubItems.Add(value.E_code.ToString());
                 MasterView.Items.Add(item);
+                
+            }
+        }
+        private void UpdateMasterclass()
+        {
+            if(MasterView.SelectedItems.Count > 0){
+                MasterclassUpdateView UpdateView = new MasterclassUpdateView();
+
+                ListViewItem item = MasterView.SelectedItems[0];
+                string datum = item.SubItems[0].Text;
+                string minimale_rating = item.SubItems[1].Text;
+                string bekende_speler = item.SubItems[2].Text;
+                string locatie = item.SubItems[3].Text;
+                string e_code = item.SubItems[4].Text;
+
+                UpdateView.TxtUpdateEcode.Text = e_code;
+                UpdateView.TxtUpdateRating.Text = minimale_rating;
+                UpdateView.DtUpdatePicker.Text = datum;
+                UpdateView.CBUpdateLocatie.Text = locatie;
+                UpdateView.CBUpdateSpeler.Text = bekende_speler;
+
+                UpdateView.Show();
+            }
+            else{
+                MessageBox.Show("Select a masterclass to update");
             }
         }
     }
