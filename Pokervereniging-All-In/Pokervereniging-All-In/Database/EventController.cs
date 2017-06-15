@@ -27,7 +27,7 @@ namespace Pokervereniging_All_In.Models
                     int eventCode = dataReader.GetInt32("e_code");
                     DateTime datum  = dataReader.GetDateTime("datum");
                     int Locatie = dataReader.GetInt32("l_code");
-                    Event Temp_Event = new Event { E_code = eventCode, Datum = datum, L_code = Locatie };
+                    Event Temp_Event = new Event(eventCode, datum, Locatie);
                     events.Add(Temp_Event);
                 }
             }
@@ -82,6 +82,47 @@ namespace Pokervereniging_All_In.Models
                 Temp_Ecode = Math.Max(value.E_code, Temp_Ecode);
             }
             return Temp_Ecode;
+        }
+
+        public Event GetEvent(int ecode)
+        {
+            Event Temp_Event = null;
+
+            try
+            {
+                conn.Open();
+
+                string selectQuery = @"SELECT * FROM event WHERE e_code = @ecode";
+                MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
+
+                EcodeParam.Value = ecode;
+
+                cmd.Parameters.Add(EcodeParam);
+
+                cmd.Prepare();
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int e_code = dataReader.GetInt32("e_code");
+                    DateTime datum = dataReader.GetDateTime("datum");
+                    int lcode = dataReader.GetInt32("l_code");
+
+                    Temp_Event = new Event(ecode, datum, lcode);                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong when trying to " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return Temp_Event;
         }
     }
 }

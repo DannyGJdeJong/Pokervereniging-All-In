@@ -14,5 +14,21 @@ namespace Pokervereniging_All_In.Models
         public int L_code { get; set; }
         public string Plaats { get; set; }
         public string Postcode { get; set; }
+
+        public Locatie(int aantaltafels, string adres, int huisnummer, int lcode, string plaats, string postcode)
+        {
+            Aantal_tafels = aantaltafels;
+            Adres = adres;
+            Huisnummer = huisnummer;
+            L_code = lcode;
+            Plaats = plaats;
+            Postcode = postcode;
+        }
+
+        public Locatie()
+        {
+
+        }
     }
+
 }

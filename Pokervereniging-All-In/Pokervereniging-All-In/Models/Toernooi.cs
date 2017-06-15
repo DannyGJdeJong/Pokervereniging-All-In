@@ -19,6 +19,7 @@ namespace Pokervereniging_All_In.Models
         public Toernooi(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
         {
             SortedPlayerController SC = new SortedPlayerController();
+            EventController EV = new EventController();
 
             E_code = e_code;
             Mindeelnemers = mindeelnemers;
@@ -27,6 +28,10 @@ namespace Pokervereniging_All_In.Models
             Tweedeplaats = tweedeplaats;
             Derdeplaats = derdeplaats;
             Inschrijvingen = SC.GetSpelersAndVolgnummers(E_code);
+            Event ev = EV.GetEvent(e_code);
+            Datum = ev.Datum;
+            L_code = ev.L_code;
+            Locatie = ev.Locatie;
         }
 
         public override string ToString()
