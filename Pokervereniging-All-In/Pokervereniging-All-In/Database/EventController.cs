@@ -94,7 +94,6 @@ namespace Pokervereniging_All_In.Models
 
                 string selectQuery = @"SELECT * FROM event WHERE e_code = @ecode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
                 MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
 
                 EcodeParam.Value = ecode;
@@ -102,6 +101,8 @@ namespace Pokervereniging_All_In.Models
                 cmd.Parameters.Add(EcodeParam);
 
                 cmd.Prepare();
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
 
                 while (dataReader.Read())
                 {

@@ -81,7 +81,6 @@ namespace Pokervereniging_All_In.Database
 
                 string selectQuery = @"SELECT * FROM locatie WHERE l_code = @lcode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);                
-                MySqlDataReader dataReader = cmd.ExecuteReader();
 
                 MySqlParameter lcodeParam = new MySqlParameter("@lcode", MySqlDbType.Int32);
                 lcodeParam.Value = lcode;
@@ -89,15 +88,16 @@ namespace Pokervereniging_All_In.Database
                 cmd.Parameters.Add(lcodeParam);
                 cmd.Prepare();
 
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
                 while (dataReader.Read())
                 {
                     int aantaltafels = dataReader.GetInt32("aantal_tafels");
-                    string adres = dataReader.GetString("adres");
                     int huisnummer = dataReader.GetInt32("huisnummer");
                     string plaats = dataReader.GetString("plaats");
                     string postcode = dataReader.GetString("postcode");
 
-                    locatie = new Locatie(aantaltafels, adres, huisnummer, lcode, plaats, postcode);
+                    locatie = new Locatie(aantaltafels, huisnummer, lcode, plaats, postcode);
                 }
             }
             catch (Exception ex)
