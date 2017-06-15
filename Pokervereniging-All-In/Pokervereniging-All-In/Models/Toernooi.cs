@@ -26,7 +26,7 @@ namespace Pokervereniging_All_In.Models
             Eersteplaats = eersteplaats;
             Tweedeplaats = tweedeplaats;
             Derdeplaats = derdeplaats;
-            Inschrijvingen = SC.GetSpelersAndDeelnames(E_code);
+            Inschrijvingen = SC.GetSpelersAndVolgnummers(E_code);
         }
 
         public override string ToString()
