@@ -67,6 +67,7 @@
     <Compile Include="Database\BekendeSpelerController.cs" />
     <Compile Include="Database\LocatieController.cs" />
     <Compile Include="Database\DeelnameController.cs" />
+    <Compile Include="Database\SortedPlayerController.cs" />
     <Compile Include="Database\ToernooiController.cs" />
     <Compile Include="MasterclassAddView.cs">
       <SubType>Form</SubType>
@@ -93,6 +94,7 @@
     <Compile Include="Models\BekendeSpeler.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Database\EventController.cs" />
+    <Compile Include="Models\Inschrijving.cs" />
     <Compile Include="Models\Locatie.cs" />
     <Compile Include="Models\Masterclass.cs" />
     <Compile Include="Models\Persoon.cs" />
