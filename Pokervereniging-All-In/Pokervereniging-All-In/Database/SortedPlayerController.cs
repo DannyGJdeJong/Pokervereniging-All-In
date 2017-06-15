@@ -10,9 +10,11 @@ namespace Pokervereniging_All_In.Database
 {
     class SortedPlayerController : DatabaseController
     {
+        public Dictionary<Speler, Deelname> Deelnames { get; set; }
+
         public Dictionary<Speler, int> GetSpelersAndDeelnames(int ecode)
         {
-            Dictionary<Speler, int> Deelnames = new Dictionary<Speler,int>();
+            Dictionary<Speler, int> SpelersVolgnummers = new Dictionary<Speler,int>();
 
             try
             {
@@ -54,8 +56,9 @@ namespace Pokervereniging_All_In.Database
                     int tafelnummer = dataReader.GetInt32("tafelnummer");
 
                     Speler s = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
-                    
-                    Deelnames.Add(s, volgnummer);
+                    Deelname d = new Deelname(e_code, volgnummer, rondenr, doetnogmee, tafelnummer);
+                    Deelnames.Add(s, d);
+                    SpelersVolgnummers.Add(s, volgnummer);
                 }
             }
             catch (Exception ex)
@@ -67,7 +70,7 @@ namespace Pokervereniging_All_In.Database
                 conn.Close();
             }
 
-            return Deelnames;
+            return SpelersVolgnummers;
 
         }        
     }
