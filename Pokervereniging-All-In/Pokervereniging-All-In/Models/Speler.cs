@@ -34,6 +34,11 @@ namespace Pokervereniging_All_In.Models
             Telefoonnummers = telnumCont.GetTelefoonnummers(P_Code);
         }
 
+        public Speler()
+        {
+            P_Code = -1;
+        }
+
         public override string ToString()
         {
             if (String.IsNullOrEmpty(Tussenvoegsels))

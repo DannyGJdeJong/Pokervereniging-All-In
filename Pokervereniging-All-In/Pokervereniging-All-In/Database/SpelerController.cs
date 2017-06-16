@@ -157,6 +157,60 @@ namespace Pokervereniging_All_In.Database
             return spelers;
         }
 
+        public void AddSpeler(Speler speler)
+        {
+            try
+            {
+                conn.Open();
+                string addString = @"INSERT INTO speler (roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist) 
+                                        VALUES (@roepnaam, @voorletters, @tussenvoegsels, @achternaam, @geslacht, @postcode, @straat, @huisnummer, @woonplaats, @emailadres, @IBAN_nummer, @rating, @staat_op_blacklist)";
+                
+                MySqlCommand cmdAddSpeler = new MySqlCommand(addString, conn);
+
+                MySqlParameter pcodeParam = new MySqlParameter("@p_code", MySqlDbType.Int32) { Value = speler.P_Code };
+                MySqlParameter roepnaamParam = new MySqlParameter("@roepnaam", MySqlDbType.VarChar) { Value = speler.Roepnaam };
+                MySqlParameter voorlettersParam = new MySqlParameter("@voorletters", MySqlDbType.VarChar) { Value = speler.Voorletters };
+                MySqlParameter tussenvoegselsParam = new MySqlParameter("@tussenvoegsels", MySqlDbType.VarChar) { Value = speler.Tussenvoegsels };
+                MySqlParameter achternaamParam = new MySqlParameter("@achternaam", MySqlDbType.VarChar) { Value = speler.Achternaam };
+                MySqlParameter geslachtParam = new MySqlParameter("@geslacht", MySqlDbType.VarChar) { Value = speler.Geslacht };
+                MySqlParameter postcodeParam = new MySqlParameter("@postcode", MySqlDbType.VarChar) { Value = speler.Postcode };
+                MySqlParameter straatParam = new MySqlParameter("@straat", MySqlDbType.VarChar) { Value = speler.Straat };
+                MySqlParameter huisnummerParam = new MySqlParameter("@huisnummer", MySqlDbType.Int32) { Value = speler.Huisnummer };
+                MySqlParameter woonplaatsParam = new MySqlParameter("@woonplaats", MySqlDbType.VarChar) { Value = speler.Woonplaats };
+                MySqlParameter emailadresParam = new MySqlParameter("@emailadres", MySqlDbType.VarChar) { Value = speler.Emailadres };
+                MySqlParameter IBANParam = new MySqlParameter("@IBAN_nummer", MySqlDbType.VarChar) { Value = speler.IBANnummer };
+                MySqlParameter ratingParam = new MySqlParameter("@rating", MySqlDbType.Int32) { Value = speler.Rating };
+                MySqlParameter staatOpBlacklistParam = new MySqlParameter("@staat_op_blacklist", MySqlDbType.VarChar) { Value = speler.StaatOpBlacklist ? 'J' : 'N' };
+
+                cmdAddSpeler.Parameters.Add(pcodeParam);
+                cmdAddSpeler.Parameters.Add(roepnaamParam);
+                cmdAddSpeler.Parameters.Add(voorlettersParam);
+                cmdAddSpeler.Parameters.Add(tussenvoegselsParam);
+                cmdAddSpeler.Parameters.Add(achternaamParam);
+                cmdAddSpeler.Parameters.Add(geslachtParam);
+                cmdAddSpeler.Parameters.Add(postcodeParam);
+                cmdAddSpeler.Parameters.Add(straatParam);
+                cmdAddSpeler.Parameters.Add(huisnummerParam);
+                cmdAddSpeler.Parameters.Add(woonplaatsParam);
+                cmdAddSpeler.Parameters.Add(emailadresParam);
+                cmdAddSpeler.Parameters.Add(IBANParam);
+                cmdAddSpeler.Parameters.Add(ratingParam);
+                cmdAddSpeler.Parameters.Add(staatOpBlacklistParam);
+
+                cmdAddSpeler.Prepare();
+
+                cmdAddSpeler.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Speler niet toegevoegd: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
         private Speler GetAttributes(MySqlDataReader dataReader)
         {

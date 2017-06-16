@@ -15,11 +15,13 @@ namespace Pokervereniging_All_In
     public partial class SpelerDialog : Form
     {
         Speler speler;
-        public SpelerDialog(Speler speler)
+        SpelerView spelerView;
+        public SpelerDialog(Speler speler, SpelerView spelerView)
         {
             InitializeComponent();
             Text = speler.Naam;
             this.speler = speler;
+            this.spelerView = spelerView;
             txtVoorletters.Text = speler.Voorletters;
             txtRoepnaam.Text = speler.Roepnaam;
             txtTussenvoegsels.Text = speler.Tussenvoegsels;
@@ -35,9 +37,12 @@ namespace Pokervereniging_All_In
             chkStaatOpBlacklist.Checked = speler.StaatOpBlacklist;
         }
 
-        public SpelerDialog()
+        public SpelerDialog(SpelerView spelerView)
         {
-
+            InitializeComponent();
+            Text = "Nieuwe speler";
+            this.spelerView = spelerView;
+            speler = new Speler();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -45,7 +50,7 @@ namespace Pokervereniging_All_In
             Submit();
         }
 
-        private void Submit()
+        private void FetchInformation()
         {
             speler.Voorletters = txtVoorletters.Text;
             speler.Roepnaam = txtRoepnaam.Text;
@@ -60,9 +65,23 @@ namespace Pokervereniging_All_In
             speler.IBANnummer = txtIBAN.Text;
             speler.Rating = Convert.ToInt32(numRating.Value);
             speler.StaatOpBlacklist = chkStaatOpBlacklist.Checked;
+        }
 
+        private void Submit()
+        {
+            FetchInformation();
             SpelerController spelerController = new SpelerController();
-            spelerController.UpdateSpeler(speler);
+            if (speler.P_Code == -1)
+            {
+                spelerController.AddSpeler(speler);
+            }
+            else
+            {
+                spelerController.UpdateSpeler(speler);
+            }
+
+            spelerView.RefreshList();
+            this.Close();
         }
     }
 }

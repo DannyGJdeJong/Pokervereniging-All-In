@@ -33,6 +33,7 @@
             this.naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.emailadres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAddSpeler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstSpeler
@@ -68,11 +69,23 @@
             this.emailadres.Text = "Emailadres";
             this.emailadres.Width = 213;
             // 
+            // btnAddSpeler
+            // 
+            this.btnAddSpeler.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddSpeler.Location = new System.Drawing.Point(11, 340);
+            this.btnAddSpeler.Name = "btnAddSpeler";
+            this.btnAddSpeler.Size = new System.Drawing.Size(105, 23);
+            this.btnAddSpeler.TabIndex = 3;
+            this.btnAddSpeler.Text = "Voeg Speler Toe";
+            this.btnAddSpeler.UseVisualStyleBackColor = true;
+            this.btnAddSpeler.Click += new System.EventHandler(this.btnAddSpeler_Click);
+            // 
             // SpelerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 375);
+            this.Controls.Add(this.btnAddSpeler);
             this.Controls.Add(this.lstSpeler);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SpelerView";
@@ -87,5 +100,6 @@
         private System.Windows.Forms.ColumnHeader naam;
         private System.Windows.Forms.ColumnHeader adres;
         private System.Windows.Forms.ColumnHeader emailadres;
+        private System.Windows.Forms.Button btnAddSpeler;
     }
 }
