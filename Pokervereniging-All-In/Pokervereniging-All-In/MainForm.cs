@@ -19,17 +19,6 @@ namespace Pokervereniging_All_In
             InitializeComponent();
         }
 
-        private void btnGetSpelers_Click(object sender, EventArgs e)
-        {
-            SpelerController spelerCont = new SpelerController();
-            foreach (Speler speler in spelerCont.GetSpelers())
-            {
-                lstSpelers.Items.Add(speler);
-            }
-
-            dataGridView1.DataSource = spelerCont.GetSpelers();
-        }
-
         private void btnToernooi_Click(object sender, EventArgs e)
         {
             ToernooiOverview toernooiOverview = new ToernooiOverview();
