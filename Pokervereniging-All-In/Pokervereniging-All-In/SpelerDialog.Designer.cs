@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.lblRoepnaam = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtVoorletters = new System.Windows.Forms.TextBox();
+            this.txtRoepnaam = new System.Windows.Forms.TextBox();
+            this.txtTussenvoegsels = new System.Windows.Forms.TextBox();
+            this.txtAchternaam = new System.Windows.Forms.TextBox();
+            this.txtPostcode = new System.Windows.Forms.TextBox();
+            this.txtStraat = new System.Windows.Forms.TextBox();
             this.lblVoorletters = new System.Windows.Forms.Label();
             this.lblTussenvoegsels = new System.Windows.Forms.Label();
             this.lblAchternaam = new System.Windows.Forms.Label();
             this.lblGeslacht = new System.Windows.Forms.Label();
             this.lblPostcode = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbGeslacht = new System.Windows.Forms.ComboBox();
             this.lblStraat = new System.Windows.Forms.Label();
             this.lblHuisnummer = new System.Windows.Forms.Label();
             this.lblWoonplaats = new System.Windows.Forms.Label();
@@ -49,11 +48,14 @@
             this.lblIBANNummer = new System.Windows.Forms.Label();
             this.lblRating = new System.Windows.Forms.Label();
             this.lblStaatOpBlacklist = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtWoonplaats = new System.Windows.Forms.TextBox();
+            this.txtEmailadres = new System.Windows.Forms.TextBox();
+            this.txtIBAN = new System.Windows.Forms.TextBox();
             this.chkStaatOpBlacklist = new System.Windows.Forms.CheckBox();
+            this.numHuisnummer = new System.Windows.Forms.NumericUpDown();
+            this.numRating = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuisnummer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRoepnaam
@@ -65,54 +67,47 @@
             this.lblRoepnaam.TabIndex = 0;
             this.lblRoepnaam.Text = "Roepnaam";
             // 
-            // textBox1
+            // txtVoorletters
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtVoorletters.Location = new System.Drawing.Point(120, 13);
+            this.txtVoorletters.Name = "txtVoorletters";
+            this.txtVoorletters.Size = new System.Drawing.Size(152, 20);
+            this.txtVoorletters.TabIndex = 1;
             // 
-            // textBox2
+            // txtRoepnaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtRoepnaam.Location = new System.Drawing.Point(120, 40);
+            this.txtRoepnaam.Name = "txtRoepnaam";
+            this.txtRoepnaam.Size = new System.Drawing.Size(152, 20);
+            this.txtRoepnaam.TabIndex = 2;
             // 
-            // textBox3
+            // txtTussenvoegsels
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtTussenvoegsels.Location = new System.Drawing.Point(120, 66);
+            this.txtTussenvoegsels.Name = "txtTussenvoegsels";
+            this.txtTussenvoegsels.Size = new System.Drawing.Size(152, 20);
+            this.txtTussenvoegsels.TabIndex = 3;
             // 
-            // textBox4
+            // txtAchternaam
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(152, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtAchternaam.Location = new System.Drawing.Point(120, 95);
+            this.txtAchternaam.Name = "txtAchternaam";
+            this.txtAchternaam.Size = new System.Drawing.Size(152, 20);
+            this.txtAchternaam.TabIndex = 4;
             // 
-            // textBox5
+            // txtPostcode
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 201);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(152, 20);
-            this.textBox5.TabIndex = 5;
+            this.txtPostcode.Location = new System.Drawing.Point(120, 149);
+            this.txtPostcode.Name = "txtPostcode";
+            this.txtPostcode.Size = new System.Drawing.Size(152, 20);
+            this.txtPostcode.TabIndex = 6;
             // 
-            // textBox6
+            // txtStraat
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 149);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(152, 20);
-            this.textBox6.TabIndex = 6;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(120, 175);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(152, 20);
-            this.textBox7.TabIndex = 7;
+            this.txtStraat.Location = new System.Drawing.Point(120, 175);
+            this.txtStraat.Name = "txtStraat";
+            this.txtStraat.Size = new System.Drawing.Size(152, 20);
+            this.txtStraat.TabIndex = 7;
             // 
             // lblVoorletters
             // 
@@ -159,16 +154,16 @@
             this.lblPostcode.TabIndex = 12;
             this.lblPostcode.Text = "Postcode";
             // 
-            // comboBox1
+            // cbbGeslacht
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbGeslacht.FormattingEnabled = true;
+            this.cbbGeslacht.Items.AddRange(new object[] {
             "M",
             "V"});
-            this.comboBox1.Location = new System.Drawing.Point(120, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cbbGeslacht.Location = new System.Drawing.Point(120, 122);
+            this.cbbGeslacht.Name = "cbbGeslacht";
+            this.cbbGeslacht.Size = new System.Drawing.Size(152, 21);
+            this.cbbGeslacht.TabIndex = 13;
             // 
             // lblStraat
             // 
@@ -233,33 +228,26 @@
             this.lblStaatOpBlacklist.TabIndex = 20;
             this.lblStaatOpBlacklist.Text = "Staat op blacklist";
             // 
-            // textBox8
+            // txtWoonplaats
             // 
-            this.textBox8.Location = new System.Drawing.Point(120, 227);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(152, 20);
-            this.textBox8.TabIndex = 21;
+            this.txtWoonplaats.Location = new System.Drawing.Point(120, 227);
+            this.txtWoonplaats.Name = "txtWoonplaats";
+            this.txtWoonplaats.Size = new System.Drawing.Size(152, 20);
+            this.txtWoonplaats.TabIndex = 21;
             // 
-            // textBox9
+            // txtEmailadres
             // 
-            this.textBox9.Location = new System.Drawing.Point(120, 253);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(152, 20);
-            this.textBox9.TabIndex = 22;
+            this.txtEmailadres.Location = new System.Drawing.Point(120, 253);
+            this.txtEmailadres.Name = "txtEmailadres";
+            this.txtEmailadres.Size = new System.Drawing.Size(152, 20);
+            this.txtEmailadres.TabIndex = 22;
             // 
-            // textBox10
+            // txtIBAN
             // 
-            this.textBox10.Location = new System.Drawing.Point(120, 279);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(152, 20);
-            this.textBox10.TabIndex = 23;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(120, 305);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(152, 20);
-            this.textBox11.TabIndex = 24;
+            this.txtIBAN.Location = new System.Drawing.Point(120, 279);
+            this.txtIBAN.Name = "txtIBAN";
+            this.txtIBAN.Size = new System.Drawing.Size(152, 20);
+            this.txtIBAN.TabIndex = 23;
             // 
             // chkStaatOpBlacklist
             // 
@@ -270,16 +258,41 @@
             this.chkStaatOpBlacklist.TabIndex = 25;
             this.chkStaatOpBlacklist.UseVisualStyleBackColor = true;
             // 
+            // numHuisnummer
+            // 
+            this.numHuisnummer.Location = new System.Drawing.Point(120, 202);
+            this.numHuisnummer.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.numHuisnummer.Name = "numHuisnummer";
+            this.numHuisnummer.Size = new System.Drawing.Size(152, 20);
+            this.numHuisnummer.TabIndex = 26;
+            // 
+            // numRating
+            // 
+            this.numRating.Location = new System.Drawing.Point(120, 305);
+            this.numRating.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.numRating.Name = "numRating";
+            this.numRating.Size = new System.Drawing.Size(152, 20);
+            this.numRating.TabIndex = 27;
+            // 
             // SpelerDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 402);
+            this.Controls.Add(this.numRating);
+            this.Controls.Add(this.numHuisnummer);
             this.Controls.Add(this.chkStaatOpBlacklist);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtIBAN);
+            this.Controls.Add(this.txtEmailadres);
+            this.Controls.Add(this.txtWoonplaats);
             this.Controls.Add(this.lblStaatOpBlacklist);
             this.Controls.Add(this.lblRating);
             this.Controls.Add(this.lblIBANNummer);
@@ -287,22 +300,23 @@
             this.Controls.Add(this.lblWoonplaats);
             this.Controls.Add(this.lblHuisnummer);
             this.Controls.Add(this.lblStraat);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbGeslacht);
             this.Controls.Add(this.lblPostcode);
             this.Controls.Add(this.lblGeslacht);
             this.Controls.Add(this.lblAchternaam);
             this.Controls.Add(this.lblTussenvoegsels);
             this.Controls.Add(this.lblVoorletters);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStraat);
+            this.Controls.Add(this.txtPostcode);
+            this.Controls.Add(this.txtAchternaam);
+            this.Controls.Add(this.txtTussenvoegsels);
+            this.Controls.Add(this.txtRoepnaam);
+            this.Controls.Add(this.txtVoorletters);
             this.Controls.Add(this.lblRoepnaam);
             this.Name = "SpelerDialog";
             this.Text = "SpelerDialog";
+            ((System.ComponentModel.ISupportInitialize)(this.numHuisnummer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRating)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,19 +325,18 @@
         #endregion
 
         private System.Windows.Forms.Label lblRoepnaam;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtVoorletters;
+        private System.Windows.Forms.TextBox txtRoepnaam;
+        private System.Windows.Forms.TextBox txtTussenvoegsels;
+        private System.Windows.Forms.TextBox txtAchternaam;
+        private System.Windows.Forms.TextBox txtPostcode;
+        private System.Windows.Forms.TextBox txtStraat;
         private System.Windows.Forms.Label lblVoorletters;
         private System.Windows.Forms.Label lblTussenvoegsels;
         private System.Windows.Forms.Label lblAchternaam;
         private System.Windows.Forms.Label lblGeslacht;
         private System.Windows.Forms.Label lblPostcode;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbGeslacht;
         private System.Windows.Forms.Label lblStraat;
         private System.Windows.Forms.Label lblHuisnummer;
         private System.Windows.Forms.Label lblWoonplaats;
@@ -331,10 +344,11 @@
         private System.Windows.Forms.Label lblIBANNummer;
         private System.Windows.Forms.Label lblRating;
         private System.Windows.Forms.Label lblStaatOpBlacklist;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtWoonplaats;
+        private System.Windows.Forms.TextBox txtEmailadres;
+        private System.Windows.Forms.TextBox txtIBAN;
         private System.Windows.Forms.CheckBox chkStaatOpBlacklist;
+        private System.Windows.Forms.NumericUpDown numHuisnummer;
+        private System.Windows.Forms.NumericUpDown numRating;
     }
 }
