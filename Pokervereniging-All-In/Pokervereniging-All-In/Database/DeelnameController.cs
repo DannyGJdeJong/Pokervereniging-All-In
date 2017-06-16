@@ -29,7 +29,7 @@ namespace Pokervereniging_All_In.Database
 
                 while (dataReader.Read())
                 {
-                    Toernooi e_code = TC.GetToernooi(dataReader.GetInt32("e_code"));     
+                    int e_code = dataReader.GetInt32("e_code");  
                     int volgnummer = dataReader.GetInt32("volgnummer");
                     int rondenr = dataReader.GetInt32("ronde_nr");
                     bool doetnogmee = dataReader.GetString("doet_nog_mee") == "J";
@@ -61,7 +61,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'v' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
             foreach (KeyValuePair<Speler, Inschrijving> kv in toernooi.Inschrijvingen)
@@ -69,7 +69,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'm' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
         }
@@ -89,7 +89,7 @@ namespace Pokervereniging_All_In.Database
                 MySqlParameter DoetnogmeeParam = new MySqlParameter("@doetnogmee", MySqlDbType.VarChar);
                 MySqlParameter TafelnummerParam = new MySqlParameter("@tafelnummer", MySqlDbType.Int32);
 
-                ECodeParam.Value = deelname.Ecode.E_code;
+                ECodeParam.Value = deelname.Ecode;
                 VolgnummerParam.Value = deelname.Volgnummer;
                 RondenrParam.Value = deelname.Rondenr;
                 DoetnogmeeParam.Value = deelname.Doetnogmee == true ? "J" : "N";

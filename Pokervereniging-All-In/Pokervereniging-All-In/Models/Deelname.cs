@@ -9,13 +9,13 @@ namespace Pokervereniging_All_In.Models
 {
     public class Deelname      
     {
-        public Toernooi Ecode { get; set; }
+        public int Ecode { get; set; }
         public int Volgnummer { get; set; }
         public int Rondenr { get; set; }
         public bool Doetnogmee { get; set; }
         public int Tafelnummer { get; set; }
 
-        public Deelname(Toernooi e_code, int volgnummer, int rondenr, bool doetnogmee, int tafelnummer)
+        public Deelname(int e_code, int volgnummer, int rondenr, bool doetnogmee, int tafelnummer)
         {
             Ecode = e_code;
             Volgnummer = volgnummer;

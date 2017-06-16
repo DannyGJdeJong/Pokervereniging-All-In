@@ -105,7 +105,7 @@ namespace Pokervereniging_All_In.Database
                     string IBAN_nummer = dataReader.GetString("IBAN_nummer");
                     int rating = dataReader.GetInt32("rating");
                     bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';
-                    Toernooi e_code = TC.GetToernooi(dataReader.GetInt32("e_code"));
+                    int e_code = dataReader.GetInt32("e_code");
                     int volgnummer = dataReader.GetInt32("volgnummer");
                     int rondenr = dataReader.GetInt32("ronde_nr");
                     bool doetnogmee = dataReader.GetString("doet_nog_mee") == "J";
