@@ -19,32 +19,8 @@ namespace Pokervereniging_All_In
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void CBAdd_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CBLocatie_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -53,7 +29,7 @@ namespace Pokervereniging_All_In
                 Event temp_event = new Event(0, dateTimePicker1.Value, l.L_code);
                 eventController.InsertEvent(temp_event);
 
-                Toernooi toernooi = new Toernooi(eventController.GetEventID(eventController), Convert.ToInt32(TxtMinDeelnemers.Text), Convert.ToInt32(TxtInleggeld.Text));
+                Toernooi toernooi = new Toernooi(eventController.GetEventID(eventController), Convert.ToInt32(TxtInleggeld.Text), Convert.ToInt32(TxtInleggeld.Text));
                 ToernooiController toernooiController = new ToernooiController();
                 toernooiController.InsertToernooi(toernooi);
             }
@@ -61,31 +37,6 @@ namespace Pokervereniging_All_In
             {
                 MessageBox.Show("Kan toernooi niet toevoegen check de waardes");
             }
-        }
-
-        private void TxtRating_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DtPicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ToernooiAddView_Load(object sender, EventArgs e)
@@ -96,6 +47,11 @@ namespace Pokervereniging_All_In
             {
                 comboBoxLocatie.Items.Add(l);
             }           
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

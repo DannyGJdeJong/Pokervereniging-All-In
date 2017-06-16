@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.BSubmit = new System.Windows.Forms.Button();
+            this.BtnSubmit = new System.Windows.Forms.Button();
             this.TxtMinDeelnemers = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtInleggeld = new System.Windows.Forms.TextBox();
@@ -49,17 +49,17 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Inleggeld";
             // 
-            // BSubmit
+            // BtnSubmit
             // 
-            this.BSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BSubmit.Location = new System.Drawing.Point(106, 175);
-            this.BSubmit.Margin = new System.Windows.Forms.Padding(2);
-            this.BSubmit.Name = "BSubmit";
-            this.BSubmit.Size = new System.Drawing.Size(82, 23);
-            this.BSubmit.TabIndex = 14;
-            this.BSubmit.Text = "Submit";
-            this.BSubmit.UseVisualStyleBackColor = true;
-            this.BSubmit.Click += new System.EventHandler(this.BSubmit_Click);
+            this.BtnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BtnSubmit.Location = new System.Drawing.Point(106, 175);
+            this.BtnSubmit.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSubmit.Name = "BtnSubmit";
+            this.BtnSubmit.Size = new System.Drawing.Size(82, 23);
+            this.BtnSubmit.TabIndex = 14;
+            this.BtnSubmit.Text = "Submit";
+            this.BtnSubmit.UseVisualStyleBackColor = true;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // TxtMinDeelnemers
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtInleggeld);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.BSubmit);
+            this.Controls.Add(this.BtnSubmit);
             this.Controls.Add(this.TxtMinDeelnemers);
             this.Controls.Add(this.label1);
             this.Name = "ToernooiChangeView";
@@ -144,7 +144,7 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button BSubmit;
+        private System.Windows.Forms.Button BtnSubmit;
         private System.Windows.Forms.TextBox TxtMinDeelnemers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtInleggeld;
