@@ -109,6 +109,12 @@
     <Compile Include="Models\Speler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpelerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpelerDialog.Designer.cs">
+      <DependentUpon>SpelerDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpelerView.cs">
       <SubType>Form</SubType>
     </Compile>

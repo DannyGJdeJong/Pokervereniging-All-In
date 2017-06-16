@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpelerView));
-            this.lstToernooi = new System.Windows.Forms.ListView();
+            this.lstSpeler = new System.Windows.Forms.ListView();
             this.naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.emailadres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,20 +37,20 @@
             // 
             // lstToernooi
             // 
-            this.lstToernooi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstSpeler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.naam,
             this.adres,
             this.emailadres});
-            this.lstToernooi.FullRowSelect = true;
-            this.lstToernooi.GridLines = true;
-            this.lstToernooi.Location = new System.Drawing.Point(11, 11);
-            this.lstToernooi.Margin = new System.Windows.Forms.Padding(2);
-            this.lstToernooi.MultiSelect = false;
-            this.lstToernooi.Name = "lstToernooi";
-            this.lstToernooi.Size = new System.Drawing.Size(604, 318);
-            this.lstToernooi.TabIndex = 2;
-            this.lstToernooi.UseCompatibleStateImageBehavior = false;
-            this.lstToernooi.View = System.Windows.Forms.View.Details;
+            this.lstSpeler.FullRowSelect = true;
+            this.lstSpeler.GridLines = true;
+            this.lstSpeler.Location = new System.Drawing.Point(11, 11);
+            this.lstSpeler.Margin = new System.Windows.Forms.Padding(2);
+            this.lstSpeler.MultiSelect = false;
+            this.lstSpeler.Name = "lstToernooi";
+            this.lstSpeler.Size = new System.Drawing.Size(604, 318);
+            this.lstSpeler.TabIndex = 2;
+            this.lstSpeler.UseCompatibleStateImageBehavior = false;
+            this.lstSpeler.View = System.Windows.Forms.View.Details;
             // 
             // naam
             // 
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 375);
-            this.Controls.Add(this.lstToernooi);
+            this.Controls.Add(this.lstSpeler);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SpelerView";
             this.Text = "SpelerView";
@@ -82,7 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lstToernooi;
+        private System.Windows.Forms.ListView lstSpeler;
         private System.Windows.Forms.ColumnHeader naam;
         private System.Windows.Forms.ColumnHeader adres;
         private System.Windows.Forms.ColumnHeader emailadres;
