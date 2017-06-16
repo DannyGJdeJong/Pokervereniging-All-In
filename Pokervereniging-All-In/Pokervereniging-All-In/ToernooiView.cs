@@ -20,7 +20,13 @@ namespace Pokervereniging_All_In
 
             this.toernooi = toernooi;
             InitializeComponent();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToernooiView));
+            DeelnameController deelnameController = new DeelnameController();
+            if (deelnameController.GetDeelnames(toernooi.E_code) == null)
+            {
+
+            }
+
+
             for (int i = 0; i < toernooi.Locatie.Aantal_tafels; i++)
             {
                 PictureBox picTafel = new PictureBox();
