@@ -121,6 +121,12 @@
     <Compile Include="SpelerView.Designer.cs">
       <DependentUpon>SpelerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToernooiChangeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToernooiChangeView.Designer.cs">
+      <DependentUpon>ToernooiChangeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToernooiAddView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="SpelerView.resx">
       <DependentUpon>SpelerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToernooiChangeView.resx">
+      <DependentUpon>ToernooiChangeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToernooiAddView.resx">
       <DependentUpon>ToernooiAddView.cs</DependentUpon>

@@ -180,5 +180,43 @@ namespace Pokervereniging_All_In.Database
                 conn.Close();
             }
         }    
+
+        public void ChangeToernooi(Toernooi t, Event e)
+        {
+            try
+            {
+                conn.Open();
+                string updateStringToernooi = "UPDATE toernooi SET minimum_deelnemers = @mindeelnemers, inleggeld = @inleggeld WHERE e_code = @ecode"; 
+                string updateStringEvent = "UPDATE Event SET datum = @datum, l_code = @lcode WHERE e_code = @ecode";
+
+                MySqlCommand cmdToernooi = new MySqlCommand(updateStringToernooi, conn);
+                MySqlCommand cmdEvent = new MySqlCommand(updateStringEvent, conn);
+
+                MySqlParameter mindeelnemersParam = new MySqlParameter("@mindeelnemers", MySqlDbType.Int32);
+                MySqlParameter inleggeldParam = new MySqlParameter("@inleggeld", MySqlDbType.Int32);
+                MySqlParameter datumParam = new MySqlParameter("datum", MySqlDbType.DateTime);
+                MySqlParameter lcodeParam = new MySqlParameter("lcode", MySqlDbType.Int32);
+
+                cmdToernooi.Parameters.Add(mindeelnemersParam);
+                cmdToernooi.Parameters.Add(inleggeldParam);
+                cmdEvent.Parameters.Add(datumParam);
+                cmdEvent.Parameters.Add(lcodeParam);
+
+                cmdEvent.Prepare();
+                cmdToernooi.Prepare();
+
+                cmdEvent.ExecuteNonQuery();
+                cmdToernooi.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
