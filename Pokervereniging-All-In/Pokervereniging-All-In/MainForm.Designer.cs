@@ -34,10 +34,6 @@
             this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lstSpelers = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnToernooi = new System.Windows.Forms.Button();
             this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voorlettersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roepnaamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +49,10 @@
             this.staatOpBlacklistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.iBANnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lstSpelers = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnToernooi = new System.Windows.Forms.Button();
             this.btnMasterclass = new System.Windows.Forms.Button();
             this.btnSpeler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -125,44 +125,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(844, 84);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // lstSpelers
-            // 
-            this.lstSpelers.FormattingEnabled = true;
-            this.lstSpelers.Location = new System.Drawing.Point(6, 125);
-            this.lstSpelers.Name = "lstSpelers";
-            this.lstSpelers.Size = new System.Drawing.Size(259, 43);
-            this.lstSpelers.TabIndex = 1;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(856, 195);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(856, 195);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnToernooi
-            // 
-            this.btnToernooi.Location = new System.Drawing.Point(12, 12);
-            this.btnToernooi.Name = "btnToernooi";
-            this.btnToernooi.Size = new System.Drawing.Size(75, 23);
-            this.btnToernooi.TabIndex = 3;
-            this.btnToernooi.Text = "Toernooi";
-            this.btnToernooi.UseVisualStyleBackColor = true;
-            this.btnToernooi.Click += new System.EventHandler(this.btnToernooi_Click);
             // 
             // pCodeDataGridViewTextBoxColumn
             // 
@@ -280,6 +242,44 @@
             // 
             this.spelerBindingSource.DataSource = typeof(Pokervereniging_All_In.Models.Speler);
             // 
+            // lstSpelers
+            // 
+            this.lstSpelers.FormattingEnabled = true;
+            this.lstSpelers.Location = new System.Drawing.Point(6, 125);
+            this.lstSpelers.Name = "lstSpelers";
+            this.lstSpelers.Size = new System.Drawing.Size(259, 43);
+            this.lstSpelers.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(856, 195);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(856, 195);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnToernooi
+            // 
+            this.btnToernooi.Location = new System.Drawing.Point(12, 12);
+            this.btnToernooi.Name = "btnToernooi";
+            this.btnToernooi.Size = new System.Drawing.Size(75, 23);
+            this.btnToernooi.TabIndex = 3;
+            this.btnToernooi.Text = "Toernooi";
+            this.btnToernooi.UseVisualStyleBackColor = true;
+            this.btnToernooi.Click += new System.EventHandler(this.btnToernooi_Click);
+            // 
             // btnMasterclass
             // 
             this.btnMasterclass.Location = new System.Drawing.Point(93, 12);
@@ -298,6 +298,7 @@
             this.btnSpeler.TabIndex = 5;
             this.btnSpeler.Text = "Speler";
             this.btnSpeler.UseVisualStyleBackColor = true;
+            this.btnSpeler.Click += new System.EventHandler(this.btnSpeler_Click);
             // 
             // button1
             // 

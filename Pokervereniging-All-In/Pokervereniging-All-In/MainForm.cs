@@ -41,5 +41,11 @@ namespace Pokervereniging_All_In
             MasterclassView masterClassView = new MasterclassView();
             masterClassView.Show();
         }
+
+        private void btnSpeler_Click(object sender, EventArgs e)
+        {
+            SpelerView spelerView = new SpelerView();
+            spelerView.Show();
+        }
     }
 }

@@ -8,6 +8,24 @@ namespace Pokervereniging_All_In.Models
 {
     public abstract class Persoon
     {
+        public string Naam { get
+            {
+                if (String.IsNullOrEmpty(Tussenvoegsels))
+                {
+                    return Roepnaam + " " + Achternaam;
+                }
+                else
+                {
+                    return Roepnaam + " " + Tussenvoegsels + " " + Achternaam;
+                }
+            }
+        }
+
+        public string Adres { get
+            {
+                return Straat + " " + Huisnummer + " " + Woonplaats;
+            }
+        }
         public string Roepnaam { get; set; }
         public string Voorletters { get; set; }
         public string Achternaam { get; set; }

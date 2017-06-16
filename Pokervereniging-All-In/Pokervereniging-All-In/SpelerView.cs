@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Pokervereniging_All_In.Database;
+using Pokervereniging_All_In.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,16 @@ namespace Pokervereniging_All_In
         public SpelerView()
         {
             InitializeComponent();
+            SpelerController spelerCont = new SpelerController();
+            foreach (Speler speler in spelerCont.GetSpelers())
+            {
+                ListViewItem item = new ListViewItem(speler.Naam);
+                item.SubItems.Add(speler.Adres);
+                item.SubItems.Add(speler.Emailadres);
+                lstToernooi.Items.Add(item);
+            }
         }
+
+
     }
 }
