@@ -75,7 +75,7 @@ namespace Pokervereniging_All_In.Database
                 UpdateView.Show();
             }
             else{
-                MessageBox.Show("Select a masterclass to update");
+                MessageBox.Show("Selecteer een masterclass die je wilt wijzigen.");
             }
         }
     }

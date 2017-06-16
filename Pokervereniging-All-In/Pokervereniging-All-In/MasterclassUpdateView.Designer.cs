@@ -89,7 +89,7 @@
             this.BSubmit.Name = "BSubmit";
             this.BSubmit.Size = new System.Drawing.Size(163, 44);
             this.BSubmit.TabIndex = 14;
-            this.BSubmit.Text = "Update";
+            this.BSubmit.Text = "Wijzigen";
             this.BSubmit.UseVisualStyleBackColor = true;
             this.BSubmit.Click += new System.EventHandler(this.BSubmit_Click);
             // 

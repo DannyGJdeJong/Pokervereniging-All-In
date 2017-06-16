@@ -71,7 +71,7 @@
             this.BSubmit.Name = "BSubmit";
             this.BSubmit.Size = new System.Drawing.Size(163, 44);
             this.BSubmit.TabIndex = 4;
-            this.BSubmit.Text = "Submit";
+            this.BSubmit.Text = "Toevoegen";
             this.BSubmit.UseVisualStyleBackColor = true;
             this.BSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
