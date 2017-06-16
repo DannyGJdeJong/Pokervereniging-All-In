@@ -14,17 +14,22 @@ namespace Pokervereniging_All_In
 {
     public partial class SpelerView : Form
     {
+        List<Speler> spelerList = new List<Speler>();
+
         public SpelerView()
         {
             InitializeComponent();
             SpelerController spelerCont = new SpelerController();
-            foreach (Speler speler in spelerCont.GetSpelers())
+            spelerList = spelerCont.GetSpelers();
+            foreach (Speler speler in spelerList)
             {
                 ListViewItem item = new ListViewItem(speler.Naam);
                 item.SubItems.Add(speler.Adres);
                 item.SubItems.Add(speler.Emailadres);
-                lstToernooi.Items.Add(item);
+                lstSpeler.Items.Add(item);
             }
+            SpelerDialog spelerDialog = new SpelerDialog(spelerList[lstSpeler.SelectedIndices[0]]);
+            spelerDialog.Show();
         }
 
 
