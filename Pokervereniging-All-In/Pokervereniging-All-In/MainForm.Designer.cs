@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 72);
+            this.ClientSize = new System.Drawing.Size(264, 47);
             this.Controls.Add(this.btnSpeler);
             this.Controls.Add(this.btnMasterclass);
             this.Controls.Add(this.btnToernooi);
