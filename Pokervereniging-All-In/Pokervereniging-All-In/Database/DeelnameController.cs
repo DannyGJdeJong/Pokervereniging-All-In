@@ -18,7 +18,7 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM toernooi WHERE e_code = @ecode";
+                string selectQuery = @"SELECT * FROM deelname WHERE e_code = @ecode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
                 MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
                 EcodeParam.Value = ecode;
@@ -56,20 +56,20 @@ namespace Pokervereniging_All_In.Database
             ToernooiController TC = new ToernooiController();
             Toernooi toernooi = TC.GetToernooi(ecode);
             int nummer = 0;
-            foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
+            foreach (KeyValuePair<Speler, Inschrijving> kv in toernooi.Inschrijvingen)
             {
-                if (kv.Key.Geslacht == 'v')
+                if (kv.Key.Geslacht == 'v' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
-            foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
+            foreach (KeyValuePair<Speler, Inschrijving> kv in toernooi.Inschrijvingen)
             {
-                if (kv.Key.Geslacht == 'm')
+                if (kv.Key.Geslacht == 'm' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
         }
