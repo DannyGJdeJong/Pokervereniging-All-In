@@ -74,6 +74,34 @@ namespace Pokervereniging_All_In.Database
             return spelers;
         }
 
+        public void DeletePlayer(Speler speler)
+        {
+            try
+            {
+                conn.Open();
+                string deleteString= "DELETE FROM speler WHERE p_code = @p_code";
+
+                MySqlCommand cmdUpdateSpeler = new MySqlCommand(deleteString, conn);
+
+                MySqlParameter pcodeParam = new MySqlParameter("@p_code", MySqlDbType.Int32) { Value = speler.P_Code };
+
+                cmdUpdateSpeler.Parameters.Add(pcodeParam);
+
+                cmdUpdateSpeler.Prepare();
+
+                cmdUpdateSpeler.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public void UpdateSpeler(Speler speler)
         {
             try

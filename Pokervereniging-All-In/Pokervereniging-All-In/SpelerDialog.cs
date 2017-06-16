@@ -40,6 +40,7 @@ namespace Pokervereniging_All_In
         public SpelerDialog(SpelerView spelerView)
         {
             InitializeComponent();
+            btnDelete.Enabled = false;
             Text = "Nieuwe speler";
             this.spelerView = spelerView;
             speler = new Speler();
@@ -80,6 +81,14 @@ namespace Pokervereniging_All_In
                 spelerController.UpdateSpeler(speler);
             }
 
+            spelerView.RefreshList();
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            SpelerController spelerController = new SpelerController();
+            spelerController.DeletePlayer(speler);
             spelerView.RefreshList();
             this.Close();
         }
