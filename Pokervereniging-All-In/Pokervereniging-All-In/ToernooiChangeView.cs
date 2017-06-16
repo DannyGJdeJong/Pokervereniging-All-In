@@ -33,13 +33,20 @@ namespace Pokervereniging_All_In
             comboBoxLocatie.SelectedItem = TEvent.Locatie;
         }
 
-        private void BSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            ToernooiController TC = new ToernooiController();
-            Toernooi newToernooi = new Toernooi(toernooi.E_code, Convert.ToInt32(TxtMinDeelnemers.Text), Convert.ToInt32(TxtInleggeld.Text));
-            Locatie selectedLocatie = (Locatie)comboBoxLocatie.SelectedItem;
-            Event newEvent = new Event(toernooi.E_code, dateTimePicker.Value, selectedLocatie.L_code);
-            TC.ChangeToernooi(toernooi, TEvent);
+            try
+            {
+                ToernooiController TC = new ToernooiController();
+                Toernooi newToernooi = new Toernooi(toernooi.E_code, Convert.ToInt32(TxtMinDeelnemers.Text), Convert.ToInt32(TxtInleggeld.Text));
+                Locatie selectedLocatie = (Locatie)comboBoxLocatie.SelectedItem;
+                Event newEvent = new Event(toernooi.E_code, dateTimePicker.Value, selectedLocatie.L_code);
+                TC.ChangeToernooi(newToernooi, newEvent);
+            }
+            catch
+            {
+                MessageBox.Show("Kan toernooi niet veranderen. check de waardes");
+            }
         }
     }
 }
