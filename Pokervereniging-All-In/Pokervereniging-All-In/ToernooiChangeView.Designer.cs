@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtInleggeld = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxLocatie = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -96,12 +96,12 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Datum";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dateTimePicker.Location = new System.Drawing.Point(105, 118);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(168, 20);
+            this.dateTimePicker.TabIndex = 19;
             // 
             // label6
             // 
@@ -127,7 +127,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.comboBoxLocatie);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtInleggeld);
             this.Controls.Add(this.label3);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtInleggeld;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxLocatie;
     }

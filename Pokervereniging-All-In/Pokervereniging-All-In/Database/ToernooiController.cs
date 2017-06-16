@@ -187,20 +187,29 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
                 string updateStringToernooi = "UPDATE toernooi SET minimum_deelnemers = @mindeelnemers, inleggeld = @inleggeld WHERE e_code = @ecode"; 
-                string updateStringEvent = "UPDATE Event SET datum = @datum, l_code = @lcode WHERE e_code = @ecode";
+                string updateStringEvent = "UPDATE event SET datum = @datum, l_code = @lcode WHERE e_code = @ecode";
 
                 MySqlCommand cmdToernooi = new MySqlCommand(updateStringToernooi, conn);
                 MySqlCommand cmdEvent = new MySqlCommand(updateStringEvent, conn);
 
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
                 MySqlParameter mindeelnemersParam = new MySqlParameter("@mindeelnemers", MySqlDbType.Int32);
                 MySqlParameter inleggeldParam = new MySqlParameter("@inleggeld", MySqlDbType.Int32);
-                MySqlParameter datumParam = new MySqlParameter("datum", MySqlDbType.DateTime);
-                MySqlParameter lcodeParam = new MySqlParameter("lcode", MySqlDbType.Int32);
+                MySqlParameter datumParam = new MySqlParameter("@datum", MySqlDbType.Date);
+                MySqlParameter lcodeParam = new MySqlParameter("@lcode", MySqlDbType.Int32);
 
+                EcodeParam.Value = t.E_code;
+                mindeelnemersParam.Value = t.Mindeelnemers;
+                inleggeldParam.Value = t.Inleggeld;
+                datumParam.Value = e.Datum;
+                lcodeParam.Value = e.L_code;
+
+                cmdToernooi.Parameters.Add(EcodeParam);
                 cmdToernooi.Parameters.Add(mindeelnemersParam);
                 cmdToernooi.Parameters.Add(inleggeldParam);
                 cmdEvent.Parameters.Add(datumParam);
                 cmdEvent.Parameters.Add(lcodeParam);
+                cmdEvent.Parameters.Add(EcodeParam);
 
                 cmdEvent.Prepare();
                 cmdToernooi.Prepare();

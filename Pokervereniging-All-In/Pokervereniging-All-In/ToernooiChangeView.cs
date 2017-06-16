@@ -14,14 +14,32 @@ namespace Pokervereniging_All_In
 {
     public partial class ToernooiChangeView : Form
     {
-        public ToernooiChangeView()
+        Toernooi toernooi;
+        Event TEvent;
+        public ToernooiChangeView(Toernooi t)
         {
+            EventController EC = new EventController();
+            toernooi = t;
+            TEvent = EC.GetEvent(t.E_code);
             InitializeComponent();
+            TxtMinDeelnemers.Text = t.Mindeelnemers.ToString();
+            TxtInleggeld.Text = t.Inleggeld.ToString();
+            dateTimePicker.Value = TEvent.Datum;
+            LocatieController LC = new LocatieController();
+            foreach(Locatie l in LC.GetLocaties())
+            {
+                comboBoxLocatie.Items.Add(l);
+            }
+            comboBoxLocatie.SelectedItem = TEvent.Locatie;
         }
 
         private void BSubmit_Click(object sender, EventArgs e)
         {
-
+            ToernooiController TC = new ToernooiController();
+            Toernooi newToernooi = new Toernooi(toernooi.E_code, Convert.ToInt32(TxtMinDeelnemers.Text), Convert.ToInt32(TxtInleggeld.Text));
+            Locatie selectedLocatie = (Locatie)comboBoxLocatie.SelectedItem;
+            Event newEvent = new Event(toernooi.E_code, dateTimePicker.Value, selectedLocatie.L_code);
+            TC.ChangeToernooi(toernooi, TEvent);
         }
     }
 }

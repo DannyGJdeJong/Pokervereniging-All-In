@@ -48,13 +48,14 @@ namespace Pokervereniging_All_In.Database
 
                 string selectQuery = @"SELECT * FROM speler WHERE p_code = @pcode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
 
                 MySqlParameter pcodeParam = new MySqlParameter("@pcode", MySqlDbType.Int32);
                 pcodeParam.Value = pcode;
 
                 cmd.Parameters.Add(pcodeParam);
                 cmd.Prepare();
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
 
                 while (dataReader.Read())
                 {

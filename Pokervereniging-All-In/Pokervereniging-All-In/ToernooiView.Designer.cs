@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnTafelindeling = new System.Windows.Forms.Button();
             this.BtnKiesWinnaars = new System.Windows.Forms.Button();
+            this.BtnChangeToernooi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numTafels)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,11 +148,22 @@
             this.BtnKiesWinnaars.UseVisualStyleBackColor = true;
             this.BtnKiesWinnaars.Click += new System.EventHandler(this.BtnKiesWinnaars_Click);
             // 
+            // BtnChangeToernooi
+            // 
+            this.BtnChangeToernooi.Location = new System.Drawing.Point(756, 121);
+            this.BtnChangeToernooi.Name = "BtnChangeToernooi";
+            this.BtnChangeToernooi.Size = new System.Drawing.Size(121, 23);
+            this.BtnChangeToernooi.TabIndex = 13;
+            this.BtnChangeToernooi.Text = "Pas toernooi aan";
+            this.BtnChangeToernooi.UseVisualStyleBackColor = true;
+            this.BtnChangeToernooi.Click += new System.EventHandler(this.BtnChangeToernooi_Click);
+            // 
             // ToernooiView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 559);
+            this.Controls.Add(this.BtnChangeToernooi);
             this.Controls.Add(this.BtnKiesWinnaars);
             this.Controls.Add(this.btnTafelindeling);
             this.Controls.Add(this.label3);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTafelindeling;
         private System.Windows.Forms.Button BtnKiesWinnaars;
+        private System.Windows.Forms.Button BtnChangeToernooi;
     }
 }

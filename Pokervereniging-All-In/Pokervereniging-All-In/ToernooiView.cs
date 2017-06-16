@@ -73,5 +73,11 @@ namespace Pokervereniging_All_In
             ToernooiWinnersView toernooiWinnersView = new ToernooiWinnersView(toernooi);
             toernooiWinnersView.Show();
         }
+
+        private void BtnChangeToernooi_Click(object sender, EventArgs e)
+        {
+            ToernooiChangeView toernooiChangeView = new ToernooiChangeView(toernooi);
+            toernooiChangeView.Show();         
+        }
     }
 }
