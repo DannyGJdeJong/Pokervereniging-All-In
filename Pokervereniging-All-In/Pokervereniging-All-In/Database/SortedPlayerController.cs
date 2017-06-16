@@ -10,9 +10,9 @@ namespace Pokervereniging_All_In.Database
 {
     public class SortedPlayerController : DatabaseController
     {
-        public Dictionary<Speler, int> GetSpelersAndVolgnummers(int ecode)
+        public Dictionary<Speler, Inschrijving> GetSpelersAndVolgnummers(int ecode)
         {
-            Dictionary<Speler, int> SpelersVolgnummers = new Dictionary<Speler,int>();
+            Dictionary<Speler, Inschrijving> SpelersVolgnummers = new Dictionary<Speler, Inschrijving>();
 
             try
             {
@@ -48,9 +48,11 @@ namespace Pokervereniging_All_In.Database
                     int rating = dataReader.GetInt32("rating");
                     bool staat_op_blacklist = dataReader.GetChar("staat_op_blacklist") == 'J';                  
                     int volgnummer = dataReader.GetInt32("volgnummer");
+                    bool heeftbetaald = dataReader.GetChar("heeft_betaald") == 'J';
 
                     Speler s = new Speler(p_code, roepnaam, voorletters, tussenvoegsels, achternaam, geslacht, postcode, straat, huisnummer, woonplaats, emailadres, IBAN_nummer, rating, staat_op_blacklist);
-                    SpelersVolgnummers.Add(s, volgnummer);
+                    Inschrijving i = new Inschrijving(ecode, volgnummer, p_code, heeftbetaald);
+                    SpelersVolgnummers.Add(s, i);
                 }
             }
             catch (Exception ex)

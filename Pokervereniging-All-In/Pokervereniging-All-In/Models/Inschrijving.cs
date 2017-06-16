@@ -10,20 +10,16 @@ namespace Pokervereniging_All_In.Models
     public class Inschrijving : Event        
     {
         public int Ecode { get; set; }
-        public int Mindeelnemers { get; set; }
-        public int Inleggeld { get; set; }
-        public Speler Eersteplaats { get; set; }
-        public Speler Tweedeplaats { get; set; }
-        public Speler Derdeplaats { get; set; }
+        public int Volgnummer { get; set; }
+        public int Pcode { get; set; }
+        public bool HeeftBetaald { get; set; }
 
-        public Inschrijving(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
+        public Inschrijving(int e_code, int volgnummer, int pcode, bool heeftbetaald)
         {
             Ecode = e_code;
-            Mindeelnemers = mindeelnemers;
-            Inleggeld = inleggeld;
-            Eersteplaats = eersteplaats;
-            Tweedeplaats = tweedeplaats;
-            Derdeplaats = derdeplaats;
+            Volgnummer = volgnummer;
+            Pcode = pcode;
+            HeeftBetaald = heeftbetaald;
         }
 
         public override string ToString()

@@ -14,7 +14,8 @@ namespace Pokervereniging_All_In.Models
         public Speler Eersteplaats { get; set; }
         public Speler Tweedeplaats { get; set; }
         public Speler Derdeplaats { get; set; }
-        public Dictionary<Speler, int> Inschrijvingen { get; set; }
+        public Dictionary<Speler, Inschrijving> Inschrijvingen { get; set; }
+        public Dictionary<Speler, Deelname> Deelnames { get; set; }
 
         public Toernooi(int e_code, int mindeelnemers, int inleggeld, Speler eersteplaats = null, Speler tweedeplaats = null, Speler derdeplaats = null )
         {
@@ -28,6 +29,7 @@ namespace Pokervereniging_All_In.Models
             Tweedeplaats = tweedeplaats;
             Derdeplaats = derdeplaats;
             Inschrijvingen = SC.GetSpelersAndVolgnummers(E_code);
+            Deelnames = SC.GetSpelersAndDeelnames(E_code);
             Event ev = EV.GetEvent(e_code);
             Datum = ev.Datum;
             L_code = ev.L_code;
