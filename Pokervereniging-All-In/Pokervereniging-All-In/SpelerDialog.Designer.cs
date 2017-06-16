@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpelerDialog));
             this.lblRoepnaam = new System.Windows.Forms.Label();
             this.txtVoorletters = new System.Windows.Forms.TextBox();
             this.txtRoepnaam = new System.Windows.Forms.TextBox();
@@ -325,6 +326,7 @@
             this.Controls.Add(this.txtRoepnaam);
             this.Controls.Add(this.txtVoorletters);
             this.Controls.Add(this.lblRoepnaam);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SpelerDialog";
             this.Text = "SpelerDialog";
             ((System.ComponentModel.ISupportInitialize)(this.numHuisnummer)).EndInit();

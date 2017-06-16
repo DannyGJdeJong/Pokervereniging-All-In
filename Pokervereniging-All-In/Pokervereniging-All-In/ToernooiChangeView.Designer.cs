@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToernooiChangeView));
             this.label3 = new System.Windows.Forms.Label();
             this.BtnSubmit = new System.Windows.Forms.Button();
             this.TxtMinDeelnemers = new System.Windows.Forms.TextBox();
@@ -134,6 +135,7 @@
             this.Controls.Add(this.BtnSubmit);
             this.Controls.Add(this.TxtMinDeelnemers);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToernooiChangeView";
             this.Text = "ToernooiChangeView";
             this.ResumeLayout(false);

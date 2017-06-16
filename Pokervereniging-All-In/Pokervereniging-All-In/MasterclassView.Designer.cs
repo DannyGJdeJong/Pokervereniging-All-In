@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterclassView));
             this.MasterView = new System.Windows.Forms.ListView();
             this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Min_rating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,10 +49,11 @@
             this.E_code});
             this.MasterView.FullRowSelect = true;
             this.MasterView.GridLines = true;
-            this.MasterView.Location = new System.Drawing.Point(24, 12);
+            this.MasterView.Location = new System.Drawing.Point(12, 6);
+            this.MasterView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MasterView.MultiSelect = false;
             this.MasterView.Name = "MasterView";
-            this.MasterView.Size = new System.Drawing.Size(1386, 470);
+            this.MasterView.Size = new System.Drawing.Size(695, 246);
             this.MasterView.TabIndex = 0;
             this.MasterView.UseCompatibleStateImageBehavior = false;
             this.MasterView.View = System.Windows.Forms.View.Details;
@@ -83,9 +85,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 497);
+            this.button1.Location = new System.Drawing.Point(12, 258);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 50);
+            this.button1.Size = new System.Drawing.Size(74, 26);
             this.button1.TabIndex = 1;
             this.button1.Text = "Toevoegen";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,9 +96,10 @@
             // 
             // BtUpdate
             // 
-            this.BtUpdate.Location = new System.Drawing.Point(178, 497);
+            this.BtUpdate.Location = new System.Drawing.Point(89, 258);
+            this.BtUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtUpdate.Name = "BtUpdate";
-            this.BtUpdate.Size = new System.Drawing.Size(135, 50);
+            this.BtUpdate.Size = new System.Drawing.Size(68, 26);
             this.BtUpdate.TabIndex = 3;
             this.BtUpdate.Text = "Wijzigen";
             this.BtUpdate.UseVisualStyleBackColor = true;
@@ -103,12 +107,14 @@
             // 
             // MasterclassView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1416, 565);
+            this.ClientSize = new System.Drawing.Size(708, 294);
             this.Controls.Add(this.BtUpdate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.MasterView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MasterclassView";
             this.Text = "MasterclassView";
             this.Activated += new System.EventHandler(this.MasterclassView_Activated);

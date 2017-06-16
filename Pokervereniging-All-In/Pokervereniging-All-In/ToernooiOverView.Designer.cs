@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToernooiOverview));
             this.lstToernooi = new System.Windows.Forms.ListView();
             this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inleggeld = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,6 +93,7 @@
             this.ClientSize = new System.Drawing.Size(615, 336);
             this.Controls.Add(this.BtnAddToernooi);
             this.Controls.Add(this.lstToernooi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToernooiOverview";
             this.Text = "ToernooiView";
             this.Activated += new System.EventHandler(this.ToernooiOverview_Activated);

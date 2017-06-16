@@ -178,7 +178,7 @@
             this.Controls.Add(this.lblInleggeld);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToernooiView";
-            this.Text = " ";
+            this.Text = " Toernooi";
             this.Activated += new System.EventHandler(this.ToernooiView_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.numTafels)).EndInit();
             this.ResumeLayout(false);
