@@ -111,18 +111,18 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
                 string insertString = @"INSERT INTO toernooi (e_code, minimum_deelnemers, inleggeld) 
-                                        VALUES (@e_code, @minimum_deelnemers, @inleggeld)";
+                                        VALUES (@ecode, @minimum_deelnemers, @inleggeld)";
 
                 MySqlCommand cmd = new MySqlCommand(insertString, conn);
-                MySqlParameter ECodeParam = new MySqlParameter("@e_code", MySqlDbType.Int32);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
                 MySqlParameter MinimumDeelnemersParam = new MySqlParameter("@minimum_deelnemers", MySqlDbType.Int32);
                 MySqlParameter InleggeldParam = new MySqlParameter("@inleggeld", MySqlDbType.Int32);
 
-                ECodeParam.Value = toernooi.E_code;
+                EcodeParam.Value = toernooi.E_code;
                 MinimumDeelnemersParam.Value = toernooi.Mindeelnemers;
                 InleggeldParam.Value = toernooi.Inleggeld;
 
-                cmd.Parameters.Add(ECodeParam);
+                cmd.Parameters.Add(EcodeParam);
                 cmd.Parameters.Add(MinimumDeelnemersParam);
                 cmd.Parameters.Add(InleggeldParam);
 

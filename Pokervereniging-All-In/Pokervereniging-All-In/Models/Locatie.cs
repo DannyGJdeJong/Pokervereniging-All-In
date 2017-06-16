@@ -32,7 +32,7 @@ namespace Pokervereniging_All_In.Models
 
         public override string ToString()
         {
-            return null;
+            return Plaats;
         }
     }
 

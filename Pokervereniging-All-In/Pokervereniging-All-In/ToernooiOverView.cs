@@ -49,5 +49,11 @@ namespace Pokervereniging_All_In
             ToernooiView toernooiView = new ToernooiView(toernooiList[lstToernooi.SelectedIndices[0]]);
             toernooiView.Show();
         }
+
+        private void BtnAddToernooi_Click(object sender, EventArgs e)
+        {
+            ToernooiAddView TAddView = new ToernooiAddView();
+            TAddView.Show();
+        }
     }
 }

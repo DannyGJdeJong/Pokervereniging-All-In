@@ -33,6 +33,7 @@
             this.inleggeld = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.minDeelnemers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Locatie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BtnAddToernooi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstToernooi
@@ -74,11 +75,22 @@
             this.Locatie.Text = "Locatie";
             this.Locatie.Width = 163;
             // 
+            // BtnAddToernooi
+            // 
+            this.BtnAddToernooi.Location = new System.Drawing.Point(13, 263);
+            this.BtnAddToernooi.Name = "BtnAddToernooi";
+            this.BtnAddToernooi.Size = new System.Drawing.Size(112, 23);
+            this.BtnAddToernooi.TabIndex = 2;
+            this.BtnAddToernooi.Text = "Toernooi toevoegen";
+            this.BtnAddToernooi.UseVisualStyleBackColor = true;
+            this.BtnAddToernooi.Click += new System.EventHandler(this.BtnAddToernooi_Click);
+            // 
             // ToernooiOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 336);
+            this.Controls.Add(this.BtnAddToernooi);
             this.Controls.Add(this.lstToernooi);
             this.Name = "ToernooiOverview";
             this.Text = "ToernooiView";
@@ -94,5 +106,6 @@
         private System.Windows.Forms.ColumnHeader Locatie;
         private System.Windows.Forms.ColumnHeader inleggeld;
         private System.Windows.Forms.ColumnHeader minDeelnemers;
+        private System.Windows.Forms.Button BtnAddToernooi;
     }
 }
