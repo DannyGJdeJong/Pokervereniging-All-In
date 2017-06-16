@@ -38,7 +38,9 @@ namespace Pokervereniging_All_In
             txtInleggeld.Text = toernooi.Inleggeld.ToString();
             txtMinDeelnemers.Text = toernooi.Mindeelnemers.ToString();
             cbbLocatie.Text = toernooi.Locatie.Straat;
-            numTafels.Maximum = toernooi.Locatie.Aantal_tafels;           
+            numTafels.Maximum = toernooi.Locatie.Aantal_tafels;
+
+            numTafels_ValueChanged(sender, e);
         }
 
         private void DrawTafels()
