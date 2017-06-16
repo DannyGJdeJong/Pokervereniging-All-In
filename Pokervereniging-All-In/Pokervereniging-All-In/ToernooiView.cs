@@ -25,9 +25,6 @@ namespace Pokervereniging_All_In
             {
                 DrawTafels();
             }
-
-
-            
         }
 
         private void ToernooiView_Activated(object sender, EventArgs e)
@@ -66,6 +63,7 @@ namespace Pokervereniging_All_In
         {
             DeelnameController DC = new DeelnameController();
             DC.InsertDeelnames(toernooi.E_code);
+            DrawTafels();
         }
 
         private void BtnKiesWinnaars_Click(object sender, EventArgs e)
