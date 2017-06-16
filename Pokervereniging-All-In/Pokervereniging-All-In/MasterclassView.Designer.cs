@@ -83,21 +83,21 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 503);
+            this.button1.Location = new System.Drawing.Point(24, 497);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 37);
+            this.button1.Size = new System.Drawing.Size(147, 50);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
+            this.button1.Text = "Toevoegen";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtUpdate
             // 
-            this.BtUpdate.Location = new System.Drawing.Point(153, 503);
+            this.BtUpdate.Location = new System.Drawing.Point(178, 497);
             this.BtUpdate.Name = "BtUpdate";
-            this.BtUpdate.Size = new System.Drawing.Size(135, 37);
+            this.BtUpdate.Size = new System.Drawing.Size(135, 50);
             this.BtUpdate.TabIndex = 3;
-            this.BtUpdate.Text = "Update";
+            this.BtUpdate.Text = "Wijzigen";
             this.BtUpdate.UseVisualStyleBackColor = true;
             this.BtUpdate.Click += new System.EventHandler(this.BtUpdate_Click);
             // 

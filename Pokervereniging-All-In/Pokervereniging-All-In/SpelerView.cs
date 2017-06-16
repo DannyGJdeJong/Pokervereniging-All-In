@@ -19,8 +19,14 @@ namespace Pokervereniging_All_In
         public SpelerView()
         {
             InitializeComponent();
+            RefreshList();
+        }
+
+        public void RefreshList()
+        {
             SpelerController spelerCont = new SpelerController();
             spelerList = spelerCont.GetSpelers();
+            lstSpeler.Items.Clear();
             foreach (Speler speler in spelerList)
             {
                 ListViewItem item = new ListViewItem(speler.Naam);
@@ -32,7 +38,13 @@ namespace Pokervereniging_All_In
 
         private void lstSpeler_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            SpelerDialog spelerDialog = new SpelerDialog(spelerList[lstSpeler.SelectedIndices[0]]);
+            SpelerDialog spelerDialog = new SpelerDialog(spelerList[lstSpeler.SelectedIndices[0]], this);
+            spelerDialog.Show();
+        }
+
+        private void btnAddSpeler_Click(object sender, EventArgs e)
+        {
+            SpelerDialog spelerDialog = new SpelerDialog(this);
             spelerDialog.Show();
         }
     }

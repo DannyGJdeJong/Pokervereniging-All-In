@@ -59,14 +59,15 @@ namespace Pokervereniging_All_In
             Masterclass temp_masterclass = new Masterclass();
             temp_masterclass.Bekende_Speler.P_Code = BekendeSpelerDB.GetPCode(CBAdd.Text);
             temp_masterclass.E_code = Temp_Ecode;
-            if(string.IsNullOrEmpty(TxtRating.Text))
+            if(string.IsNullOrEmpty(TxtRating.Text) && CBAdd.SelectedItem == null || CBLocatie.SelectedItem == null)
             {
-                MessageBox.Show("Het rating veld moet ingevuld worden");
-                throw new ArgumentException("Het rating veld moet ingevuld worden");
+                MessageBox.Show("Niet alle velden zijn ingevuld.");
+                BSubmit.DialogResult = DialogResult.None;
             }
             else
             {
                 temp_masterclass.Minimale_rating = int.Parse(TxtRating.Text);
+                BSubmit.DialogResult = DialogResult.OK;
             }
             MasterDB.Insertmasterclass(temp_masterclass);
         }

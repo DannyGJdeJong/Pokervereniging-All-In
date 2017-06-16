@@ -54,6 +54,7 @@
             this.chkStaatOpBlacklist = new System.Windows.Forms.CheckBox();
             this.numHuisnummer = new System.Windows.Forms.NumericUpDown();
             this.numRating = new System.Windows.Forms.NumericUpDown();
+            this.btnSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numHuisnummer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
             this.SuspendLayout();
@@ -282,11 +283,22 @@
             this.numRating.Size = new System.Drawing.Size(152, 20);
             this.numRating.TabIndex = 27;
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(105, 367);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 28;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // SpelerDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 402);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.numRating);
             this.Controls.Add(this.numHuisnummer);
             this.Controls.Add(this.chkStaatOpBlacklist);
@@ -350,5 +362,6 @@
         private System.Windows.Forms.CheckBox chkStaatOpBlacklist;
         private System.Windows.Forms.NumericUpDown numHuisnummer;
         private System.Windows.Forms.NumericUpDown numRating;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
