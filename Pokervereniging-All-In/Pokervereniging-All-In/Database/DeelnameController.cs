@@ -108,12 +108,12 @@ namespace Pokervereniging_All_In.Database
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Toernooi niet toegeveogd: " + ex);
+                Console.WriteLine("Toernooi niet toegevoegd: " + ex);
             }
             finally
             {
                 conn.Close();
             }
-        }
+        }     
     }
 }
