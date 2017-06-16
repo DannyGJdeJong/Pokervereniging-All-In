@@ -35,7 +35,7 @@
             this.emailadres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // lstToernooi
+            // lstSpeler
             // 
             this.lstSpeler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.naam,
@@ -46,11 +46,12 @@
             this.lstSpeler.Location = new System.Drawing.Point(11, 11);
             this.lstSpeler.Margin = new System.Windows.Forms.Padding(2);
             this.lstSpeler.MultiSelect = false;
-            this.lstSpeler.Name = "lstToernooi";
+            this.lstSpeler.Name = "lstSpeler";
             this.lstSpeler.Size = new System.Drawing.Size(604, 318);
             this.lstSpeler.TabIndex = 2;
             this.lstSpeler.UseCompatibleStateImageBehavior = false;
             this.lstSpeler.View = System.Windows.Forms.View.Details;
+            this.lstSpeler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstSpeler_MouseDoubleClick);
             // 
             // naam
             // 

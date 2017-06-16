@@ -172,6 +172,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpelerDialog.resx">
+      <DependentUpon>SpelerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SpelerView.resx">
       <DependentUpon>SpelerView.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,10 +28,12 @@ namespace Pokervereniging_All_In
                 item.SubItems.Add(speler.Emailadres);
                 lstSpeler.Items.Add(item);
             }
+        }
+
+        private void lstSpeler_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
             SpelerDialog spelerDialog = new SpelerDialog(spelerList[lstSpeler.SelectedIndices[0]]);
             spelerDialog.Show();
         }
-
-
     }
 }
