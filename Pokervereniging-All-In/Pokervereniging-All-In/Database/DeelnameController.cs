@@ -10,7 +10,7 @@ namespace Pokervereniging_All_In.Database
 {
     public class DeelnameController : DatabaseController
     {
-        public List<Deelname> GetDeelnames()
+        public List<Deelname> GetDeelnames(int ecode)
         {
             List<Deelname> Deelnames = new List<Deelname>();
 
@@ -18,8 +18,12 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM toernooi";
+                string selectQuery = @"SELECT * FROM toernooi WHERE e_code = @ecode";
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
+                MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);
+                EcodeParam.Value = ecode;
+                cmd.Parameters.Add(EcodeParam);
+
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 ToernooiController TC = new ToernooiController();
 
