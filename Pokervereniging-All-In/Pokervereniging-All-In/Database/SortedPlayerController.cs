@@ -76,7 +76,7 @@ namespace Pokervereniging_All_In.Database
             {
                 conn.Open();
 
-                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer JOIN speler s on i.p_code = s.p_code JOIN inschrijving n on d.e_code = i.e_code";
+                string selectQuery = @"SELECT * FROM deelname d JOIN inschrijving i on d.volgnummer = i.volgnummer and d.e_code = i.e_code JOIN speler s on i.p_code = s.p_code WHERE d.e_code = @ecode;";
 
                 MySqlCommand cmd = new MySqlCommand(selectQuery, conn);
                 MySqlParameter EcodeParam = new MySqlParameter("@ecode", MySqlDbType.Int32);

@@ -67,5 +67,11 @@ namespace Pokervereniging_All_In
             DeelnameController DC = new DeelnameController();
             DC.InsertDeelnames(toernooi.E_code);
         }
+
+        private void BtnKiesWinnaars_Click(object sender, EventArgs e)
+        {
+            ToernooiWinnersView toernooiWinnersView = new ToernooiWinnersView(toernooi);
+            toernooiWinnersView.Show();
+        }
     }
 }

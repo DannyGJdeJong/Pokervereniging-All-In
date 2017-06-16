@@ -149,14 +149,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker DtPicker;
-        private System.Windows.Forms.ComboBox CBAdd;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox CBLocatie;
         private System.Windows.Forms.Button BSubmit;
         private System.Windows.Forms.TextBox TxtMinDeelnemers;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtInleggeld;
         private System.Windows.Forms.Label label5;

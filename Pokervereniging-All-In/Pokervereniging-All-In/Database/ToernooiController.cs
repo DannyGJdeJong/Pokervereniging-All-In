@@ -146,8 +146,8 @@ namespace Pokervereniging_All_In.Database
             try
             {
                 conn.Open();
-                string insertString = @"INSERT INTO toernooi (eerste_plaats, tweede_plaats, derde_plaats) 
-                                        VALUES (@eerste, @tweede, @derde)
+                string insertString = @"UPDATE toernooi
+                                        SET eerste_plaats = @eerste, tweede_plaats = @tweede, derde_plaats = @derde
                                         WHERE e_code = @ecode";
 
                 MySqlCommand cmd = new MySqlCommand(insertString, conn);

@@ -39,6 +39,7 @@
             this.lblText1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTafelindeling = new System.Windows.Forms.Button();
+            this.BtnKiesWinnaars = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numTafels)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,22 @@
             this.btnTafelindeling.UseVisualStyleBackColor = true;
             this.btnTafelindeling.Click += new System.EventHandler(this.btnTafelindeling_Click);
             // 
+            // BtnKiesWinnaars
+            // 
+            this.BtnKiesWinnaars.Location = new System.Drawing.Point(756, 92);
+            this.BtnKiesWinnaars.Name = "BtnKiesWinnaars";
+            this.BtnKiesWinnaars.Size = new System.Drawing.Size(121, 23);
+            this.BtnKiesWinnaars.TabIndex = 12;
+            this.BtnKiesWinnaars.Text = "Kies Winnaars";
+            this.BtnKiesWinnaars.UseVisualStyleBackColor = true;
+            this.BtnKiesWinnaars.Click += new System.EventHandler(this.BtnKiesWinnaars_Click);
+            // 
             // ToernooiView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 559);
+            this.Controls.Add(this.BtnKiesWinnaars);
             this.Controls.Add(this.btnTafelindeling);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblText1);
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Label lblText1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTafelindeling;
+        private System.Windows.Forms.Button BtnKiesWinnaars;
     }
 }

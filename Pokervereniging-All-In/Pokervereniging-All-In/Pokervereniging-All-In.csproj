@@ -133,6 +133,12 @@
     <Compile Include="ToernooiView.Designer.cs">
       <DependentUpon>ToernooiView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToernooiWinnersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToernooiWinnersView.Designer.cs">
+      <DependentUpon>ToernooiWinnersView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MasterclassAddView.resx">
       <DependentUpon>MasterclassAddView.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToernooiView.resx">
       <DependentUpon>ToernooiView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToernooiWinnersView.resx">
+      <DependentUpon>ToernooiWinnersView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Pokervereniging_All_In.Models.Speler.datasource" />
     <None Include="Properties\Settings.settings">
