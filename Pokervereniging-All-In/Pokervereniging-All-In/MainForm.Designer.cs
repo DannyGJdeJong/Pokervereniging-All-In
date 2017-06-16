@@ -32,7 +32,6 @@
             this.btnToernooi = new System.Windows.Forms.Button();
             this.btnMasterclass = new System.Windows.Forms.Button();
             this.btnSpeler = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnToernooi
@@ -65,21 +64,11 @@
             this.btnSpeler.UseVisualStyleBackColor = true;
             this.btnSpeler.Click += new System.EventHandler(this.btnSpeler_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(255, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 527);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(264, 72);
             this.Controls.Add(this.btnSpeler);
             this.Controls.Add(this.btnMasterclass);
             this.Controls.Add(this.btnToernooi);
@@ -94,7 +83,6 @@
         private System.Windows.Forms.Button btnToernooi;
         private System.Windows.Forms.Button btnMasterclass;
         private System.Windows.Forms.Button btnSpeler;
-        private System.Windows.Forms.Button button1;
     }
 }
 
