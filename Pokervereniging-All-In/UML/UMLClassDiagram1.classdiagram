@@ -1,1 +1,547 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3a471444-3891-4fd2-9475-e924801db11e" name="UMLClassDiagram1" linkedPackageId="9ca4c36e-f401-46d4-9955-a15b03fcb000" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="e2fd011f-4e92-425f-a20d-5a334ccbf15a" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="edad6427-1935-427a-b6be-1b652ffcfe06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e44ed73e-2fad-4fcc-b97d-5f67b0269a34" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="edad6427-1935-427a-b6be-1b652ffcfe06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c594cd1d-2176-4c00-b2d2-f85d06c8fbc5" name="BekendeSpeler" isAbstract="false" isLeaf="false" cachedFullName="BekendeSpeler">
+        <elementDefinition Id="ba5bd978-da15-4e71-9d88-15c32a9ccdad" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ee054b52-8fe5-4cb2-b0cf-eedd45877ae5" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="edad6427-1935-427a-b6be-1b652ffcfe06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a82c283e-5abe-4656-9a4b-e8c94363e372" name="Speler" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b99dfca6-036c-4100-b00d-8aae352baaf1" />
+        <generalsInternal>
+          <generalization Id="ac578a89-6e4f-4eb0-ae53-1ac078b89134" isSubstitutable="false">
+            <classMoniker Id="908f70de-27cc-4c2c-8787-dc92b610780b" LastKnownName="Persoon" />
+            <elementDefinition Id="2a7af81b-459d-4f6e-95c0-eeef565f8b35" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="d710384e-73ab-4709-97f4-31d17114cdae" isDerived="false" sourceEndRoleName="Speler" targetEndRoleName="Inschrijving" isLeaf="false" isAbstract="false">
+            <classMoniker Id="770560ba-7098-4dcb-98fa-6248bfde49df" LastKnownName="Inschrijving" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="561e06af-11e5-4423-b69c-5a573351b2a3" name="Speler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="543a0baf-60cf-4766-8577-5aa549e54491" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4b38ddd8-9564-4992-8590-8dfae2686a21" name="Inschrijving" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7d1993a5-04ca-4a58-93d6-0d882ff33028" name="Lower" value="*">
+                      <elementDefinition Id="475d1a97-f8ae-43dd-899c-f7a5a5a0504f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1ec88caf-9d8b-4064-b9aa-894eaae62b17" name="Upper" value="*">
+                      <elementDefinition Id="24b9fd6c-3e2a-4105-a496-4dba75a666bf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c70a8dd8-d337-44e6-86ef-08f83d1b6ac5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3b2c8e06-3268-432d-8718-96bc7e0bfa97" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="f80c08a3-6fd6-488f-afba-48661050c0ce" name="Staat_Op_Blacklist : bool" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7feda8e8-c7c0-46c9-96a5-ce73ab526b30" />
+          </property>
+          <property Id="df7b4b5e-49c2-44f7-b230-566a566eaf27" name="Telefoonnummer :  string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6490d955-6b66-4488-ae0b-926e3a8350bf" />
+          </property>
+          <property Id="e143c83a-1cb0-44eb-b73a-f6b0381e7b59" name="Rating : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="467373aa-1a6a-456b-9cac-a3abec615fc7" />
+          </property>
+          <property Id="d7c57f30-54d6-406b-94a9-dd71a8ae0dab" name="IBANnummer : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5b5822f9-1e1c-4f2b-be05-2c5d8b65458a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="08613f5d-5a44-40b2-9bea-e03801c89d2d" name="Toernooi" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5f0bde8f-6ac4-4a02-a703-d55006f0e3dd" />
+        <targetEnds>
+          <association Id="d099b441-867c-4599-b133-040814f3eb12" isDerived="false" sourceEndRoleName="Toernooi" targetEndRoleName="Inschrijving" isLeaf="false" isAbstract="false">
+            <classMoniker Id="770560ba-7098-4dcb-98fa-6248bfde49df" LastKnownName="Inschrijving" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e6f39f4-49c6-4a7e-bffa-e15bc47ab782" name="Toernooi" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8df4657d-3300-4eec-b91d-a9986d14d897" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b78e1e6a-9497-4b1b-99f1-d819a5008253" name="Inschrijving" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="e6cbf9a0-fbc8-429f-bf90-9ea273d6f3a0" name="Lower" value="*">
+                      <elementDefinition Id="3d94c405-5a15-457e-aafa-6907cb85d329" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f86fa269-7ad8-485a-99e6-2a49d88acd03" name="Upper" value="*">
+                      <elementDefinition Id="4f81d884-872a-40a8-8d33-6a1aa017c431" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="3dc0e867-2bb3-49e6-aaeb-8a6686b9afb5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4d023943-1c4b-4ada-85a8-3bd8f4a580a0" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="76953617-0d16-461c-83c2-36f71c558d4c" name="Inleggeld : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b6fb313d-d550-4743-9ef1-b6ae736476fc" />
+          </property>
+          <property Id="46963a70-a155-491b-8b49-14d0e23126e4" name="T_code : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e6674e8d-8f16-48c4-a42a-c2f343eba067" />
+          </property>
+          <property Id="81fee477-e701-4c02-86b2-5bf6f6b31ce9" name="Min_deelnemers : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f5592bc5-395c-4901-bd74-89c63e01dc4b" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4984edd5-37cb-4b46-86f6-9a8053a65af6" name="Locatie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cbb92671-ccde-4c1f-a260-1c2c2cb6e06d" />
+        <suppliersInternal>
+          <dependency Id="99c028f0-3f8f-4d21-85c1-1d8aaadff0e7">
+            <classMoniker Id="b8edbf3d-33f5-477e-9654-a91a990b86e4" LastKnownName="LocatieController" />
+            <elementDefinition Id="668a4faf-fe35-4360-a1cf-070280137a4f" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="343bd727-24f6-4dae-bae5-a6b763dc1033" isDerived="false" sourceEndRoleName="Locatie" targetEndRoleName="Event" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ecabee73-adb1-497b-8614-d86254bcd293" LastKnownName="Event" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2616ab48-95ef-4721-8d02-149ad754a664" name="Locatie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f1475fb-ff0f-4646-9628-dfb6265ca3d8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41b74dee-496a-459b-8b06-67fc7c2f23e9" name="Event" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="6290c9b9-7292-40b2-912e-60e635222e97" name="Lower" value="*">
+                      <elementDefinition Id="361f3dfc-2822-415f-862f-db65861ce552" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b1ec27fe-cd4b-4b2a-b60d-527bf7b668fe" name="Upper" value="*">
+                      <elementDefinition Id="7a8dd28d-c96b-4e3a-83f7-cca4b8aa917d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="37166549-51ae-4434-9e68-80537a2fecd7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ab90221-dff7-40e5-b6db-e1246013066d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="d99da954-8b14-4188-80e8-1f67e6c5e21a" name="L_code : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="503ac5d9-a19d-404b-a2c5-388077f3e1ab" />
+          </property>
+          <property Id="5cf089e3-0e23-494c-adc6-89a2296a5ea3" name="Straat : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="183af7f0-2770-45d0-8e13-0511b579d0a5" />
+          </property>
+          <property Id="82b71eaf-e76b-4b1e-bb5f-c0810313be7b" name="Plaats : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9129c735-6f02-41be-b48a-20a0714c0d64" />
+          </property>
+          <property Id="82a95a33-887e-496a-a2f0-b258d1c3bb84" name="Postcode : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dcda37ec-9a26-49ef-a5c5-f3df234ddf6b" />
+          </property>
+          <property Id="35695b0d-9214-438b-898b-ea2a6ff3d408" name="Aantal_tafels : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1fad33fe-9b61-4e97-a8e0-ab730af4040b" />
+          </property>
+          <property Id="ec39f221-5ff6-45dc-85a7-7b590c5dcd65" name="Huisnummer : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36dfe815-2a70-4a9a-8c5e-26afe2b828d8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ec512746-306c-46b7-a2e9-abd494ac58b7" name="DataBaseController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c" />
+        <ownedAttributesInternal>
+          <property Id="b56cb530-5320-4b23-87c5-e72480c8b026" name="Connection" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="298825b9-1d32-4147-8b8a-2d95563d94ed" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="66cbd5c7-4784-45b1-902a-6941a9b3b9b7" name="MasterClassController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d99a534c-a43f-48da-ad4e-9fcfb2759ae4" />
+        <suppliersInternal>
+          <dependency Id="349358b3-6960-4116-a9d5-11266ba30999">
+            <classMoniker Id="bac19c38-fd54-41f7-8f41-7c15332c848c" LastKnownName="MasterClass" />
+            <elementDefinition Id="e7ed10d0-7e18-4822-aa47-7662933175dc" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="8bb97626-f04a-4a7a-8f35-fbec83d7c639" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="a3d6fc74-2c09-411c-87c9-93237a076687" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="8df0ed64-8dd4-4438-a9f9-edfea127d5b0" name="GetMasterclasses" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7524742b-82e0-42eb-bbf8-1df2973dd235" />
+          </operation>
+          <operation Id="78e41842-12ac-4ec7-92ba-e3794ea1f280" name="InsertMasterclass" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99f4c9ce-fd31-4f92-a203-432ed2b8b37a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a3c9639d-d296-449f-862e-3c6b63fa05ba" name="SpelerController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6286eb80-d564-4b37-bf9e-7466d16a5d13" />
+        <suppliersInternal>
+          <dependency Id="82630d10-2f02-49ce-9b60-c51ce7916b24">
+            <classMoniker Id="a82c283e-5abe-4656-9a4b-e8c94363e372" LastKnownName="Speler" />
+            <description>Creates</description>
+            <elementDefinition Id="1220ffdc-c3b3-4f99-b8bf-abfc993cdaa6" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="022d2571-054a-4b49-a156-9f18f85628b7" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="810868a7-96ca-453f-bdea-d63ce4d089df" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d7f688aa-b5a0-4f54-8921-9d8c2ce9a9cb" name="InsertSpeler" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fcaef625-4bf7-440a-a6b2-0c0a5a81d0a0" />
+          </operation>
+          <operation Id="990b0edd-0413-4408-b42a-162069d24313" name="GetSpelers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1d033407-9f0a-47ad-a8c5-df27005b4077" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c404ba5-8f65-4750-9412-cc6e85e2bd1c" name="ToernooiController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bd217ef1-eec1-4685-9d99-fb7f9b1b2bcc" />
+        <suppliersInternal>
+          <dependency Id="a7171eb4-a7b6-4a4b-8870-1f1e80978acd">
+            <classMoniker Id="08613f5d-5a44-40b2-9bea-e03801c89d2d" LastKnownName="Toernooi" />
+            <elementDefinition Id="5d45850a-6f1b-446c-9681-ca25f9be5f78" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="4156b4de-b298-4a1c-b22f-3e57abda303d" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="81e0f23d-e9be-4a69-baec-dc84d64692f6" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5b9fee09-1fc4-4064-8974-944490aa7ea8" name="InsertToernooi" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b686654b-c6d7-466d-aa5b-dd12db4a7b4e" />
+          </operation>
+          <operation Id="fe45a7f9-a868-4eb5-b71e-af9969a88531" name="GetToernooien" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a545f491-24c3-4010-826d-3f9282f15d3e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="96b2e106-3658-485b-ac78-8baa86769251" name="EventController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3fe0b70f-f434-4204-bf43-6b488cc82104" />
+        <suppliersInternal>
+          <dependency Id="93a1be85-c5d3-417e-9037-a9c0a8feeb58">
+            <classMoniker Id="ecabee73-adb1-497b-8614-d86254bcd293" LastKnownName="Event" />
+            <elementDefinition Id="e9fe003a-67cb-400c-9e60-8daef913440f" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="a8beb692-b0c1-4066-978c-815cf22683ce" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="b12ab97b-44a8-4c13-9081-c748104f2261" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d66243b4-4e0f-4f2d-b083-5429ded24abd" name="InsertEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6cf756e8-46c0-4796-9cc9-567f50154f88" />
+          </operation>
+          <operation Id="c9f1cef8-1ec0-43da-96cc-9d3add413974" name="GetEvents" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="117282af-1535-4470-91a7-7986c2c8b3dd" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b8edbf3d-33f5-477e-9654-a91a990b86e4" name="LocatieController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5aa4dc00-af41-4208-8a2e-f4aefa0d1b0d" />
+        <generalsInternal>
+          <generalization Id="b8ec63c3-11e7-4a81-bc09-21b9c391a53e" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="ab7b774c-d8c3-4251-a7c8-03d6c6998f04" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="1c343848-421e-433a-b5dc-1d82923ff4cc" name="GetLocaties" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c00ee9b7-cf98-4952-82a5-6dc2794bcd8b" />
+          </operation>
+          <operation Id="56d0869c-dd7b-4660-b0c4-2ab0c005e6c5" name="InsertLocatie" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eb8aba1e-5a9f-4158-9eb4-2f2bf97e1a4b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8be7a348-690a-4ed5-bfcb-b28f1e5d2942" name="BekendeSpelerController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2c87dc3f-526e-456a-afde-2434f854a9bc" />
+        <suppliersInternal>
+          <dependency Id="921f8fe6-8640-4f3d-a781-e8e9392f8a3f">
+            <classMoniker Id="38f99eaf-74d1-4491-8a91-094942f0ecf4" LastKnownName="BekendeSpeler" />
+            <elementDefinition Id="a86f4d9d-944c-437b-bd53-f820f7664a9d" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="d0f4d35d-b0e3-4ada-917b-82ef11748cca" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="8609c91c-c34f-4d01-b436-5826222bdd14" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="b421a1c9-b138-43b8-a20a-e98cf0c2cf78" name="InsertBekendeSpeler" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="32b3b329-052d-45dc-afcd-1c470fb715e7" />
+          </operation>
+          <operation Id="ecc71f2c-1f5d-4ba9-9167-84a178e68b02" name="GetBekendeSpelers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b31af44f-fc7c-46d7-8aac-92171319e19d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1776b3c9-5624-4340-ab7e-06537d31a174" name="InschrijvingController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d98534a5-4165-4690-bc74-bfcc38acc1bf" />
+        <suppliersInternal>
+          <dependency Id="3b0dff04-6ef1-4ec2-affd-b2f49b116844">
+            <classMoniker Id="770560ba-7098-4dcb-98fa-6248bfde49df" LastKnownName="Inschrijving" />
+            <elementDefinition Id="514601de-2a86-4bcb-9a89-f8f3c1f8f0fe" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="c3a5b3df-b259-40d6-b7e2-7788d4a35551" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="2c49dc5b-7eba-492f-a927-c79f7f3b2036" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e9e9fcd6-b942-439c-ba0c-15561a727eb8" name="GetInschrijvingen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce3470b6-09d5-45a5-ad2f-259a8713d2be" />
+          </operation>
+          <operation Id="b3a78031-65c5-4dbc-ba54-19815d0e69ea" name="InsertInschrijving" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6ba5ad7b-f173-431a-9d0c-faf270613fc4" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bac19c38-fd54-41f7-8f41-7c15332c848c" name="MasterClass" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23a00a76-4689-46fe-b4ca-ae1b03091990" />
+        <ownedAttributesInternal>
+          <property Id="2736b7ad-e508-4f22-9aee-02999e5a8690" name="E_code" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ebb0ea08-4a66-46ee-be76-f57d0cc7a0be" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e2fd011f-4e92-425f-a20d-5a334ccbf15a" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="102778e1-a046-451e-a667-2ed6835374b1" name="Minimale_rating" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c0d13745-9d1a-412e-864e-9067f88e8455" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e44ed73e-2fad-4fcc-b97d-5f67b0269a34" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="1824feaa-9865-4cb9-a8ea-4dec8148aae0" name="Bekende_speler" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="45f51810-7950-44fd-a596-21fee3f0c0b8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c594cd1d-2176-4c00-b2d2-f85d06c8fbc5" LastKnownName="BekendeSpeler" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="38f99eaf-74d1-4491-8a91-094942f0ecf4" name="BekendeSpeler" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8704d8d2-c3ce-4b9e-83f1-0b7a9c331392" />
+        <generalsInternal>
+          <generalization Id="51e537f3-d1e1-4da8-8cec-5df4ab9dd9f0" isSubstitutable="false">
+            <classMoniker Id="908f70de-27cc-4c2c-8787-dc92b610780b" LastKnownName="Persoon" />
+            <elementDefinition Id="61c14480-a992-4352-a6d2-855714918702" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="5dea74fb-169d-430d-9603-25eaa62a4a3f" isDerived="false" sourceEndRoleName="BekendeSpeler" targetEndRoleName="MasterClass" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bac19c38-fd54-41f7-8f41-7c15332c848c" LastKnownName="MasterClass" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="699ee1fe-d476-43c9-b265-fe9a5c4f3d7b" name="BekendeSpeler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c2473dc6-28be-45a3-b65f-6d28f364bb5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39637914-46a8-4c6f-96a8-b0cc0c1fd410" name="MasterClass" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="a35f144d-5dab-4d0a-9db0-a76c6e50fb8c" name="Lower" value="*">
+                      <elementDefinition Id="a873faf7-aef9-4f0a-9524-3c8b13bfa55f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3ab1ea9e-f99d-4fd4-b26d-137ff7a09b0b" name="Upper" value="*">
+                      <elementDefinition Id="6d3df0bf-63a5-400c-9cfc-3efe6ea7539e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="791eab0d-dfa9-4020-8718-78b108a08443" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="520c7437-e426-4c01-84ef-8dc84eddd73b" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="51dd66f0-4b65-45fd-9942-38123af6c5f9" name="Geb_datum : DateTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="75e1c245-9d44-46e1-a67a-fd2b2b9288d6" />
+          </property>
+          <property Id="74505204-38a2-4997-8c85-d5cd7329a9e0" name="Nationaliteit : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="82258250-67f3-44bb-bb8a-a10339dde603" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="908f70de-27cc-4c2c-8787-dc92b610780b" name="Persoon" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b1b2a8e5-1907-4e83-acb8-aa72fb61218f" />
+        <ownedAttributesInternal>
+          <property Id="c404c8ae-3725-4e2d-b10c-15d957f476aa" name="P_code" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c598545b-9b61-4287-b31d-b6a5c1d0e2cb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ee054b52-8fe5-4cb2-b0cf-eedd45877ae5" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="14c85026-f5d6-4b0d-bc51-fc01b962edf0" name="Adres : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="281e3a8a-cc59-45e8-bf4f-9a864275c9cf" />
+          </property>
+          <property Id="45f6b48b-2f7b-44f1-862b-dca0b66143cf" name="Naam : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="70ece33f-8946-4500-8b2b-3db69e297797" />
+          </property>
+          <property Id="862bd5c8-3808-46a7-b955-13d0d49e5fe7" name="Emailadres : string" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="51575274-5872-46cc-ba82-eb86b3ad7daf" />
+          </property>
+          <property Id="612d8a59-43c0-4863-9c1b-b8357a73e7d5" name="Geslacht : char" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05290afd-66bf-4fa9-9841-f03416e5461e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="770560ba-7098-4dcb-98fa-6248bfde49df" name="Inschrijving" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95111b0c-9f67-4e1c-a93d-07d00acfef1c" />
+        <ownedAttributesInternal>
+          <property Id="4f6c3f7e-ab08-4169-adba-75e5c40ab886" name="Volgnummer : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f091847b-865c-4259-a798-f32b66cd22f5" />
+          </property>
+          <property Id="559901e1-9b6f-4bf9-bfb8-1178fd0eeff3" name="Tafelnummer : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="75153472-b506-4212-ab56-27e0738bb1ae" />
+          </property>
+          <property Id="03663e7a-0399-4288-9a2d-4bd58786e259" name="Is_nog_in_spel : bool" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="66ed4b1a-9563-421b-b0ac-47acc2f32811" />
+          </property>
+          <property Id="3e6f3f76-071f-447c-8c4c-2e33f6bb8c3c" name="Heeft_betaald : bool" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fcc52fec-c45a-4953-8ce8-5799678157f6" />
+          </property>
+          <property Id="8f3b9d2a-13d7-413f-a35a-e193f5f3f117" name="E_code : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a4f7c7f0-f68a-49f6-9bf8-288e52dc6e99" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ecabee73-adb1-497b-8614-d86254bcd293" name="Event" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="532a9734-de66-4b81-826f-7980c25fc11d" />
+        <generalsInternal>
+          <generalization Id="466ddfea-9557-4444-8660-0b4730f28504" isSubstitutable="false">
+            <classMoniker Id="08613f5d-5a44-40b2-9bea-e03801c89d2d" LastKnownName="Toernooi" />
+            <elementDefinition Id="eeab6317-1fb7-4130-8d9d-f478a12ed57c" />
+          </generalization>
+          <generalization Id="edcf9db5-1c8a-4f75-bf21-61df2a792e3f" isSubstitutable="false">
+            <classMoniker Id="bac19c38-fd54-41f7-8f41-7c15332c848c" LastKnownName="MasterClass" />
+            <elementDefinition Id="531ccb21-e565-4238-b7f9-d6210faf392a" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="3ba8a93e-e852-4b1f-8210-83f87ac7959a" name="E_code : int" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f55750e-e9cf-47c2-87c1-5151ebf60b98" />
+          </property>
+          <property Id="73778ee8-ae94-4dbd-b5d0-09b9d4ea07fe" name="Datum : DateTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7f64b185-7959-4b7c-b413-6e1553434b7f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2363e31a-3a52-4c93-b60d-68e1546ebc8e" name="TelefoonnummerController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ce79370-08db-4bd4-9e47-41e5542bc65d" />
+        <suppliersInternal>
+          <dependency Id="812ccce5-92bd-43c4-a4c8-d74900f4a144">
+            <classMoniker Id="8be7a348-690a-4ed5-bfcb-b28f1e5d2942" LastKnownName="BekendeSpelerController" />
+            <elementDefinition Id="49585c84-1726-4904-9b30-5e708c40022f" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="580acfd7-c312-4e18-937e-c4bc9bccf240" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="aa0e2b1a-1ca5-4503-a9c4-e6e0aaa4f7ea" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="a4ad459a-77a3-4fe5-a928-53e7ae7f2f29" name="GetTelefoonnummers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bd7d71db-6ba6-40a8-b0ef-8bbadc67b74f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5479e5ad-69de-48ee-b153-3ef711bfb9d9" name="SortedPlayerController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1410b6bc-4419-48d7-ae3a-f1aedb765596" />
+        <generalsInternal>
+          <generalization Id="7e11f923-642c-4727-9452-150501592baa" isSubstitutable="false">
+            <classMoniker Id="ec512746-306c-46b7-a2e9-abd494ac58b7" LastKnownName="DataBaseController" />
+            <elementDefinition Id="8195647e-8603-4ff8-96fb-348ac75d4066" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d5aa6ede-7bc8-4852-aa8a-53fb16c9c6eb" name="GetSpelersAndVolgnummers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8a9c435d-4d00-4039-b447-ab221c23c0b6" />
+          </operation>
+          <operation Id="ddaf3d86-b48d-472b-89db-c66e4346b4cd" name="GetSpelersAndDeelnames" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4bf84eb3-bedb-4174-a04f-ef51d3ddbe6b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="9ca4c36e-f401-46d4-9955-a15b03fcb000" name="UML">
+    <elementDefinition Id="128fd885-ef9d-4929-9a8c-c267a74ee467" />
+  </package>
+</logicalClassDesignerModel>

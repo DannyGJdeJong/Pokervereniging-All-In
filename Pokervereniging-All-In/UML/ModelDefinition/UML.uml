@@ -1,44 +1,1159 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="128fd885-ef9d-4929-9a8c-c267a74ee467"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
-  <profileInstances>
-    <packageHasProfileInstances
-      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
-      <profileInstance
-        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
-        name="StandardProfileL2" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances
-      Id="29349502-908c-4fda-9054-c48619c59ed0">
-      <profileInstance
-        Id="532ea607-fb19-44b8-8502-3351b05452be"
-        name="StandardProfileL3" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="edad6427-1935-427a-b6be-1b652ffcfe06"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ba5bd978-da15-4e71-9d88-15c32a9ccdad"
+        name="BekendeSpeler" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b99dfca6-036c-4100-b00d-8aae352baaf1"
+        name="Speler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2a7af81b-459d-4f6e-95c0-eeef565f8b35"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b1b2a8e5-1907-4e83-acb8-aa72fb61218f"
+              LastKnownName="Persoon"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="3b2c8e06-3268-432d-8718-96bc7e0bfa97"
+            isDerived="false"
+            sourceEndRoleName="Speler"
+            targetEndRoleName="Inschrijving"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="95111b0c-9f67-4e1c-a93d-07d00acfef1c"
+              LastKnownName="Inschrijving"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="543a0baf-60cf-4766-8577-5aa549e54491"
+                  name="Speler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c70a8dd8-d337-44e6-86ef-08f83d1b6ac5"
+                  name="Inschrijving"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="475d1a97-f8ae-43dd-899c-f7a5a5a0504f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="24b9fd6c-3e2a-4105-a496-4dba75a666bf"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="7feda8e8-c7c0-46c9-96a5-ce73ab526b30"
+            name="Staat_Op_Blacklist : bool"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6490d955-6b66-4488-ae0b-926e3a8350bf"
+            name="Telefoonnummer :  string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="467373aa-1a6a-456b-9cac-a3abec615fc7"
+            name="Rating : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5b5822f9-1e1c-4f2b-be05-2c5d8b65458a"
+            name="IBANnummer : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5f0bde8f-6ac4-4a02-a703-d55006f0e3dd"
+        name="Toernooi"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4d023943-1c4b-4ada-85a8-3bd8f4a580a0"
+            isDerived="false"
+            sourceEndRoleName="Toernooi"
+            targetEndRoleName="Inschrijving"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="95111b0c-9f67-4e1c-a93d-07d00acfef1c"
+              LastKnownName="Inschrijving"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8df4657d-3300-4eec-b91d-a9986d14d897"
+                  name="Toernooi"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3dc0e867-2bb3-49e6-aaeb-8a6686b9afb5"
+                  name="Inschrijving"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3d94c405-5a15-457e-aafa-6907cb85d329"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4f81d884-872a-40a8-8d33-6a1aa017c431"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b6fb313d-d550-4743-9ef1-b6ae736476fc"
+            name="Inleggeld : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e6674e8d-8f16-48c4-a42a-c2f343eba067"
+            name="T_code : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f5592bc5-395c-4901-bd74-89c63e01dc4b"
+            name="Min_deelnemers : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cbb92671-ccde-4c1f-a260-1c2c2cb6e06d"
+        name="Locatie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="668a4faf-fe35-4360-a1cf-070280137a4f">
+            <classMoniker
+              Id="5aa4dc00-af41-4208-8a2e-f4aefa0d1b0d"
+              LastKnownName="LocatieController"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="7ab90221-dff7-40e5-b6db-e1246013066d"
+            isDerived="false"
+            sourceEndRoleName="Locatie"
+            targetEndRoleName="Event"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="532a9734-de66-4b81-826f-7980c25fc11d"
+              LastKnownName="Event"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f1475fb-ff0f-4646-9628-dfb6265ca3d8"
+                  name="Locatie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37166549-51ae-4434-9e68-80537a2fecd7"
+                  name="Event"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="361f3dfc-2822-415f-862f-db65861ce552"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7a8dd28d-c96b-4e3a-83f7-cca4b8aa917d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="503ac5d9-a19d-404b-a2c5-388077f3e1ab"
+            name="L_code : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="183af7f0-2770-45d0-8e13-0511b579d0a5"
+            name="Straat : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9129c735-6f02-41be-b48a-20a0714c0d64"
+            name="Plaats : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dcda37ec-9a26-49ef-a5c5-f3df234ddf6b"
+            name="Postcode : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1fad33fe-9b61-4e97-a8e0-ab730af4040b"
+            name="Aantal_tafels : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="36dfe815-2a70-4a9a-8c5e-26afe2b828d8"
+            name="Huisnummer : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+        name="DataBaseController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="298825b9-1d32-4147-8b8a-2d95563d94ed"
+            name="Connection"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d99a534c-a43f-48da-ad4e-9fcfb2759ae4"
+        name="MasterClassController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e7ed10d0-7e18-4822-aa47-7662933175dc">
+            <classMoniker
+              Id="23a00a76-4689-46fe-b4ca-ae1b03091990"
+              LastKnownName="MasterClass"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a3d6fc74-2c09-411c-87c9-93237a076687"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7524742b-82e0-42eb-bbf8-1df2973dd235"
+            name="GetMasterclasses"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="99f4c9ce-fd31-4f92-a203-432ed2b8b37a"
+            name="InsertMasterclass"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6286eb80-d564-4b37-bf9e-7466d16a5d13"
+        name="SpelerController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="1220ffdc-c3b3-4f99-b8bf-abfc993cdaa6">
+            <classMoniker
+              Id="b99dfca6-036c-4100-b00d-8aae352baaf1"
+              LastKnownName="Speler"
+              LastKnownLocation="UML.uml" />
+            <description>Creates</description>
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="810868a7-96ca-453f-bdea-d63ce4d089df"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fcaef625-4bf7-440a-a6b2-0c0a5a81d0a0"
+            name="InsertSpeler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1d033407-9f0a-47ad-a8c5-df27005b4077"
+            name="GetSpelers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bd217ef1-eec1-4685-9d99-fb7f9b1b2bcc"
+        name="ToernooiController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="5d45850a-6f1b-446c-9681-ca25f9be5f78">
+            <classMoniker
+              Id="5f0bde8f-6ac4-4a02-a703-d55006f0e3dd"
+              LastKnownName="Toernooi"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="81e0f23d-e9be-4a69-baec-dc84d64692f6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b686654b-c6d7-466d-aa5b-dd12db4a7b4e"
+            name="InsertToernooi"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a545f491-24c3-4010-826d-3f9282f15d3e"
+            name="GetToernooien"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3fe0b70f-f434-4204-bf43-6b488cc82104"
+        name="EventController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e9fe003a-67cb-400c-9e60-8daef913440f">
+            <classMoniker
+              Id="532a9734-de66-4b81-826f-7980c25fc11d"
+              LastKnownName="Event"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="b12ab97b-44a8-4c13-9081-c748104f2261"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6cf756e8-46c0-4796-9cc9-567f50154f88"
+            name="InsertEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="117282af-1535-4470-91a7-7986c2c8b3dd"
+            name="GetEvents"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5aa4dc00-af41-4208-8a2e-f4aefa0d1b0d"
+        name="LocatieController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ab7b774c-d8c3-4251-a7c8-03d6c6998f04"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c00ee9b7-cf98-4952-82a5-6dc2794bcd8b"
+            name="GetLocaties"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="eb8aba1e-5a9f-4158-9eb4-2f2bf97e1a4b"
+            name="InsertLocatie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2c87dc3f-526e-456a-afde-2434f854a9bc"
+        name="BekendeSpelerController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a86f4d9d-944c-437b-bd53-f820f7664a9d">
+            <classMoniker
+              Id="8704d8d2-c3ce-4b9e-83f1-0b7a9c331392"
+              LastKnownName="BekendeSpeler"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="8609c91c-c34f-4d01-b436-5826222bdd14"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="32b3b329-052d-45dc-afcd-1c470fb715e7"
+            name="InsertBekendeSpeler"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b31af44f-fc7c-46d7-8aac-92171319e19d"
+            name="GetBekendeSpelers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d98534a5-4165-4690-bc74-bfcc38acc1bf"
+        name="InschrijvingController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="514601de-2a86-4bcb-9a89-f8f3c1f8f0fe">
+            <classMoniker
+              Id="95111b0c-9f67-4e1c-a93d-07d00acfef1c"
+              LastKnownName="Inschrijving"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="2c49dc5b-7eba-492f-a927-c79f7f3b2036"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ce3470b6-09d5-45a5-ad2f-259a8713d2be"
+            name="GetInschrijvingen"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6ba5ad7b-f173-431a-9d0c-faf270613fc4"
+            name="InsertInschrijving"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="23a00a76-4689-46fe-b4ca-ae1b03091990"
+        name="MasterClass"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ebb0ea08-4a66-46ee-be76-f57d0cc7a0be"
+            name="E_code"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="edad6427-1935-427a-b6be-1b652ffcfe06"
+                LastKnownName="int"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c0d13745-9d1a-412e-864e-9067f88e8455"
+            name="Minimale_rating"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="edad6427-1935-427a-b6be-1b652ffcfe06"
+                LastKnownName="int"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="45f51810-7950-44fd-a596-21fee3f0c0b8"
+            name="Bekende_speler"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ba5bd978-da15-4e71-9d88-15c32a9ccdad"
+                LastKnownName="BekendeSpeler"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8704d8d2-c3ce-4b9e-83f1-0b7a9c331392"
+        name="BekendeSpeler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="61c14480-a992-4352-a6d2-855714918702"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b1b2a8e5-1907-4e83-acb8-aa72fb61218f"
+              LastKnownName="Persoon"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="520c7437-e426-4c01-84ef-8dc84eddd73b"
+            isDerived="false"
+            sourceEndRoleName="BekendeSpeler"
+            targetEndRoleName="MasterClass"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="23a00a76-4689-46fe-b4ca-ae1b03091990"
+              LastKnownName="MasterClass"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c2473dc6-28be-45a3-b65f-6d28f364bb5e"
+                  name="BekendeSpeler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="791eab0d-dfa9-4020-8718-78b108a08443"
+                  name="MasterClass"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a873faf7-aef9-4f0a-9524-3c8b13bfa55f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6d3df0bf-63a5-400c-9cfc-3efe6ea7539e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="75e1c245-9d44-46e1-a67a-fd2b2b9288d6"
+            name="Geb_datum : DateTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="82258250-67f3-44bb-bb8a-a10339dde603"
+            name="Nationaliteit : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b1b2a8e5-1907-4e83-acb8-aa72fb61218f"
+        name="Persoon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="c598545b-9b61-4287-b31d-b6a5c1d0e2cb"
+            name="P_code"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="edad6427-1935-427a-b6be-1b652ffcfe06"
+                LastKnownName="int"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="281e3a8a-cc59-45e8-bf4f-9a864275c9cf"
+            name="Adres : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="70ece33f-8946-4500-8b2b-3db69e297797"
+            name="Naam : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="51575274-5872-46cc-ba82-eb86b3ad7daf"
+            name="Emailadres : string"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="05290afd-66bf-4fa9-9841-f03416e5461e"
+            name="Geslacht : char"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="95111b0c-9f67-4e1c-a93d-07d00acfef1c"
+        name="Inschrijving"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f091847b-865c-4259-a798-f32b66cd22f5"
+            name="Volgnummer : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="75153472-b506-4212-ab56-27e0738bb1ae"
+            name="Tafelnummer : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="66ed4b1a-9563-421b-b0ac-47acc2f32811"
+            name="Is_nog_in_spel : bool"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fcc52fec-c45a-4953-8ce8-5799678157f6"
+            name="Heeft_betaald : bool"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a4f7c7f0-f68a-49f6-9bf8-288e52dc6e99"
+            name="E_code : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="532a9734-de66-4b81-826f-7980c25fc11d"
+        name="Event"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="eeab6317-1fb7-4130-8d9d-f478a12ed57c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5f0bde8f-6ac4-4a02-a703-d55006f0e3dd"
+              LastKnownName="Toernooi"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+          <generalization
+            Id="531ccb21-e565-4238-b7f9-d6210faf392a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="23a00a76-4689-46fe-b4ca-ae1b03091990"
+              LastKnownName="MasterClass"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0f55750e-e9cf-47c2-87c1-5151ebf60b98"
+            name="E_code : int"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7f64b185-7959-4b7c-b413-6e1553434b7f"
+            name="Datum : DateTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9ce79370-08db-4bd4-9e47-41e5542bc65d"
+        name="TelefoonnummerController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="49585c84-1726-4904-9b30-5e708c40022f">
+            <classMoniker
+              Id="2c87dc3f-526e-456a-afde-2434f854a9bc"
+              LastKnownName="BekendeSpelerController"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="aa0e2b1a-1ca5-4503-a9c4-e6e0aaa4f7ea"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bd7d71db-6ba6-40a8-b0ef-8bbadc67b74f"
+            name="GetTelefoonnummers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1410b6bc-4419-48d7-ae3a-f1aedb765596"
+        name="SortedPlayerController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="8195647e-8603-4ff8-96fb-348ac75d4066"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4ec73350-3a19-4fb4-9145-e73c44f77f7c"
+              LastKnownName="DataBaseController"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8a9c435d-4d00-4039-b447-ab221c23c0b6"
+            name="GetSpelersAndVolgnummers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4bf84eb3-bedb-4174-a04f-ef51d3ddbe6b"
+            name="GetSpelersAndDeelnames"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>
