@@ -21,26 +21,26 @@ namespace Pokervereniging_All_In
             this.toernooi = toernooi;
             InitializeComponent();
             DeelnameController deelnameController = new DeelnameController();
-            if (deelnameController.GetDeelnames(toernooi.E_code) == null)
+            if (deelnameController.GetDeelnames(toernooi.E_code).Count != 0)
             {
-
+                for (int i = 0; i < toernooi.Locatie.Aantal_tafels; i++)
+                {
+                    PictureBox picTafel = new PictureBox();
+                    picTafel.Image = Image.FromFile("../../PokerTafel.png");
+                    picTafel.InitialImage = null;
+                    picTafel.Name = "picTafel";
+                    picTafel.Size = new System.Drawing.Size(240, 135);
+                    picTafel.Location = new System.Drawing.Point((picTafel.Size.Width + 12) * (i % 2) + 12, (picTafel.Size.Height + 12) * (i / 2) + 12);
+                    picTafel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+                    picTafel.TabIndex = 12;
+                    picTafel.TabStop = false;
+                    this.Controls.Add(picTafel);
+                    picTafel.Show();
+                }
             }
 
 
-            for (int i = 0; i < toernooi.Locatie.Aantal_tafels; i++)
-            {
-                PictureBox picTafel = new PictureBox();
-                picTafel.Image = Image.FromFile("../../PokerTafel.png");
-                picTafel.InitialImage = null;
-                picTafel.Name = "picTafel";
-                picTafel.Size = new System.Drawing.Size(240, 135);
-                picTafel.Location = new System.Drawing.Point((picTafel.Size.Width + 12) * (i % 2) + 12, (picTafel.Size.Height + 12) * (i / 2) + 12);
-                picTafel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                picTafel.TabIndex = 12;
-                picTafel.TabStop = false;
-                this.Controls.Add(picTafel);
-                picTafel.Show();
-            }
+            
         }
 
         private void ToernooiView_Activated(object sender, EventArgs e)
