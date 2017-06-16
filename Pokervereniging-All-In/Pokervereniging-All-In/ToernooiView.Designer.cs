@@ -95,7 +95,7 @@
             // 
             // numTafels
             // 
-            this.numTafels.Location = new System.Drawing.Point(664, 535);
+            this.numTafels.Location = new System.Drawing.Point(641, 535);
             this.numTafels.Minimum = new decimal(new int[] {
             1,
             0,
@@ -109,11 +109,12 @@
             0,
             0,
             0});
+            this.numTafels.ValueChanged += new System.EventHandler(this.numTafels_ValueChanged);
             // 
             // lblText1
             // 
             this.lblText1.AutoSize = true;
-            this.lblText1.Location = new System.Drawing.Point(571, 537);
+            this.lblText1.Location = new System.Drawing.Point(548, 537);
             this.lblText1.Name = "lblText1";
             this.lblText1.Size = new System.Drawing.Size(87, 13);
             this.lblText1.TabIndex = 9;
@@ -122,11 +123,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(700, 537);
+            this.label3.Location = new System.Drawing.Point(677, 537);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 13);
+            this.label3.Size = new System.Drawing.Size(163, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "tafel(s) geeft [X] (of [Y]) spelers per tafel";
+            this.label3.Text = "tafel(s) geeft (of ) spelers per tafel";
             // 
             // btnTafelindeling
             // 

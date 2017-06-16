@@ -65,7 +65,7 @@ namespace Pokervereniging_All_In
         private void btnTafelindeling_Click(object sender, EventArgs e)
         {
             DeelnameController DC = new DeelnameController();
-            DC.InsertDeelnames(toernooi.E_code);
+            DC.InsertDeelnames(toernooi.E_code, Convert.ToInt32(numTafels.Value));
         }
 
         private void BtnKiesWinnaars_Click(object sender, EventArgs e)
@@ -78,6 +78,19 @@ namespace Pokervereniging_All_In
         {
             ToernooiChangeView toernooiChangeView = new ToernooiChangeView(toernooi);
             toernooiChangeView.Show();         
+        }
+
+        private void numTafels_ValueChanged(object sender, EventArgs e)
+        {
+            decimal ammount = toernooi.Locatie.Aantal_tafels / numTafels.Value;
+            if (decimal.Truncate(ammount) != ammount)
+            {
+                label3.Text = this.label3.Text = "tafel(s) geeft " + Math.Floor(ammount) + " (of " + Math.Ceiling(ammount) + " spelers per tafel";
+            }
+            else
+            {
+                label3.Text = this.label3.Text = "tafel(s) geeft " + ammount + " spelers per tafel";
+            }
         }
     }
 }

@@ -51,7 +51,7 @@ namespace Pokervereniging_All_In.Database
             return Deelnames;
         }
 
-        public void InsertDeelnames(int ecode)
+        public void InsertDeelnames(int ecode, int numtafels)
         {
             ToernooiController TC = new ToernooiController();
             Toernooi toernooi = TC.GetToernooi(ecode);
@@ -61,7 +61,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'v' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % numtafels));
                 }
             }
             foreach (KeyValuePair<Speler, Inschrijving> kv in toernooi.Inschrijvingen)
@@ -69,7 +69,7 @@ namespace Pokervereniging_All_In.Database
                 if (kv.Key.Geslacht == 'm' && kv.Value.HeeftBetaald)
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
+                    InsertDeelname(new Deelname(toernooi.E_code, kv.Value.Volgnummer, 1, true, nummer % numtafels));
                 }
             }
         }
