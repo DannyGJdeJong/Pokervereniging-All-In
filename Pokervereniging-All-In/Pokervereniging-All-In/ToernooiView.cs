@@ -54,5 +54,11 @@ namespace Pokervereniging_All_In
 
             
         }
+
+        private void btnTafelindeling_Click(object sender, EventArgs e)
+        {
+            DeelnameController DC = new DeelnameController();
+            DC.InsertDeelnames(toernooi.E_code);
+        }
     }
 }

@@ -134,6 +134,7 @@
             this.btnTafelindeling.TabIndex = 11;
             this.btnTafelindeling.Text = "Maak tafelindeling";
             this.btnTafelindeling.UseVisualStyleBackColor = true;
+            this.btnTafelindeling.Click += new System.EventHandler(this.btnTafelindeling_Click);
             // 
             // ToernooiView
             // 

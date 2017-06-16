@@ -55,22 +55,21 @@ namespace Pokervereniging_All_In.Database
         {
             ToernooiController TC = new ToernooiController();
             Toernooi toernooi = TC.GetToernooi(ecode);
+            int nummer = 0;
             foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
             {
-                int nummer = 0;
                 if (kv.Key.Geslacht == 'v')
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels + 1));
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
             foreach (KeyValuePair<Speler, int> kv in toernooi.Inschrijvingen)
             {
-                int nummer = 0;
                 if (kv.Key.Geslacht == 'm')
                 {
                     nummer++;
-                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer & toernooi.Locatie.Aantal_tafels + 1));
+                    InsertDeelname(new Deelname(toernooi, kv.Value, 1, true, nummer % toernooi.Locatie.Aantal_tafels));
                 }
             }
         }
