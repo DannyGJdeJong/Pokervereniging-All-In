@@ -33,9 +33,9 @@
             this.Min_rating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BekendeSpeler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Locatie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.E_code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.BtUpdate = new System.Windows.Forms.Button();
-            this.E_code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // MasterView
@@ -51,7 +51,7 @@
             this.MasterView.Location = new System.Drawing.Point(24, 12);
             this.MasterView.MultiSelect = false;
             this.MasterView.Name = "MasterView";
-            this.MasterView.Size = new System.Drawing.Size(1179, 470);
+            this.MasterView.Size = new System.Drawing.Size(1386, 470);
             this.MasterView.TabIndex = 0;
             this.MasterView.UseCompatibleStateImageBehavior = false;
             this.MasterView.View = System.Windows.Forms.View.Details;
@@ -76,6 +76,11 @@
             this.Locatie.Text = "Locatie";
             this.Locatie.Width = 120;
             // 
+            // E_code
+            // 
+            this.E_code.Text = "E_code";
+            this.E_code.Width = 100;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 503);
@@ -96,16 +101,11 @@
             this.BtUpdate.UseVisualStyleBackColor = true;
             this.BtUpdate.Click += new System.EventHandler(this.BtUpdate_Click);
             // 
-            // E_code
-            // 
-            this.E_code.Text = "E_code";
-            this.E_code.Width = 100;
-            // 
             // MasterclassView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 565);
+            this.ClientSize = new System.Drawing.Size(1416, 565);
             this.Controls.Add(this.BtUpdate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.MasterView);
